@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nomen — Giulia De Fazio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  <header>
+    <div class="wrap">
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        Giulia De Fazio
+      </a>
+      <nav>
+        <ul>
+          <li><a href="about.html">Chi Sono</a></li>
+          <li><a href="progetti.html" class="active">Progetti</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+ 
+  <!-- TOP NAV -->
+  <nav class="project-nav project-nav-top">
+    <div class="wrap">
+      <a href="flowstate.html">
+        <span class="dir">← Progetto precedente</span>
+        <span class="title">Flow State - Juli</span>
+      </a>
+      <a href="welcome-back-champion.html">
+        <span class="dir">Prossimo progetto →</span>
+        <span class="title">Welcome back, champion</span>
+      </a>
+    </div>
+  </nav>
+ 
+  <!-- HERO: teaser video in loop, muto, decorativo -->
+  <section class="hero-video">
+    <video id="teaser" autoplay muted loop playsinline poster="images/nomen-poster.jpg">
+      <source src="Assets/video/nomen_video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-video-content">
+      <div class="wrap">
+        <div class="hero-eyebrow">Video &amp; Motion Design — Progetto universitario</div>
+        <h1>Nomen</h1>
+        <p class="claim">Un cortometraggio thriller sospeso tra i tarocchi e il destino nella Torino esoterica.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- BRIEF / CONCEPT -->
+  <section id="brief">
+    <div class="wrap">
+      <div class="section-label reveal">Il concept</div>
+      <div class="two-col reveal">
+        <h2>Quando il destino chiama per nome</h2>
+        <div class="body">
+          <p><strong>NOMEN</strong> è un cortometraggio thriller ambientato nella <strong>Torino esoterica</strong>. La storia segue una studentessa fuorisede che, dopo essersi trasferita in un appartamento affacciato su <strong>Piazza Statuto</strong>, trova un vecchio mazzo di tarocchi appartenuto a <strong>Gustavo Rol</strong>.</p>
+          <p>Da quel momento, le carte iniziano ad apparire nella sua quotidianità e una serie di coincidenze sempre più inquietanti mette in discussione il confine tra <strong>realtà e soprannaturale</strong>. Il progetto racconta il rapporto tra <strong>caso, destino e identità</strong>, utilizzando i simboli dei tarocchi e l’immaginario occulto della città.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- VIDEO INTEGRALE -->
+  <section id="video">
+    <div class="wrap">
+      <div class="section-label reveal">Il progetto</div>
+      <div class="reveal">
+        <div class="player-wrap">
+          <video controls preload="metadata" poster="images/nomen-poster.jpg">
+            <source src="Assets/video/nomen_video.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="player-caption">
+          <span>Nomen — video integrale</span>
+          <span>9:05 min</span>
+        </div>
+        <div class="project-description" style="margin-top: 32px; max-width: 80ch; color: var(--ink-dim); font-size: 15.5px; line-height: 1.6;">
+          <p style="margin-bottom: 16px;">La <strong>direzione visiva</strong> accompagna la progressiva perdita di controllo della protagonista. Le prime scene presentano una quotidianità apparentemente tranquilla, con tonalità naturali e una luce più morbida; con l’avanzare della storia, gli ambienti diventano più scuri, le <strong>ombre più profonde</strong> e i contrasti più marcati.</p>
+          <p style="margin-bottom: 16px;">La <strong>color correction</strong> rafforza questo passaggio, alternando le tonalità calde degli interni a dominanti più fredde e verdastre nelle sequenze notturne.</p>
+          <p>La luce proviene spesso da <strong>fonti presenti nella scena</strong>, come lampade, luci stradali e candele, che permettono di lasciare parte degli ambienti nell’ombra e costruire un’atmosfera <strong>intima, claustrofobica e inquietante</strong>. Il montaggio parte da un ritmo più disteso e diventa progressivamente <strong>più serrato</strong>, mentre suono, luce e colore lavorano insieme per suggerire una presenza soprannaturale senza mostrarla completamente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+ 
+  <!-- PREV/NEXT -->
+  <nav class="project-nav">
+    <div class="wrap">
+      <a href="flowstate.html">
+        <span class="dir">← Progetto precedente</span>
+        <span class="title">Flow State - Juli</span>
+      </a>
+      <a href="welcome-back-champion.html">
+        <span class="dir">Prossimo progetto →</span>
+        <span class="title">Welcome back, champion</span>
+      </a>
+    </div>
+  </nav>
+ 
+  <footer>
+    <div class="wrap bottom">
+      <span>© 2026 Giulia De Fazio</span>
+      <span>Torino, Italia</span>
+    </div>
+  </footer>
+ 
+  <script src="main.js"></script>
+ 
+</body>
+</html>
