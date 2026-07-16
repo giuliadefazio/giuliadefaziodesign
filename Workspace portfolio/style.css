@@ -309,7 +309,7 @@ section {
 /* ---------- PROJECTS ---------- */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
 }
 
@@ -662,12 +662,42 @@ footer .bottom {
   letter-spacing: 0.03em;
 }
 
+/* Hero Flex Grid for side-by-side projects */
+.hero-flex-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+  align-items: center;
+  justify-content: space-between;
+}
+
 @media (max-width: 860px) {
+  .hero-flex-layout {
+    gap: 32px;
+  }
   nav ul {
     gap: 20px;
   }
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .project-card {
+    padding: 24px;
+    aspect-ratio: auto;
+    min-height: 280px;
+  }
+  .project-card h3 {
+    font-size: clamp(18px, 2.2vw, 24px);
+  }
+  .project-tag {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  .project-overview {
+    opacity: 1 !important;
+    max-height: none !important;
+    margin-top: 8px !important;
   }
   .about {
     grid-template-columns: 1fr;
@@ -750,7 +780,7 @@ footer .bottom {
 }
 .overview .wrap {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
 }
 .overview-item .label {
@@ -797,7 +827,7 @@ footer .bottom {
 }
 .variants-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
@@ -986,31 +1016,6 @@ footer .bottom {
   margin-top: 86px;
 }
 
-@media (max-width: 860px) {
-  .two-col {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .overview .wrap {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .variants-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .visual-grid {
-    grid-template-columns: 1fr;
-  }
-  .gallery-item, .gallery-item.reverse {
-    grid-template-columns: 1fr;
-    direction: ltr;
-  }
-  .hero-grid,
-  .visual-side-by-side {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-}
-
 .hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -1023,6 +1028,42 @@ footer .bottom {
   grid-template-columns: 1.15fr 0.85fr;
   gap: 60px;
   align-items: center;
+}
+
+@media (max-width: 860px) {
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .overview .wrap {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .variants-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .visual-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-item, .gallery-item.reverse {
+    display: flex;
+    flex-direction: column;
+    direction: ltr;
+  }
+  .gallery-item .gallery-text {
+    order: 1;
+  }
+  .gallery-item .gallery-visual {
+    order: 2;
+  }
+  .grid-responsive-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .hero-grid,
+  .visual-side-by-side {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 }
 
 .visual-img img {
@@ -1182,7 +1223,7 @@ footer .bottom {
 }
 .hero-video h1 {
   font-weight: 500;
-  font-size: 50px;
+  font-size: clamp(32px, 5vw, 50px);
   line-height: 1.02;
   letter-spacing: -0.01em;
 }
@@ -1192,7 +1233,7 @@ footer .bottom {
   font-style: italic;
   font-weight: 400;
   color: var(--accent);
-  font-size: 30px;
+  font-size: clamp(20px, 3.5vw, 30px);
   margin-top: 18px;
   max-width: 520px;
 }
@@ -1228,7 +1269,7 @@ footer .bottom {
 }
 .overview .wrap {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
 }
 .overview-item .label {
@@ -1299,7 +1340,7 @@ footer .bottom {
 }
 .project-detail-hero h1 {
   font-weight: 500;
-  font-size: 50px;
+  font-size: clamp(32px, 5vw, 50px);
   line-height: 1.02;
   letter-spacing: -0.01em;
   max-width: 920px;
@@ -1311,7 +1352,7 @@ footer .bottom {
   font-style: italic;
   font-weight: 400;
   color: var(--accent);
-  font-size: 30px;
+  font-size: clamp(20px, 3.5vw, 30px);
   margin-top: 20px;
   max-width: 560px;
 }
@@ -1329,7 +1370,7 @@ footer .bottom {
 
 .challenges {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
@@ -1378,7 +1419,7 @@ footer .bottom {
 }
 .vmv-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
@@ -1423,7 +1464,7 @@ footer .bottom {
 
 .champions-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
@@ -1483,7 +1524,7 @@ footer .bottom {
 
 .arena-steps {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 28px;
 }
 .arena-step {
@@ -1549,7 +1590,7 @@ footer .bottom {
 }
 .network-features {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 32px;
   margin-top: 56px;
   max-width: 960px;
@@ -1597,7 +1638,7 @@ footer .bottom {
     grid-template-columns: 1fr;
   }
   .champions-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .arena-steps {
     grid-template-columns: 1fr;
@@ -1624,7 +1665,7 @@ footer .bottom {
 }
 .hero-forza-cura h1 {
   font-weight: 500;
-  font-size: 50px;
+  font-size: clamp(32px, 5vw, 50px);
   line-height: 1.02;
   letter-spacing: -0.01em;
   max-width: 920px;
@@ -1636,7 +1677,7 @@ footer .bottom {
   font-style: italic;
   font-weight: 400;
   color: var(--accent);
-  font-size: 30px;
+  font-size: clamp(20px, 3.5vw, 30px);
   margin-top: 22px;
   max-width: 600px;
 }
@@ -1712,7 +1753,7 @@ footer .bottom {
 
 .tov-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
@@ -1743,7 +1784,7 @@ footer .bottom {
 
 .palette-row {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 14px;
 }
 .swatch {
@@ -1817,7 +1858,7 @@ footer .bottom {
 
 .story-steps {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
@@ -1851,10 +1892,10 @@ footer .bottom {
     grid-template-columns: 1fr;
   }
   .tov-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .palette-row {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .kvisual-row {
     grid-template-columns: 1fr;
@@ -1931,7 +1972,7 @@ footer .bottom {
 /* Channels Grid & Card Layout for La Forza è Cura */
 .channels-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 32px;
   margin-top: 48px;
 }
@@ -1976,3 +2017,171 @@ footer .bottom {
   margin-top: auto;
   display: block;
 }
+
+/* Responsive tweaks for mobile devices under 480px */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 16px;
+  }
+  nav ul {
+    gap: 16px;
+  }
+  nav a {
+    font-size: 13px;
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+  }
+  .project-arrow {
+    width: 32px;
+    height: 32px;
+    top: 20px;
+    right: 20px;
+  }
+  .wrap {
+    width: 92%;
+  }
+}
+
+/* ---------- RESPONSIVE NAVIGATION (HAMBURGER MENU) ---------- */
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 110;
+    color: #fff; /* White since difference mix-blend works on header */
+    position: relative;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .nav-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  header nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.4s ease;
+    z-index: 105;
+  }
+  header nav.active {
+    right: 0;
+  }
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0;
+  }
+  header nav a {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 28px;
+    color: var(--ink);
+    transition: color 0.3s ease;
+  }
+  header nav a:hover {
+    color: var(--accent);
+  }
+  
+  body.menu-open {
+    overflow: hidden; /* disable scroll when menu is open */
+  }
+  body.menu-open header {
+    mix-blend-mode: normal;
+    background-color: var(--bg);
+  }
+  body.menu-open .logo {
+    color: var(--ink);
+    z-index: 110;
+    position: relative;
+  }
+  body.menu-open .nav-toggle {
+    color: var(--ink);
+  }
+}
+
+/* ---------- RESPONSIVE GRIDS FOR MOBILE (375px - 480px) ---------- */
+@media (max-width: 600px) {
+  .tov-grid {
+    grid-template-columns: 1fr;
+  }
+  .tov-card {
+    padding: 24px 20px;
+  }
+  .split-card {
+    padding: 24px 20px;
+  }
+  .story-step {
+    padding: 24px 20px;
+  }
+  .channel-card {
+    padding: 24px 20px;
+  }
+  .project-nav .wrap {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .project-nav a:last-child {
+    text-align: left;
+    align-items: flex-start;
+  }
+  .project-nav a .title {
+    font-size: 19px;
+  }
+}
+
+/* Word break safety for grid cards and titles */
+.champion-card,
+.champion-title,
+.champion-desc,
+.tov-card,
+.split-card,
+.story-step,
+.channel-card {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+@media (max-width: 480px) {
+  .champions-grid {
+    grid-template-columns: 1fr;
+  }
+  .carousel-container {
+    max-width: 240px;
+  }
+  .variant-img {
+    height: 100px;
+  }
+}
+

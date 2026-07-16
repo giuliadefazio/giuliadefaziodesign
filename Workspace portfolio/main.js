@@ -39,4 +39,33 @@ document.addEventListener('DOMContentLoaded', () => {
       showImage(currentIndex);
     });
   });
+
+  // MOBILE MENU LOGIC
+  const nav = document.querySelector('header nav');
+  if (nav) {
+    const hamburger = document.createElement('button');
+    hamburger.className = 'nav-toggle';
+    hamburger.setAttribute('aria-label', 'Menu');
+    hamburger.innerHTML = '<span></span><span></span><span></span>';
+    
+    const wrap = document.querySelector('header .wrap');
+    if (wrap) {
+      wrap.insertBefore(hamburger, nav);
+    }
+    
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      nav.classList.toggle('active');
+      document.body.classList.toggle('menu-open');
+    });
+
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      });
+    });
+  }
 });
