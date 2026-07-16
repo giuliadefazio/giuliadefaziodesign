@@ -2159,6 +2159,32 @@ footer .bottom {
   .project-nav a .title {
     font-size: 19px;
   }
+  .variants-grid {
+    grid-template-columns: 1fr;
+  }
+  .variant-card {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 4px 20px;
+    align-items: center;
+    min-height: auto;
+    padding: 20px;
+  }
+  .variant-card .variant-img {
+    grid-column: 1;
+    grid-row: 1 / span 6;
+    width: 90px;
+    height: 90px;
+    margin-bottom: 0;
+    align-self: center;
+  }
+  .variant-card .variant-glyph,
+  .variant-card .variant-name,
+  .variant-card .variant-fungo,
+  .variant-card .variant-copy,
+  .variant-card .variant-benefit {
+    grid-column: 2;
+  }
 }
 
 /* Word break safety for grid cards and titles */
