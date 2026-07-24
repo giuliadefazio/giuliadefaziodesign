@@ -16,6 +16,12 @@
   --fc-ivory: #F1E9DA;
   --fc-warmgray: #CFC6B8;
   --fc-red: #8E2A2A;
+  
+  /* palette del progetto Trama: buio, carta, ambra */
+  --tr-black: #0c0b0a;
+  --tr-paper: #F1ECE1;
+  --tr-smoke: #55504a;
+  --tr-amber: #d9822b;
 }
 
 * {
@@ -341,32 +347,34 @@ section {
   transition: transform .6s cubic-bezier(.16, 1, .3, 1);
 }
 
-.project-card:nth-child(1) .thumb {
+.project-card.p-flowstate .thumb {
   background: url('Assets/img/anteprima-juli.png') no-repeat center center;
   background-size: cover;
 }
 
-.project-card:nth-child(2) .thumb {
+.project-card.p-nomen .thumb {
   background: url('Assets/img/nome-anteprima.png') no-repeat center center;
   background-size: cover;
 }
 
-.project-card:nth-child(3) .thumb {
+.project-card.p-welcome-back .thumb {
   background: url('Assets/img/tesi-affissioni.png') no-repeat center center;
   background-size: cover;
 }
 
-.project-card:nth-child(4) .thumb {
+.project-card.p-la-forza .thumb {
   background: url('Assets/img/mockup-affissioni-forza.jpg') no-repeat center center;
   background-size: cover;
 }
 
-.project-card:nth-child(5) .thumb {
-  background: linear-gradient(150deg, #2b201a, #d9a44118);
+.project-card.p-trama .thumb {
+  background: url('Assets/img/trama4.png') no-repeat center center;
+  background-size: cover;
 }
 
-.project-card:nth-child(6) .thumb {
-  background: linear-gradient(150deg, #1e1e24, #c1502e22);
+.project-card.p-gabbia .thumb {
+  background: url('Assets/img/gabbia1.png') no-repeat center center;
+  background-size: cover;
 }
 
 .project-card:nth-child(7) .thumb {
@@ -579,7 +587,7 @@ section {
   font-size: 14px;
   font-weight: 500;
   color: var(--ink);
-  word-break: break-all;
+  white-space: nowrap;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -607,7 +615,7 @@ section {
   transform: rotate(-45deg);
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1100px) {
   .contact-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -662,19 +670,7 @@ footer .bottom {
   letter-spacing: 0.03em;
 }
 
-/* Hero Flex Grid for side-by-side projects */
-.hero-flex-layout {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 64px;
-  align-items: center;
-  justify-content: space-between;
-}
-
 @media (max-width: 860px) {
-  .hero-flex-layout {
-    gap: 32px;
-  }
   nav ul {
     gap: 20px;
   }
@@ -727,12 +723,16 @@ footer .bottom {
 
 /* ---------- PROJECT PAGE STYLE ---------- */
 .back-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 19px;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--ink);
 }
 .back-link svg {
   width: 14px;
@@ -1012,15 +1012,18 @@ footer .bottom {
 .project-nav-top {
   border-top: none;
   border-bottom: 1px solid var(--line);
-  padding: 24px 0;
-  margin-top: 86px;
+  padding: 16px 0;
+  margin-top: 76px;
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 60px;
-  align-items: center;
+  align-items: flex-start;
+}
+.hero-grid .hero-img {
+  margin-top: 0;
 }
 
 .visual-side-by-side {
@@ -1333,8 +1336,8 @@ footer .bottom {
 /* ---------- WELCOME BACK, CHAMPION (THESIS) SPECIFIC STYLES ---------- */
 .project-detail-hero {
   position: relative;
-  padding-top: 150px;
-  padding-bottom: 0;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
   min-height: auto !important;
   display: block !important;
 }
@@ -1356,17 +1359,7 @@ footer .bottom {
   margin-top: 20px;
   max-width: 560px;
 }
-.hero-img-box {
-  margin-top: 56px;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-}
-.hero-img-box img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+
 
 .challenges {
   display: grid;
@@ -1654,33 +1647,6 @@ footer .bottom {
 }
 
 /* ---------- LA FORZA E CURA (GAP CAMPAIGN) SPECIFIC STYLES ---------- */
-.hero-forza-cura {
-  position: relative;
-  padding-top: 150px;
-  padding-bottom: 70px;
-  background: none;
-  border-bottom: 1px solid var(--line);
-  min-height: auto !important;
-  display: block !important;
-}
-.hero-forza-cura h1 {
-  font-weight: 500;
-  font-size: clamp(32px, 5vw, 50px);
-  line-height: 1.02;
-  letter-spacing: -0.01em;
-  max-width: 920px;
-  color: var(--ink);
-}
-/*.hero-forza-cura .claim */
-.hero-forza-cura .claim {
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-weight: 400;
-  color: var(--accent);
-  font-size: clamp(20px, 3.5vw, 30px);
-  margin-top: 22px;
-  max-width: 600px;
-}
 .hero-sub {
   margin-top: 20px;
   color: var(--ink-dim);
@@ -1907,7 +1873,6 @@ footer .bottom {
 
 .project-nav-top + .project-detail-hero,
 .project-nav-top + .hero-video,
-.project-nav-top + .hero-forza-cura,
 .project-nav-top + .hero {
   padding-top: 40px !important;
 }
@@ -2020,7 +1985,7 @@ footer .bottom {
 
 /* Responsive tweaks for mobile devices under 480px */
 @media (max-width: 480px) {
-  .logo {
+  .logo, .back-link {
     font-size: 16px;
   }
   nav ul {
@@ -2208,6 +2173,296 @@ footer .bottom {
   }
   .variant-img {
     height: 100px;
+  }
+}
+
+/* ---------- TRAMA SPECIFIC STYLES ---------- */
+
+/* ESPERIENZA — CAROSELLO INTERATTIVO */
+.experience-carousel-wrap {
+  position: relative;
+  background: var(--tr-black);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+}
+.experience-carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.experience-slide {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: stretch;
+}
+.experience-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 380px;
+  max-height: 480px;
+}
+.experience-slide-text {
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--tr-black);
+}
+.experience-slide-num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  color: var(--tr-amber);
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+.experience-slide-text h3 {
+  font-family: 'Fraunces', serif;
+  color: var(--tr-paper);
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+.experience-slide-text p {
+  color: #a89f92;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.experience-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px;
+  background: var(--bg-panel);
+  border-top: 1px solid var(--line);
+}
+.experience-counter {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  color: var(--tr-amber);
+  font-size: 16px;
+}
+.experience-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.exp-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(241, 236, 225, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.exp-dot.active {
+  background: var(--tr-amber);
+  width: 28px;
+  border-radius: 5px;
+}
+.experience-nav-btns {
+  display: flex;
+  gap: 12px;
+}
+.exp-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--bg-panel-2);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.exp-btn:hover {
+  border-color: var(--tr-amber);
+  color: var(--tr-amber);
+  transform: translateY(-2px);
+}
+
+/* RICERCA: 4 prospettive — 2x2 Dark Cards with Pill Badges */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.research-card {
+  background: var(--bg-panel-2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 32px 28px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.research-card:hover {
+  border-color: rgba(217, 130, 43, 0.3);
+  transform: translateY(-2px);
+}
+.research-num {
+  display: inline-block;
+  padding: 4px 10px;
+  background: rgba(217, 130, 43, 0.12);
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tr-amber);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.research-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--tr-paper);
+}
+.research-card p {
+  font-size: 14px;
+  color: var(--ink-dim);
+  line-height: 1.6;
+}
+
+/* IDENTITA VISIVA — Swatch overrides */
+.palette-row.four-cols {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.swatch-label.trama-style {
+  font-family: 'Inter', sans-serif;
+  color: #f4ece0;
+  padding: 14px 16px;
+}
+.swatch-label.trama-style strong {
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.swatch-label.trama-style span {
+  display: block;
+  color: #d8cebe;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.tov-line {
+  margin-top: 36px;
+  color: var(--ink-dim);
+  font-size: 15px;
+  max-width: 70ch;
+}
+.tov-line strong {
+  color: var(--ink);
+}
+
+/* RISCHI — Split Problem/Solution Full Width Cards */
+.risk-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.risk-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--tr-amber);
+  border-radius: 14px;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 70px 1fr 1fr;
+  gap: 28px;
+  align-items: center;
+}
+.risk-num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  color: var(--tr-amber);
+  font-size: 36px;
+  line-height: 1;
+}
+.risk-problem, .risk-solution {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.risk-problem {
+  padding-right: 20px;
+  border-right: 1px solid var(--line);
+}
+.risk-badge {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tr-amber);
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+.risk-card p {
+  font-size: 14.5px;
+  color: var(--ink-dim);
+  line-height: 1.55;
+  margin: 0;
+}
+.risk-card p strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* APPLICAZIONI — Minimal Editorial Columns with Top Amber Accent Bars */
+.app-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+.app-card {
+  background: transparent;
+  padding: 24px 0 0;
+  border-top: 2px solid var(--tr-amber);
+}
+.app-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: var(--tr-paper);
+}
+.app-card p {
+  font-size: 14px;
+  color: var(--ink-dim);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+  .experience-slide {
+    grid-template-columns: 1fr;
+  }
+  .experience-slide img {
+    min-height: 240px;
+    max-height: 300px;
+  }
+  .experience-slide-text {
+    padding: 32px 24px;
+  }
+  .palette-row.four-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .risk-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .risk-problem {
+    padding-right: 0;
+    border-right: none;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  .app-row {
+    grid-template-columns: 1fr;
   }
 }
 
