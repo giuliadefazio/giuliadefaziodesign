@@ -3,119 +3,195 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progetti — Giulia De Fazio</title>
+  <title>Tutti i Progetti — Giulia De Fazio</title>
+  <meta name="description" content="Tutti i progetti di Giulia De Fazio: Flow State, Trama, Nomen, Welcome back champion, Gabbia, La forza è cura.">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
-  <header>
-    <div class="wrap">
-      <a href="index.html" class="logo">Giulia De Fazio</a>
-      <nav>
-        <ul>
-          <li><a href="about.html">Chi Sono</a></li>
-          <li><a href="progetti.html" class="active">Progetti</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-      </nav>
-    </div>
+
+  <!-- PROGRESSIVE BLUR HEADER -->
+  <div class="header-blur-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo-mark">Giulia De Fazio</a>
+    
+    <nav>
+      <ul class="nav-links-list">
+        <li><a href="about.html">Chi Sono</a></li>
+        <li><a href="progetti.html" class="active">Progetti</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </nav>
+
+    <!-- KOMMA KOMMA BUTTON-043 -->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
+      <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+      <span class="button-043__inner">
+        <span>Scrivimi</span>
+        <span class="button-043__icon-wrap">
+          <span class="button-043__icon-list">
+            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </span>
+      </span>
+    </a>
   </header>
- 
-  <!-- PROGETTI SECTION -->
-  <section class="hero inner-page-section">
-    <div class="blob"></div>
+
+  <!-- PROJECTS PAGE HERO -->
+  <section class="intro-section page-top-hero" style="padding-top: 140px; padding-bottom: 32px; border-bottom: none;">
     <div class="wrap">
-      <div class="section-label reveal">Tutti i progetti</div>
-      <div class="projects-grid reveal">
- 
-        <!-- Progetto 1 -->
-        <a class="project-card p-flowstate" href="flowstate.html">
-          <div class="thumb"></div>
-          <div class="project-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
-          <div class="meta">
-            <h3>Flow State</h3>
-            <div class="project-tag">Brand identity e digital marketing</div>
-            <p class="project-overview">Capsule collection di acque funzionali pensata come rituale quotidiano per rilassarsi e gestire lo stress.</p>
-          </div>
-        </a>
+      <h1 class="reveal" style="font-family: var(--font-serif); font-weight: 400; font-size: clamp(38px, 5.5vw, 76px); line-height: 0.95; letter-spacing: -0.02em; color: var(--color-onyx); margin-bottom: 24px;">
+        Tutti i <span class="serif-highlight">Progetti</span>
+      </h1>
 
-        <!-- Progetto 2 -->
-        <a class="project-card p-trama" href="trama.html">
-          <div class="thumb"></div>
-          <div class="project-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
-          <div class="meta">
-            <h3>Trama</h3>
-            <div class="project-tag">Installation Design / Interaction Design</div>
-            <p class="project-overview">Un’installazione urbana sui difetti che nascondiamo e su come cambiano quando li guardiamo attraverso gli occhi di uno sconosciuto.</p>
-          </div>
-        </a>
-
-        <!-- Progetto 3 -->
-        <a class="project-card p-nomen" href="nomen.html">
-          <div class="thumb"></div>
-          <div class="project-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
-          <div class="meta">
-            <h3>Nomen</h3>
-            <div class="project-tag">Video e motion design</div>
-            <p class="project-overview">Cortometraggio mystery ambientato nella Torino esoterica, tra tarocchi, coincidenze inquietanti e una parola misteriosa.</p>
-          </div>
-        </a>
-
-        <!-- Progetto 4 -->
-        <a class="project-card p-welcome-back" href="welcome-back-champion.html">
-          <div class="thumb"></div>
-          <div class="project-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
-          <div class="meta">
-            <h3>Welcome back, champion</h3>
-            <div class="project-tag">Campagna crossmediale</div>
-            <p class="project-overview">Campagna per SUSTAINera che presenta i ricambi rigenerati come prodotti affidabili, performanti e sostenibili.</p>
-          </div>
-        </a>
-
-        <!-- Progetto 5 -->
-        <a class="project-card p-gabbia" href="gabbia.html">
-          <div class="thumb"></div>
-          <div class="project-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
-          <div class="meta">
-            <h3>Gabbia</h3>
-            <div class="project-tag">Virtual Reality / Immersive Experience Design</div>
-            <p class="project-overview">Una casa che da fuori sembra normale. Dentro, un'esperienza VR che fa vivere la violenza di genere in prima persona.</p>
-          </div>
-        </a>
-
-        <!-- Progetto 6 -->
-        <a class="project-card p-la-forza" href="la-forza-e-cura.html">
-          <div class="thumb"></div>
-          <div class="project-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
-          <div class="meta">
-            <h3>La forza è cura</h3>
-            <div class="project-tag">Campagna sociale</div>
-            <p class="project-overview">Campagna partecipativa che racconta la forza come responsabilità, protezione e azione collettiva.</p>
-          </div>
-        </a>
- 
+      <!-- ELEGANT DISCIPLINE TAGS -->
+      <div class="reveal tag-row">
+        <span class="tag-chip">Brand Identity &amp; Packaging</span>
+        <span class="tag-chip">Esperienza Immersiva</span>
+        <span class="tag-chip">Video &amp; Motion</span>
+        <span class="tag-chip">Campagna Crossmediale</span>
+        <span class="tag-chip">Campagna Sociale</span>
       </div>
     </div>
   </section>
- 
-  <!-- MARQUEE -->
-  <div class="marquee-wrap">
-    <div class="marquee">
-      <span>Ricerca</span><span class="accentword">Comunicazione</span><span>Ascolto</span><span class="accentword">Cura</span><span>Connessione</span><span class="accentword">Design</span>
-      <span>Ricerca</span><span class="accentword">Comunicazione</span><span>Ascolto</span><span class="accentword">Cura</span><span>Connessione</span><span class="accentword">Design</span>
+
+  <!-- ALL PROJECTS GRID (ORBIT TILES 3D DECK) -->
+  <section class="orbit-section" style="border-top: none; padding-top: 20px;">
+    <div class="wrap">
+      <div class="orbit-grid">
+        <!-- Orbit Card 1 -->
+        <a href="flowstate.html" class="orbit-card" data-orbit-tilt>
+          <div class="orbit-card__tilt">
+            <div class="orbit-card__media">
+              <img src="Assets/img/anteprima-juli.png" alt="Flow State">
+            </div>
+            <div class="orbit-card__shade"></div>
+          </div>
+          <div class="orbit-card__info">
+            <div>
+              <span class="orbit-card__num">Brand Identity &amp; Packaging</span>
+              <h3 class="orbit-card__title">Flow State</h3>
+              <p class="orbit-card__desc">Capsule collection di acqua premium pensata come rituale quotidiano per rilassarsi e gestire lo stress.</p>
+            </div>
+            <span class="orbit-card__cta">Esplora ↗</span>
+          </div>
+        </a>
+
+        <!-- Orbit Card 2 -->
+        <a href="trama.html" class="orbit-card" data-orbit-tilt>
+          <div class="orbit-card__tilt">
+            <div class="orbit-card__media">
+              <img src="Assets/img/trama4.png" alt="Trama">
+            </div>
+            <div class="orbit-card__shade"></div>
+          </div>
+          <div class="orbit-card__info">
+            <div>
+              <span class="orbit-card__num">Esperienza Immersiva</span>
+              <h3 class="orbit-card__title">Trama</h3>
+              <p class="orbit-card__desc">Un’installazione urbana sui difetti che nascondiamo e su come cambiano quando li guardiamo attraverso gli occhi di uno sconosciuto.</p>
+            </div>
+            <span class="orbit-card__cta">Esplora ↗</span>
+          </div>
+        </a>
+
+        <!-- Orbit Card 3 -->
+        <a href="nomen.html" class="orbit-card" data-orbit-tilt>
+          <div class="orbit-card__tilt">
+            <div class="orbit-card__media">
+              <img src="Assets/img/nome-anteprima.png" alt="Nomen">
+            </div>
+            <div class="orbit-card__shade"></div>
+          </div>
+          <div class="orbit-card__info">
+            <div>
+              <span class="orbit-card__num">Video &amp; Motion</span>
+              <h3 class="orbit-card__title">Nomen</h3>
+              <p class="orbit-card__desc">Cortometraggio mystery ambientato nella Torino esoterica, tra tarocchi, coincidenze inquietanti e una parola misteriosa.</p>
+            </div>
+            <span class="orbit-card__cta">Esplora ↗</span>
+          </div>
+        </a>
+
+        <!-- Orbit Card 4 -->
+        <a href="welcome-back-champion.html" class="orbit-card" data-orbit-tilt>
+          <div class="orbit-card__tilt">
+            <div class="orbit-card__media">
+              <img src="Assets/img/tesi-affissioni.png" alt="Welcome back, Champion">
+            </div>
+            <div class="orbit-card__shade"></div>
+          </div>
+          <div class="orbit-card__info">
+            <div>
+              <span class="orbit-card__num">Campagna Crossmediale</span>
+              <h3 class="orbit-card__title">Welcome back, Champion</h3>
+              <p class="orbit-card__desc">Campagna per SUSTAINera che presenta i ricambi rigenerati come prodotti affidabili, performanti e sostenibili.</p>
+            </div>
+            <span class="orbit-card__cta">Esplora ↗</span>
+          </div>
+        </a>
+
+        <!-- Orbit Card 5 -->
+        <a href="gabbia.html" class="orbit-card" data-orbit-tilt>
+          <div class="orbit-card__tilt">
+            <div class="orbit-card__media">
+              <img src="Assets/img/gabbia1.png" alt="Gabbia">
+            </div>
+            <div class="orbit-card__shade"></div>
+          </div>
+          <div class="orbit-card__info">
+            <div>
+              <span class="orbit-card__num">Esperienza Immersiva</span>
+              <h3 class="orbit-card__title">Gabbia</h3>
+              <p class="orbit-card__desc">Una casa che da fuori sembra normale. Dentro, un'esperienza VR che fa vivere la violenza di genere in prima persona.</p>
+            </div>
+            <span class="orbit-card__cta">Esplora ↗</span>
+          </div>
+        </a>
+
+        <!-- Orbit Card 6 -->
+        <a href="la-forza-e-cura.html" class="orbit-card" data-orbit-tilt>
+          <div class="orbit-card__tilt">
+            <div class="orbit-card__media">
+              <img src="Assets/img/mockup-affissioni-forza.jpg" alt="La forza è cura">
+            </div>
+            <div class="orbit-card__shade"></div>
+          </div>
+          <div class="orbit-card__info">
+            <div>
+              <span class="orbit-card__num">Campagna Sociale</span>
+              <h3 class="orbit-card__title">La Forza è Cura</h3>
+              <p class="orbit-card__desc">Campagna partecipativa che racconta la forza come responsabilità, protezione e azione collettiva.</p>
+            </div>
+            <span class="orbit-card__cta">Esplora ↗</span>
+          </div>
+        </a>
+
+      </div>
     </div>
-  </div>
- 
+  </section>
+
   <footer>
+    <div class="wrap">
+      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;">Restiamo in contatto</span>
+      <nav class="footer-links">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank">Email</a>
+        <a href="https://www.linkedin.com/in/giulia-de-fazio-321a8a215/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/le_illustrazioni_di_lia/" target="_blank">Instagram</a>
+        <a href="https://www.behance.net/giuliadefazio" target="_blank">Behance</a>
+      </nav>
+    </div>
     <div class="wrap bottom">
       <span>© 2026 Giulia De Fazio</span>
       <span>Torino, Italia</span>
     </div>
   </footer>
- 
+
   <script src="main.js"></script>
 </body>
 </html>

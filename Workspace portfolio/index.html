@@ -4,166 +4,334 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Giulia De Fazio — Digital Communication Design</title>
+  <meta name="description" content="Portfolio di Giulia De Fazio, digital communication designer. Identità visiva, motion design, interaction design, illustrazione e video.">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
- 
-  <header>
+<body data-initial-loader="complete">
+
+  <!-- PROGRESSIVE BLUR HEADER -->
+  <div class="header-blur-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo-mark">Giulia De Fazio</a>
+    
+    <nav>
+      <ul class="nav-links-list">
+        <li><a href="about.html">Chi Sono</a></li>
+        <li><a href="progetti.html">Progetti</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </nav>
+
+    <!-- KOMMA KOMMA BUTTON-043 -->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
+      <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+      <span class="button-043__inner">
+        <span>Scrivimi</span>
+        <span class="button-043__icon-wrap">
+          <span class="button-043__icon-list">
+            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </span>
+      </span>
+    </a>
+  </header>
+
+  <!-- HERO SLIDESHOW -->
+  <section class="home-hero" aria-label="Progetti in evidenza">
+    <!-- MANUAL NAVIGATION ARROWS -->
+    <button type="button" class="home-hero__nav-arrow home-hero__nav-arrow--prev" id="hero-arrow-prev" aria-label="Progetto precedente">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    </button>
+    <button type="button" class="home-hero__nav-arrow home-hero__nav-arrow--next" id="hero-arrow-next" aria-label="Progetto successivo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+
+    <div class="home-hero__media" aria-hidden="true">
+      <div class="home-hero__slide is--current" data-index="0">
+        <img src="Assets/img/anteprima-juli.png" alt="Flow State">
+      </div>
+      <div class="home-hero__slide" data-index="1">
+        <img src="Assets/img/trama4.png" alt="Trama">
+      </div>
+      <div class="home-hero__slide" data-index="2">
+        <img src="Assets/img/nome-anteprima.png" alt="Nomen">
+      </div>
+      <div class="home-hero__slide" data-index="3">
+        <img src="Assets/img/tesi-affissioni.png" alt="Welcome back, Champion">
+      </div>
+    </div>
+
+    <div class="home-hero__shade" aria-hidden="true"></div>
+
+    <div class="home-hero__content">
+      <span class="home-hero__featured-label">Progetto in evidenza</span>
+      
+      <h1 class="home-hero__title" id="hero-slide-title">Flow State</h1>
+      
+      <p class="home-hero__statement" id="hero-slide-desc">
+        Capsule collection di acqua premium pensata come rituale quotidiano per rilassarsi e gestire lo stress.
+      </p>
+
+      <div class="home-hero__bottom-bar">
+        <a href="flowstate.html" id="hero-slide-link" class="button-043">
+          <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+          <span class="button-043__inner">
+            <span>Vedi progetto</span>
+            <span class="button-043__icon-wrap">
+              <span class="button-043__icon-list">
+                <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </span>
+          </span>
+        </a>
+
+        <!-- SLIDESHOW DOTS -->
+        <div class="home-hero__dots">
+          <button type="button" class="home-hero__dot is--current" data-index="0" aria-label="Mostra Flow State"></button>
+          <button type="button" class="home-hero__dot" data-index="1" aria-label="Mostra Trama"></button>
+          <button type="button" class="home-hero__dot" data-index="2" aria-label="Mostra Nomen"></button>
+          <button type="button" class="home-hero__dot" data-index="3" aria-label="Mostra Welcome back champion"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO / CHI SONO SECTION -->
+  <section class="intro-section section-tint" id="chi-sono">
     <div class="wrap">
-      <a href="index.html" class="logo">Giulia De Fazio</a>
-      <nav>
-        <ul>
-          <li><a href="about.html">Chi Sono</a></li>
-          <li><a href="progetti.html">Progetti</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
-        </ul>
+      <div class="section-label reveal">Chi Sono · Digital Communication Designer</div>
+      
+      <div class="intro-grid reveal">
+        <!-- LEFT COLUMN -->
+        <div>
+          <h2 class="intro-quote">
+            Do forma a idee che <span class="serif-highlight">coinvolgono</span> le persone.
+          </h2>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="intro-body">
+          <p>
+            Sono <strong>Giulia De Fazio</strong>, <strong>Digital Communication Designer</strong> di Torino.
+          </p>
+          <p>
+            Progetto <strong>esperienze</strong> e <strong>sistemi di comunicazione</strong> che prendono forma attraverso <span class="serif-accent">installazioni immersive, identità visive, contenuti, video, motion e campagne</span>.
+          </p>
+          <p>
+            Ogni progetto nasce dall'<strong>ascolto</strong>, dalla <strong>ricerca</strong> e dalla volontà di creare <strong>connessioni autentiche</strong> tra persone e brand.
+          </p>
+
+          <!-- ACTION BUTTONS -->
+          <div class="intro-actions">
+            <a href="about.html" class="button-043">
+              <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+              <span class="button-043__inner">
+                <span>Scopri di più su di me</span>
+                <span class="button-043__icon-wrap">
+                  <span class="button-043__icon-list">
+                    <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </span>
+              </span>
+            </a>
+
+            <a href="Assets/giulia_defazio_cv.pdf" target="_blank" class="button-043 button-dark">
+              <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+              <span class="button-043__inner">
+                <span>Scarica CV</span>
+                <span class="button-043__icon-wrap">
+                  <span class="button-043__icon-list">
+                    <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                    <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                  </span>
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORBIT TILES (3D TILT PROJECT DECK) -->
+  <section class="orbit-section" id="progetti">
+    <div class="wrap">
+      <div class="section-label reveal">Progetti Selezionati</div>
+
+      <div class="orbit-grid">
+
+      <!-- Orbit Card 1 -->
+      <a href="flowstate.html" class="orbit-card" data-orbit-tilt>
+        <div class="orbit-card__tilt">
+          <div class="orbit-card__media">
+            <img src="Assets/img/anteprima-juli.png" alt="Flow State">
+          </div>
+          <div class="orbit-card__shade"></div>
+        </div>
+        <div class="orbit-card__info">
+          <div>
+            <span class="orbit-card__num">Branding &amp; Packaging</span>
+            <h3 class="orbit-card__title">Flow State</h3>
+            <p class="orbit-card__desc">Capsule collection di acqua premium pensata come rituale quotidiano per rilassarsi.</p>
+          </div>
+          <span class="orbit-card__cta">Esplora ↗</span>
+        </div>
+      </a>
+
+      <!-- Orbit Card 2 -->
+      <a href="trama.html" class="orbit-card" data-orbit-tilt>
+        <div class="orbit-card__tilt">
+          <div class="orbit-card__media">
+            <img src="Assets/img/trama4.png" alt="Trama">
+          </div>
+          <div class="orbit-card__shade"></div>
+        </div>
+        <div class="orbit-card__info">
+          <div>
+            <span class="orbit-card__num">Esperienza Immersiva</span>
+            <h3 class="orbit-card__title">Trama</h3>
+            <p class="orbit-card__desc">Un’installazione urbana sui difetti che nascondiamo vista attraverso gli occhi degli altri.</p>
+          </div>
+          <span class="orbit-card__cta">Esplora ↗</span>
+        </div>
+      </a>
+
+      <!-- Orbit Card 3 -->
+      <a href="nomen.html" class="orbit-card" data-orbit-tilt>
+        <div class="orbit-card__tilt">
+          <div class="orbit-card__media">
+            <img src="Assets/img/nome-anteprima.png" alt="Nomen">
+          </div>
+          <div class="orbit-card__shade"></div>
+        </div>
+        <div class="orbit-card__info">
+          <div>
+            <span class="orbit-card__num">Video &amp; Motion</span>
+            <h3 class="orbit-card__title">Nomen</h3>
+            <p class="orbit-card__desc">Cortometraggio mystery ambientato nella Torino esoterica, tra tarocchi e coincidenze.</p>
+          </div>
+          <span class="orbit-card__cta">Esplora ↗</span>
+        </div>
+      </a>
+
+      <!-- Orbit Card 4 -->
+      <a href="welcome-back-champion.html" class="orbit-card" data-orbit-tilt>
+        <div class="orbit-card__tilt">
+          <div class="orbit-card__media">
+            <img src="Assets/img/tesi-affissioni.png" alt="Welcome back, Champion">
+          </div>
+          <div class="orbit-card__shade"></div>
+        </div>
+        <div class="orbit-card__info">
+          <div>
+            <span class="orbit-card__num">Campagna Crossmediale</span>
+            <h3 class="orbit-card__title">Welcome back, Champion</h3>
+            <p class="orbit-card__desc">Campagna per SUSTAINera che presenta i ricambi rigenerati come campioni che tornano in gioco.</p>
+          </div>
+          <span class="orbit-card__cta">Esplora ↗</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- BUTTON: SCOPRI TUTTI I PROGETTI -->
+    <div style="margin-top: 48px; display: flex; justify-content: center;">
+      <a href="progetti.html" class="button-043">
+        <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+        <span class="button-043__inner">
+          <span>Scopri tutti i progetti</span>
+          <span class="button-043__icon-wrap">
+            <span class="button-043__icon-list">
+              <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </span>
+        </span>
+      </a>
+    </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION (FEATURED LIGHT ACCENT SECTION) -->
+  <section class="section-tint" id="contatti" style="padding: 80px 0; border-top: 1px solid var(--line-burgundy); border-bottom: 1px solid var(--line-burgundy);">
+    <div class="wrap">
+      <div class="section-label reveal">Mettiamoci in contatto</div>
+      
+      <h2 class="reveal" style="font-family: var(--font-serif); font-style: normal; font-weight: 400; font-size: clamp(36px, 5vw, 68px); line-height: 1.05; letter-spacing: -0.02em; color: var(--color-onyx); margin-bottom: 12px;">
+        Scrivimi :)
+      </h2>
+
+      <p class="reveal" style="font-family: var(--font-serif); font-style: italic; font-size: clamp(18px, 2vw, 26px); color: var(--color-onyx-muted); max-width: 58ch; line-height: 1.4;">
+        Hai un’idea, una collaborazione o un progetto da sviluppare insieme?
+      </p>
+
+      <!-- LIGHT CARDS GRID MATCHING CONTATTI PAGE -->
+      <div class="contact-grid-light reveal" style="margin-top: 36px;">
+        
+        <!-- EMAIL -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="contact-card-light">
+          <div>
+            <span class="label">Email</span>
+            <div class="val">giuliadefazio.work@gmail.com</div>
+          </div>
+          <span class="action-tag">Scrivimi ↗</span>
+        </a>
+
+        <!-- LINKEDIN -->
+        <a href="https://www.linkedin.com/in/giulia-de-fazio-321a8a215/" target="_blank" class="contact-card-light">
+          <div>
+            <span class="label">LinkedIn</span>
+            <div class="val">Giulia De Fazio</div>
+          </div>
+          <span class="action-tag">Profilo ↗</span>
+        </a>
+
+        <!-- INSTAGRAM -->
+        <a href="https://www.instagram.com/le_illustrazioni_di_lia/" target="_blank" class="contact-card-light">
+          <div>
+            <span class="label">Instagram</span>
+            <div class="val">@le_illustrazioni_di_lia</div>
+          </div>
+          <span class="action-tag">Segui ↗</span>
+        </a>
+
+        <!-- BEHANCE -->
+        <a href="https://www.behance.net/giuliadefazio" target="_blank" class="contact-card-light">
+          <div>
+            <span class="label">Behance</span>
+            <div class="val">giuliadefazio</div>
+          </div>
+          <span class="action-tag">Portfolio ↗</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;">Restiamo in contatto</span>
+      <nav class="footer-links">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank">Email</a>
+        <a href="https://www.linkedin.com/in/giulia-de-fazio-321a8a215/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/le_illustrazioni_di_lia/" target="_blank">Instagram</a>
+        <a href="https://www.behance.net/giuliadefazio" target="_blank">Behance</a>
       </nav>
     </div>
-  </header>
- 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="blob"></div>
-    <div class="wrap">
-      <h1>Do forma a idee che <em>parlano</em> alle persone.</h1>
-      <p class="claim">Uso il design come strumento per osservare le persone, capirne i bisogni e trasformarli in comunicazione chiara, sensibile e concreta.</p>
-      <div class="hero-actions">
-        <a href="progetti.html" class="btn">Scopri i progetti</a>
-        <a href="Assets/giulia_defazio_cv.pdf" target="_blank" class="btn-ghost">Scarica il CV</a>
-      </div>
-    </div>
-  </section>
- 
-  <!-- PROGETTI -->
-  <section id="progetti">
-    <div class="wrap">
-      <div class="section-label reveal">Progetti selezionati</div>
-      <div class="projects-grid reveal">
- 
-        <a class="project-card p-flowstate" href="flowstate.html">
-          <div class="thumb"></div>
-          <div class="project-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
-          <div class="meta">
-            <h3>Flow State</h3>
-            <div class="project-tag">Brand identity e digital marketing</div>
-            <p class="project-overview">Capsule collection di acque funzionali pensata come rituale quotidiano per rilassarsi e gestire lo stress.</p>
-          </div>
-        </a>
- 
-        <a class="project-card p-trama" href="trama.html">
-          <div class="thumb"></div>
-          <div class="project-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
-          <div class="meta">
-            <h3>Trama</h3>
-            <div class="project-tag">Installation Design / Interaction Design</div>
-            <p class="project-overview">Un’installazione urbana sui difetti che nascondiamo e su come cambiano quando li guardiamo attraverso gli occhi di uno sconosciuto.</p>
-          </div>
-        </a>
- 
-        <a class="project-card p-nomen" href="nomen.html">
-          <div class="thumb"></div>
-          <div class="project-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
-          <div class="meta">
-            <h3>Nomen</h3>
-            <div class="project-tag">Video e motion design</div>
-            <p class="project-overview">Cortometraggio mystery ambientato nella Torino esoterica, tra tarocchi, coincidenze inquietanti e una parola misteriosa.</p>
-          </div>
-        </a>
- 
-        <a class="project-card p-welcome-back" href="welcome-back-champion.html">
-          <div class="thumb"></div>
-          <div class="project-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></div>
-          <div class="meta">
-            <h3>Welcome back, champion</h3>
-            <div class="project-tag">Campagna crossmediale</div>
-            <p class="project-overview">Campagna per SUSTAINera che presenta i ricambi rigenerati come prodotti affidabili, performanti e sostenibili.</p>
-          </div>
-        </a>
- 
-      </div>
-      
-      <div class="projects-cta reveal" style="text-align: center; margin-top: 56px;">
-        <a href="progetti.html" class="btn">Vedi tutti i progetti</a>
-      </div>
-    </div>
-  </section>
- 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="wrap">
-      <div class="section-label reveal">Chi sono</div>
-      <div class="about" style="display: flex; flex-direction: column; gap: 24px; max-width: 800px;">
-        <div class="about-quote reveal" style="font-size: clamp(24px, 2.8vw, 36px); line-height: 1.3; font-weight: 500; font-family: 'Fraunces', serif;">
-          Sono Giulia, una <span>digital communication designer</span>.
-        </div>
-        <div class="about-body reveal">
-          <p style="font-size: 17px; line-height: 1.6; color: var(--ink-dim); max-width: 68ch; margin-bottom: 24px;">
-            Lavoro tra identità visiva, grafica, illustrazione, contenuti social, video e motion design. Uso il design per trasformare idee e intuizioni in progetti capaci di arrivare alle persone.
-          </p>
-          <a href="about.html" class="accent-link">
-            Scopri di più su di me <span>→</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
- 
-  <!-- CONTATTI -->
-  <section id="contatti" class="contact">
-    <div class="wrap">
-      <div class="section-label reveal">Contatti</div>
-      <h2 class="reveal">Hai un progetto, un’idea da sviluppare o semplicemente qualcosa di interessante da raccontarmi?<br><strong><em>Scrivimi</em></strong> o seguimi sui miei canali :)</h2>
-      <div class="contact-grid reveal">
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="contact-card">
-          <span class="card-label">Email</span>
-          <span class="card-value">
-            giuliadefazio.work@gmail.com
-            <span class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 14px; height: 14px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          </span>
-        </a>
-        <a href="https://www.linkedin.com/in/giulia-de-fazio-321a8a215/" target="_blank" class="contact-card">
-          <span class="card-label">LinkedIn</span>
-          <span class="card-value">
-            Giulia De Fazio
-            <span class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 14px; height: 14px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          </span>
-        </a>
-        <a href="https://www.instagram.com/le_illustrazioni_di_lia/" target="_blank" class="contact-card">
-          <span class="card-label">Instagram</span>
-          <span class="card-value">
-            @le_illustrazioni_di_lia
-            <span class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 14px; height: 14px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          </span>
-        </a>
-        <a href="https://www.behance.net/giuliadefazio" target="_blank" class="contact-card">
-          <span class="card-label">Behance</span>
-          <span class="card-value">
-            Progetti
-            <span class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 14px; height: 14px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          </span>
-        </a>
-      </div>
-    </div>
-  </section>
- 
-  <!-- MARQUEE -->
-  <div class="marquee-wrap">
-    <div class="marquee">
-      <span>Ricerca</span><span class="accentword">Comunicazione</span><span>Ascolto</span><span class="accentword">Cura</span><span>Connessione</span><span class="accentword">Design</span>
-      <span>Ricerca</span><span class="accentword">Comunicazione</span><span>Ascolto</span><span class="accentword">Cura</span><span>Connessione</span><span class="accentword">Design</span>
-    </div>
-  </div>
- 
-  <footer>
     <div class="wrap bottom">
       <span>© 2026 Giulia De Fazio</span>
       <span>Torino, Italia</span>
     </div>
   </footer>
- 
+
   <script src="main.js"></script>
 </body>
 </html>

@@ -3,60 +3,190 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Giulia De Fazio</title>
+  <title>Chi Sono — Giulia De Fazio</title>
+  <meta name="description" content="Chi sono — Giulia De Fazio, Digital Communication Designer a Torino. Identità visiva, motion design, illustrazione e strategia.">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
-  <header>
-    <div class="wrap">
-      <a href="index.html" class="logo">Giulia De Fazio</a>
-      <nav>
-        <ul>
-          <li><a href="about.html" class="active">Chi Sono</a></li>
-          <li><a href="progetti.html">Progetti</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-      </nav>
-    </div>
+
+  <!-- PROGRESSIVE BLUR HEADER -->
+  <div class="header-blur-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo-mark">Giulia De Fazio</a>
+    
+    <nav>
+      <ul class="nav-links-list">
+        <li><a href="about.html" class="active">Chi Sono</a></li>
+        <li><a href="progetti.html">Progetti</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </nav>
+
+    <!-- KOMMA KOMMA BUTTON-043 -->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
+      <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+      <span class="button-043__inner">
+        <span>Scrivimi</span>
+        <span class="button-043__icon-wrap">
+          <span class="button-043__icon-list">
+            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </span>
+      </span>
+    </a>
   </header>
- 
-  <!-- ABOUT SECTION -->
-  <section class="hero inner-page-section">
-    <div class="blob"></div>
+
+  <!-- EDITORIAL HERO HEADER -->
+  <section style="padding: 140px clamp(24px, 5vw, 64px) 48px; border-bottom: 1px solid var(--line-color);">
     <div class="wrap">
-      <div class="section-label reveal">Chi sono</div>
-      <div class="about">
-        <div class="about-quote reveal">
-          Per me il design è un modo per trasformare idee e intuizioni in qualcosa che possa <span>arrivare davvero</span> alle persone.
+      <h1 class="reveal" style="font-family: var(--font-serif); font-weight: 400; font-size: clamp(38px, 5.5vw, 76px); line-height: 0.95; letter-spacing: -0.02em; color: var(--color-onyx); margin-bottom: 20px;">
+        Ciao, sono <span class="serif-highlight">Giulia.</span>
+      </h1>
+      <p class="reveal" style="font-family: var(--font-serif); font-style: italic; font-size: clamp(20px, 2.2vw, 30px); color: var(--color-onyx-muted); max-width: 860px; line-height: 1.35;">
+        Digital Communication Designer di Torino.<br>Progetto esperienze che uniscono strategia, sensibilità visiva e narrazione.
+      </p>
+
+      <!-- MINIMALIST DISCIPLINE TAGS -->
+      <div class="reveal tag-row" style="margin-top: 28px;">
+        <span class="tag-chip">Identità Visiva</span>
+        <span class="tag-chip">Campagne Crossmediali</span>
+        <span class="tag-chip">Video &amp; Motion</span>
+        <span class="tag-chip">Immersive Experience</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN BIO & CV SECTION -->
+  <section style="padding: 80px 0; background: var(--bg-alabaster);">
+    <div class="wrap">
+      <div class="bio-cv-grid" style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 60px; align-items: start;">
+        
+        <!-- LEFT COLUMN: BIO PARAGRAPHS -->
+        <div class="reveal" style="font-family: var(--font-sans); font-size: clamp(16px, 1.7vw, 20px); color: var(--color-onyx-muted); line-height: 1.65; display: flex; flex-direction: column; gap: 24px; max-width: 58ch;">
+          <p>
+            Sono una designer della comunicazione digitale e progetto esperienze e sistemi di comunicazione che prendono forma attraverso <strong>installazioni immersive, identità visive, contenuti, video, motion e campagne</strong>.
+          </p>
+          <p>
+            Il mio approccio parte dall'<strong>ascolto</strong>, dalla <strong>ricerca</strong> e dall'<strong>analisi</strong> dei bisogni, cercando il giusto equilibrio tra strategia, sensibilità visiva e attenzione ai dettagli.
+          </p>
+          <p>
+            Sono una persona <strong>curiosa, proattiva</strong> e credo nel design come strumento per <strong>attivare, connettere persone e dare forma a valori condivisi</strong>.
+          </p>
         </div>
-        <div class="about-body reveal">
-          <p>Sono una designer della comunicazione digitale e lavoro tra identità visiva, grafica, illustrazione, contenuti social, video e motion design. Mi interessa creare progetti capaci di comunicare con chiarezza, coinvolgere e ispirare.</p>
-          <p>Il mio modo di lavorare parte dall’ascolto e dalla ricerca. Osservo il contesto e trasformo bisogni e intuizioni in un linguaggio visivo coerente, riconoscibile e curato nei dettagli.</p>
-          <p>Cerco ogni volta il giusto equilibrio tra strategia e sensibilità visiva, senza perdere di vista le persone a cui il progetto si rivolge.</p>
+
+        <!-- RIGHT COLUMN: ELEGANT DARK CV POSTER CARD -->
+        <div class="reveal" style="background: var(--color-onyx); color: #FFFFFF; padding: 40px 32px; border-radius: 20px; display: flex; flex-direction: column; justify-content: space-between; gap: 28px; box-shadow: 0 12px 28px rgba(0,0,0,0.06);">
+          <div>
+            <span style="font-family: var(--font-sans); font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 12px;">Curriculum</span>
+            <h2 style="font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 19px; line-height: 1.4; color: #FFFFFF;">
+              Esplora il mio percorso.
+            </h2>
+          </div>
+
+          <div>
+            <a href="Assets/giulia_defazio_cv.pdf" target="_blank" class="button-043 button-cv-dark">
+              <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+              <span class="button-043__inner">
+                <span>Scarica CV</span>
+                <span class="button-043__icon-wrap">
+                  <span class="button-043__icon-list">
+                    <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                    <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7-7 7"/></svg>
+                  </span>
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COME LAVORO / METODO -->
+  <section id="metodo" class="section-tint">
+    <div class="wrap">
+      <div class="section-label reveal">Metodo</div>
+      <h2 class="reveal" style="margin-bottom: 36px;">Come lavoro</h2>
+      <div class="story-steps">
+        <div class="story-step reveal">
+          <div class="n">01</div>
+          <h3>Ascolto</h3>
+          <p>Immergersi nel contesto, comprendere gli obiettivi e ascoltare i bisogni reali delle persone e dei brand.</p>
+        </div>
+        <div class="story-step reveal">
+          <div class="n">02</div>
+          <h3>Ricerca</h3>
+          <p>Esplorare linguaggi visivi, analizzare scenari e raccogliere spunti per costruire una base solida.</p>
+        </div>
+        <div class="story-step reveal">
+          <div class="n">03</div>
+          <h3>Concept</h3>
+          <p>Definire l'idea chiave, il tono di voce e l'identità visiva che daranno forma e direzione al progetto.</p>
+        </div>
+        <div class="story-step reveal">
+          <div class="n">04</div>
+          <h3>Cura</h3>
+          <p>Sviluppare i contenuti, curare la resa tecnica e i dettagli per una realizzazione coerente ed efficace.</p>
         </div>
       </div>
     </div>
   </section>
- 
-  <!-- MARQUEE -->
-  <div class="marquee-wrap">
-    <div class="marquee">
-      <span>Ricerca</span><span class="accentword">Comunicazione</span><span>Ascolto</span><span class="accentword">Cura</span><span>Connessione</span><span class="accentword">Design</span>
-      <span>Ricerca</span><span class="accentword">Comunicazione</span><span>Ascolto</span><span class="accentword">Cura</span><span>Connessione</span><span class="accentword">Design</span>
+
+  <!-- STRUMENTI & COMPETENZE -->
+  <section id="strumenti">
+    <div class="wrap">
+      <div class="section-label reveal">Toolkit</div>
+      <div class="two-col reveal">
+        <h2>Strumenti</h2>
+        <div class="body">
+          <p style="margin-bottom: 24px;">Cosa utilizzo nel mio lavoro:</p>
+          <div class="tool-icon-grid">
+            <div class="app-icon-badge" data-tooltip="Photoshop" aria-label="Photoshop">Ps</div>
+            <div class="app-icon-badge" data-tooltip="Adobe Illustrator" aria-label="Adobe Illustrator">Ai</div>
+            <div class="app-icon-badge" data-tooltip="After Effects" aria-label="After Effects">Ae</div>
+            <div class="app-icon-badge" data-tooltip="InDesign" aria-label="InDesign">Id</div>
+            <div class="app-icon-badge" data-tooltip="Premiere Pro" aria-label="Premiere Pro">Pr</div>
+            
+            <div class="app-icon-badge" data-tooltip="Figma" aria-label="Figma">
+              <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M5 5.5A3.5 3.5 0 018.5 2H12v7H8.5A3.5 3.5 0 015 5.5zM12 2h3.5a3.5 3.5 0 110 7H12V2zM12 12.5a3.5 3.5 0 117 0 3.5 3.5 0 01-7 0zM5 19.5A3.5 3.5 0 018.5 16H12v3.5a3.5 3.5 0 11-7 0zM5 12.5A3.5 3.5 0 018.5 9H12v7H8.5A3.5 3.5 0 015 12.5z"/></svg>
+            </div>
+            
+            <div class="app-icon-badge" data-tooltip="Procreate" aria-label="Procreate">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 17C6 14 10 7 13 4C16 1 20 4 19 8C18 12 14 16 11 18C8 20 5 19 4 17Z"/></svg>
+            </div>
+
+            <div class="app-icon-badge" data-tooltip="Antigravity" aria-label="Antigravity">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18C4 18 8 5 12 5C16 5 20 18 20 18C20 18 16 10 12 10C8 10 4 18 4 18Z"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
- 
+  </section>
+
   <footer>
+    <div class="wrap">
+      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;">Restiamo in contatto</span>
+      <nav class="footer-links">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank">Email</a>
+        <a href="https://www.linkedin.com/in/giulia-de-fazio-321a8a215/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/le_illustrazioni_di_lia/" target="_blank">Instagram</a>
+        <a href="https://www.behance.net/giuliadefazio" target="_blank">Behance</a>
+      </nav>
+    </div>
     <div class="wrap bottom">
       <span>© 2026 Giulia De Fazio</span>
       <span>Torino, Italia</span>
     </div>
   </footer>
- 
+
   <script src="main.js"></script>
 </body>
 </html>

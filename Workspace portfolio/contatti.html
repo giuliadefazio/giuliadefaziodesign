@@ -4,80 +4,117 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contatti — Giulia De Fazio</title>
+  <meta name="description" content="Contatti — Giulia De Fazio, Digital Communication Designer a Torino. Mettiamoci in contatto per collaborazioni e progetti.">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
-  <header>
+
+  <!-- PROGRESSIVE BLUR HEADER -->
+  <div class="header-blur-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo-mark">Giulia De Fazio</a>
+    
+    <nav>
+      <ul class="nav-links-list">
+        <li><a href="about.html">Chi Sono</a></li>
+        <li><a href="progetti.html">Progetti</a></li>
+        <li><a href="contatti.html" class="active">Contatti</a></li>
+      </ul>
+    </nav>
+
+    <!-- KOMMA KOMMA BUTTON-043 -->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
+      <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+      <span class="button-043__inner">
+        <span>Scrivimi</span>
+        <span class="button-043__icon-wrap">
+          <span class="button-043__icon-list">
+            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </span>
+      </span>
+    </a>
+  </header>
+
+  <!-- MAIN CONTACT SECTION (LIGHT ALABASTER EDITORIAL STYLE) -->
+  <main style="padding-top: 100px; padding-bottom: 40px; display: flex; flex-direction: column; justify-content: center;">
+    
+    <section style="padding: 20px clamp(24px, 5vw, 64px);">
+      <div class="wrap">
+        <h1 class="reveal" style="font-family: var(--font-serif); font-style: normal; font-weight: 400; font-size: clamp(36px, 5.5vw, 76px); line-height: 1.05; letter-spacing: -0.02em; color: var(--color-onyx); margin-bottom: 24px;">
+          Hai un’idea o un progetto da sviluppare insieme?
+        </h1>
+
+        <!-- LIGHT CARDS GRID -->
+        <div class="contact-grid-light reveal">
+          
+          <!-- EMAIL -->
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="contact-card-light">
+            <div>
+              <span class="label">Email</span>
+              <div class="val">giuliadefazio.work@gmail.com</div>
+            </div>
+            <span class="action-tag">Scrivimi ↗</span>
+          </a>
+
+          <!-- LINKEDIN -->
+          <a href="https://www.linkedin.com/in/giulia-de-fazio-321a8a215/" target="_blank" class="contact-card-light">
+            <div>
+              <span class="label">LinkedIn</span>
+              <div class="val">Giulia De Fazio</div>
+            </div>
+            <span class="action-tag">Profilo ↗</span>
+          </a>
+
+          <!-- INSTAGRAM -->
+          <a href="https://www.instagram.com/le_illustrazioni_di_lia/" target="_blank" class="contact-card-light">
+            <div>
+              <span class="label">Instagram</span>
+              <div class="val">@le_illustrazioni_di_lia</div>
+            </div>
+            <span class="action-tag">Segui ↗</span>
+          </a>
+
+          <!-- BEHANCE -->
+          <a href="https://www.behance.net/giuliadefazio" target="_blank" class="contact-card-light">
+            <div>
+              <span class="label">Behance</span>
+              <div class="val">giuliadefazio</div>
+            </div>
+            <span class="action-tag">Portfolio ↗</span>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
     <div class="wrap">
-      <a href="index.html" class="logo">Giulia De Fazio</a>
-      <nav>
-        <ul>
-          <li><a href="about.html">Chi Sono</a></li>
-          <li><a href="progetti.html">Progetti</a></li>
-          <li><a href="contatti.html" class="active">Contatti</a></li>
-        </ul>
+      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;">Restiamo in contatto</span>
+      <nav class="footer-links">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank">Email</a>
+        <a href="https://www.linkedin.com/in/giulia-de-fazio-321a8a215/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/le_illustrazioni_di_lia/" target="_blank">Instagram</a>
+        <a href="https://www.behance.net/giuliadefazio" target="_blank">Behance</a>
       </nav>
     </div>
-  </header>
- 
-  <!-- CONTACT SECTION -->
-  <section class="hero inner-page-section contact">
-    <div class="blob"></div>
-    <div class="wrap">
-      <div class="section-label reveal">Contatti</div>
-      <h2 class="reveal">Hai un progetto, un’idea da sviluppare o semplicemente qualcosa di interessante da raccontarmi?<br><strong><em>Scrivimi</em></strong> o seguimi sui miei canali :)</h2>
-      <div class="contact-grid reveal">
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="contact-card">
-          <span class="card-label">Email</span>
-          <span class="card-value">
-            giuliadefazio.work@gmail.com
-            <span class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 14px; height: 14px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          </span>
-        </a>
-        <a href="https://www.linkedin.com/in/giulia-de-fazio-321a8a215/" target="_blank" class="contact-card">
-          <span class="card-label">LinkedIn</span>
-          <span class="card-value">
-            Giulia De Fazio
-            <span class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 14px; height: 14px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          </span>
-        </a>
-        <a href="https://www.instagram.com/le_illustrazioni_di_lia/" target="_blank" class="contact-card">
-          <span class="card-label">Instagram</span>
-          <span class="card-value">
-            @le_illustrazioni_di_lia
-            <span class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 14px; height: 14px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          </span>
-        </a>
-        <a href="https://www.behance.net/giuliadefazio" target="_blank" class="contact-card">
-          <span class="card-label">Behance</span>
-          <span class="card-value">
-            Progetti
-            <span class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 14px; height: 14px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          </span>
-        </a>
-      </div>
-    </div>
-  </section>
- 
-  <!-- MARQUEE -->
-  <div class="marquee-wrap">
-    <div class="marquee">
-      <span>Ricerca</span><span class="accentword">Comunicazione</span><span>Ascolto</span><span class="accentword">Cura</span><span>Connessione</span><span class="accentword">Design</span>
-      <span>Ricerca</span><span class="accentword">Comunicazione</span><span>Ascolto</span><span class="accentword">Cura</span><span>Connessione</span><span class="accentword">Design</span>
-    </div>
-  </div>
- 
-  <footer>
     <div class="wrap bottom">
       <span>© 2026 Giulia De Fazio</span>
       <span>Torino, Italia</span>
     </div>
   </footer>
- 
+
   <script src="main.js"></script>
 </body>
 </html>
