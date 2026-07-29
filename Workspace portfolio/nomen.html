@@ -6,25 +6,38 @@
   <title>Nomen — Giulia De Fazio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
  
-  <header>
-    <div class="wrap">
-      <a href="index.html" class="back-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-        Giulia De Fazio
-      </a>
-      <nav>
-        <ul>
-          <li><a href="about.html">Chi Sono</a></li>
-          <li><a href="progetti.html" class="active">Progetti</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-      </nav>
-    </div>
+  <!-- PROGRESSIVE BLUR HEADER -->
+  <div class="header-blur-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo-mark">Giulia De Fazio</a>
+    
+    <nav>
+      <ul class="nav-links-list">
+        <li><a href="about.html">Chi Sono</a></li>
+        <li><a href="progetti.html" class="active">Progetti</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </nav>
+
+    <!-- KOMMA KOMMA BUTTON-043 -->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
+      <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+      <span class="button-043__inner">
+        <span>Scrivimi</span>
+        <span class="button-043__icon-wrap">
+          <span class="button-043__icon-list">
+            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </span>
+      </span>
+    </a>
   </header>
  
   <!-- TOP NAV -->
@@ -36,22 +49,40 @@
       </a>
       <a href="welcome-back-champion.html">
         <span class="dir">Prossimo progetto →</span>
-        <span class="title">Welcome back, champion</span>
+        <span class="title">Welcome back, Champion</span>
       </a>
     </div>
   </nav>
  
   <!-- HERO -->
   <section class="project-detail-hero">
-    <div class="wrap">
-      <div class="hero-eyebrow">Video &amp; Motion Design — Progetto universitario</div>
-      <h1>Nomen</h1>
-      <div class="claim">Un cortometraggio thriller sospeso tra i tarocchi e il destino nella Torino esoterica.</div>
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <div class="hero-eyebrow">Video &amp; Motion — Progetto universitario</div>
+        <h1>Nomen</h1>
+        <div class="claim">Un cortometraggio thriller sospeso tra i tarocchi e il destino nella Torino esoterica.</div>
+      </div>
+      <div class="hero-img reveal" style="max-width: 440px; width: 100%; border-radius: 16px; overflow: hidden; border: 1px solid var(--line-color);">
+        <img src="Assets/img/nome-anteprima.png" alt="Anteprima Nomen" style="width: 100%; height: auto; display: block;">
+      </div>
     </div>
   </section>
   
+  <!-- BRIEF / CONCEPT -->
+  <section id="brief" class="section-accent">
+    <div class="wrap">
+      <div class="section-label reveal">Il concept</div>
+      <div class="two-col reveal">
+        <h2>Quando il destino chiama per nome</h2>
+        <div class="body">
+          <p><strong>NOMEN</strong> è un <strong>cortometraggio thriller</strong> ambientato nella <strong>Torino esoterica</strong>. Una studentessa fuorisede trova un antico mazzo di <strong>tarocchi</strong> appartenuto a Gustavo Rol, dando inizio a una serie di coincidenze inquietanti che mettono in dubbio il confine tra realtà e soprannaturale. Il progetto esplora il rapporto tra <strong>destino, caso e identità</strong> attraverso i simboli dei tarocchi e l’immaginario occulto della città.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- VIDEO INTEGRALE -->
-  <section id="video">
+  <section id="video" class="section-tint">
     <div class="wrap">
       <div class="section-label reveal">Il progetto</div>
       <div class="reveal">
@@ -69,24 +100,10 @@
           <span>Nomen — video integrale</span>
           <span>9:05 min</span>
         </div>
-        <div class="project-description" style="margin-top: 32px; max-width: 80ch; color: var(--ink-dim); font-size: 15.5px; line-height: 1.6;">
-          <p style="margin-bottom: 16px;">La <strong>direzione visiva</strong> accompagna la progressiva perdita di controllo della protagonista. Le prime scene presentano una quotidianità apparentemente tranquilla, con tonalità naturali e una luce più morbida; con l’avanzare della storia, gli ambienti diventano più scuri, le <strong>ombre più profonde</strong> e i contrasti più marcati.</p>
-          <p style="margin-bottom: 16px;">La <strong>color correction</strong> rafforza questo passaggio, alternando le tonalità calde degli interni a dominanti più fredde e verdastre nelle sequenze notturne.</p>
-          <p>La luce proviene spesso da <strong>fonti presenti nella scena</strong>, come lampade, luci stradali e candele, che permettono di lasciare parte degli ambienti nell’ombra e costruire un’atmosfera <strong>intima, claustrofobica e inquietante</strong>. Il montaggio parte da un ritmo più disteso e diventa progressivamente <strong>più serrato</strong>, mentre suono, luce e colore lavorano insieme per suggerire una presenza soprannaturale senza mostrarla completamente.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BRIEF / CONCEPT -->
-  <section id="brief">
-    <div class="wrap">
-      <div class="section-label reveal">Il concept</div>
-      <div class="two-col reveal">
-        <h2>Quando il destino chiama per nome</h2>
-        <div class="body">
-          <p><strong>NOMEN</strong> è un cortometraggio thriller ambientato nella <strong>Torino esoterica</strong>. La storia segue una studentessa fuorisede che, dopo essersi trasferita in un appartamento affacciato su <strong>Piazza Statuto</strong>, trova un vecchio mazzo di tarocchi appartenuto a <strong>Gustavo Rol</strong>.</p>
-          <p>Da quel momento, le carte iniziano ad apparire nella sua quotidianità e una serie di coincidenze sempre più inquietanti mette in discussione il confine tra <strong>realtà e soprannaturale</strong>. Il progetto racconta il rapporto tra <strong>caso, destino e identità</strong>, utilizzando i simboli dei tarocchi e l’immaginario occulto della città.</p>
+        <div class="project-description" style="margin-top: 32px; max-width: 58ch; color: var(--color-onyx-muted); font-size: 16px; line-height: 1.6;">
+          <p style="margin-bottom: 16px;">La <strong>direzione visiva</strong> accompagna la progressiva perdita di controllo della protagonista: dalla <strong>calma apparente</strong> delle prime scene, caratterizzate da luce morbida e tonalità naturali, si passa a una sensazione di <strong>ansia</strong> data spazi più scuri, ombre profonde e contrasti marcati.</p>
+          <p style="margin-bottom: 16px;">La <strong>luce</strong>, spesso proveniente da fonti interne alla scena, e la <strong>variazione cromatica</strong> tra toni caldi e freddi costruiscono un’atmosfera intima e inquietante.</p>
+          <p>Il <strong>montaggio</strong> accelera gradualmente, mentre immagini, <strong>suono</strong> e <strong>colore</strong> suggeriscono una presenza soprannaturale senza mostrarla mai del tutto.</p>
         </div>
       </div>
     </div>
@@ -102,12 +119,21 @@
       </a>
       <a href="welcome-back-champion.html">
         <span class="dir">Prossimo progetto →</span>
-        <span class="title">Welcome back, champion</span>
+        <span class="title">Welcome back, Champion</span>
       </a>
     </div>
   </nav>
  
   <footer>
+    <div class="wrap">
+      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;">Restiamo in contatto</span>
+      <nav class="footer-links">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank">Email</a>
+        <a href="https://www.linkedin.com/in/giulia-de-fazio-321a8a215/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/le_illustrazioni_di_lia/" target="_blank">Instagram</a>
+        <a href="https://www.behance.net/giuliadefazio" target="_blank">Behance</a>
+      </nav>
+    </div>
     <div class="wrap bottom">
       <span>© 2026 Giulia De Fazio</span>
       <span>Torino, Italia</span>

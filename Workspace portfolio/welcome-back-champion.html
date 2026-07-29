@@ -6,25 +6,38 @@
   <title>Welcome Back, Champion — Giulia De Fazio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
  
-  <header>
-    <div class="wrap">
-      <a href="index.html" class="back-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-        Giulia De Fazio
-      </a>
-      <nav>
-        <ul>
-          <li><a href="about.html">Chi Sono</a></li>
-          <li><a href="progetti.html" class="active">Progetti</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-      </nav>
-    </div>
+  <!-- PROGRESSIVE BLUR HEADER -->
+  <div class="header-blur-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo-mark">Giulia De Fazio</a>
+    
+    <nav>
+      <ul class="nav-links-list">
+        <li><a href="about.html">Chi Sono</a></li>
+        <li><a href="progetti.html" class="active">Progetti</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </nav>
+
+    <!-- KOMMA KOMMA BUTTON-043 -->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
+      <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+      <span class="button-043__inner">
+        <span>Scrivimi</span>
+        <span class="button-043__icon-wrap">
+          <span class="button-043__icon-list">
+            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </span>
+      </span>
+    </a>
   </header>
  
   <!-- TOP NAV -->
@@ -46,11 +59,11 @@
     <div class="wrap hero-grid">
       <div class="hero-text">
         <div class="hero-eyebrow">Campagna crossmediale — Progetto universitario</div>
-        <h1>Welcome Back, Champion</h1>
+        <h1>Welcome back, Champion</h1>
         <div class="claim">"Sustainera is the place that says to champions: welcome back."</div>
       </div>
       <div class="hero-img reveal">
-        <img src="Assets/img/tesi-affissioni.png" alt="Copertina del progetto Welcome Back, Champion per Sustainera">
+        <img src="Assets/img/tesi-affissioni.png" alt="Copertina del progetto Welcome back, Champion per Sustainera">
       </div>
     </div>
   </section>
@@ -61,14 +74,14 @@
       <div class="section-label reveal">Il brand e il brief</div>
       <div class="two-col reveal" style="align-items: flex-start;">
         <div>
-          <h2>Non un sub-brand. Un'evoluzione sostenibile.</h2>
-          <div style="margin-top: 32px; max-width: 240px; opacity: 0.85;">
+          <h2>Non solo un sub-brand, ma un'evoluzione sostenibile.</h2>
+          <div style="margin-top: 32px; max-width: 260px; background: var(--color-onyx); padding: 18px 24px; border-radius: 14px; box-shadow: 0 10px 24px rgba(0,0,0,0.15);">
             <img src="Assets/img/logo-sustainera.png" alt="Logo Sustainera" style="width: 100%; height: auto; display: block;">
           </div>
         </div>
         <div class="body">
-          <p><strong>Sustainera</strong> è la business unit di Stellantis che <strong>rigenera, ripara, riutilizza e ricicla</strong> veicoli e componenti per allungarne la vita, ridurre i rifiuti e abbassare l'impatto ambientale della filiera automotive.</p>
-          <p>Il brief chiedeva di comunicare i servizi aftersales <strong>4R (Reman, Repair, Reuse, Recycle)</strong> in modo <strong>disruptive e sostenibile</strong>, abbattendo pregiudizi, attraverso analisi strategica, concept creativo, touchpoint digitali e piano media.</p>
+          <p><strong>Sustainera</strong> è la business unit di Stellantis dedicata alla rigenerazione, riparazione, riutilizzo e riciclo di veicoli e componenti per ridurre sprechi e impatto ambientale.</p>
+          <p>Il progetto comunica i servizi <strong>4R</strong> attraverso una strategia <strong>disruptive e sostenibile</strong>, con concept creativo, touchpoint digitali e piano media volti a superare i pregiudizi sulla filiera circolare.</p>
         </div>
       </div>
     </div>
@@ -78,36 +91,35 @@
   <section id="sfide">
     <div class="wrap">
       <div class="section-label reveal">Le tre sfide</div>
-      <div class="challenges reveal">
-        <div class="challenge-card">
+      <div class="challenges">
+        <div class="challenge-card reveal">
           <div class="challenge-num">01</div>
           <h3>Brand awareness</h3>
           <p>Dalle interviste ai meccanici e dai sondaggi sui consumatori è emerso che <strong>Sustainera</strong> è ancora <strong>poco conosciuta</strong>.</p>
         </div>
-        <div class="challenge-card">
+        <div class="challenge-card reveal">
           <div class="challenge-num">02</div>
           <h3>Costruire fiducia</h3>
-          <p>La <strong>sostenibilità</strong> va comunicata come <strong>valore aggiunto</strong>, non come leva principale tramite dati concreti, standard originali, certificazione Stellantis.</p>
+          <p>La <strong>sostenibilità</strong> va comunicata come <strong>valore aggiunto</strong> tramite dati concreti, standard originali, certificazione Stellantis.</p>
         </div>
-        <div class="challenge-card">
+        <div class="challenge-card reveal">
           <div class="challenge-num">03</div>
-          <h3>Cambiare la percezione</h3>
-          <p>I pezzi Sustainera non devono essere letti come il ripiego di chi non può permettersi il nuovo, ma come la scelta intelligente e ovvia: non scarti, ma potenziale certificato pronto a tornare in campo.</p>
+          <h3>Cambiare percezione</h3>
+          <p>I pezzi Sustainera non sono il <strong>ripiego</strong> di chi non può permettersi il nuovo, ma la <strong>scelta intelligente e ovvia</strong>.</p>
         </div>
       </div>
     </div>
   </section>
  
   <!-- CONCEPT -->
-  <section id="concept">
+  <section id="concept" class="section-accent">
     <div class="wrap">
       <div class="section-label reveal">Il concept</div>
       <div class="two-col reveal">
-        <h2>Welcome back, champion</h2>
+        <h2>Welcome back, Champion</h2>
         <div class="body">
-          <p><strong>Welcome Back, Champion</strong> nasce dall’idea che un ritorno non sia un passo indietro, ma una <strong>nuova occasione</strong> per esprimere valore.</p>
-          <p>Un componente rigenerato diventa così un <strong>campione che torna in gioco</strong>: recuperato, riqualificato e pronto a offrire di nuovo le suas prestazioni. Il progetto trasforma la rigenerazione in un <strong>comeback</strong>, legandola a performance, affidabilità e vittoria.</p>
-          <p>Sustainera riattiva il <strong>potenziale</strong> di ciò che esiste già, riducendo l’impatto ambientale e offrendo un <strong>vantaggio economico</strong> concreto.</p>
+          <p><strong>Welcome back, Champion</strong> trasforma la rigenerazione in un comeback: un componente recuperato e riqualificato torna in gioco come un <strong>campione</strong>, esprimendo nuovamente valore, prestazioni e affidabilità.</p>
+          <p>Sustainera valorizza ciò che esiste già, riducendo l’impatto ambientale e creando un vantaggio concreto.</p>
         </div>
       </div>
       <div class="visual-block reveal" style="margin-top:40px;">
@@ -117,32 +129,32 @@
   </section>
  
   <!-- THE CHAMPIONS -->
-  <section id="champions">
+  <section id="champions" class="section-ecosystem">
     <div class="wrap">
       <div class="section-label reveal">L'ecosistema: The Champions</div>
       <div class="two-col reveal" style="margin-bottom:48px;">
         <h2>Ogni R ha una storia.</h2>
         <div class="body">
-          <p>Per rendere le 4R immediate e memorabili non bastava spiegarle: bisognava dare loro una <strong>forma narrativa</strong>, quindi abbiamo costruito un <strong>personaggio per ogni R</strong> come se fossero dei campioni.</p>
+          <p>Per rendere le 4R più immediate e memorabili, abbiamo costruito un <strong>personaggio per ogni R</strong>, creando una <strong>squadra di campioni</strong>.</p>
         </div>
       </div>
-      <div class="champions-grid reveal">
-        <div class="champion-card">
+      <div class="champions-grid">
+        <div class="champion-card reveal">
           <div class="champion-r">Repair Champion</div>
           <div class="champion-title">Il campione ferito</div>
           <div class="champion-desc">Si rompe nel momento migliore della carriera. Un lavoro tecnico preciso lo rimette in condizione di tornare a vincere.</div>
         </div>
-        <div class="champion-card">
+        <div class="champion-card reveal">
           <div class="champion-r">Reman Champion</div>
           <div class="champion-title">Il campione ricostruito</div>
           <div class="champion-desc">Una leggenda smontata, ricondizionata, ricertificata e rimessa in gara non come copia, ma come originale al suo standard.</div>
         </div>
-        <div class="champion-card">
+        <div class="champion-card reveal">
           <div class="champion-r">Reuse Champion</div>
           <div class="champion-title">Il veterano</div>
           <div class="champion-desc">Cambia squadra ma non ha perso valore. In un nuovo contesto torna decisivo: non un ripiego, una scelta intelligente.</div>
         </div>
-        <div class="champion-card">
+        <div class="champion-card reveal">
           <div class="champion-r">Recycle Champion</div>
           <div class="champion-title">La leggenda che cambia forma</div>
           <div class="champion-desc">Chiude un ciclo, ma la sua materia ed energia diventano qualcos'altro di forte, utile e contemporaneo.</div>
@@ -156,7 +168,13 @@
     <div class="wrap">
       <div class="gallery">
  
-        <div class="gallery-item reveal">
+        <!-- WALL OF FAME CAROUSEL SECTION -->
+        <div class="gallery-item-clean reveal">
+          <div class="gallery-text">
+            <div class="gallery-tag">Social · Serie di post</div>
+            <h3>The Wall of Fame</h3>
+            <p>Quattro post social in cui ogni R viene presentata come un atleta leggendario sulla propria placca celebrativa, collegando l'affidabilità dei componenti alla gloria tipica dello sport.</p>
+          </div>
           <div class="carousel-container gallery-visual">
             <div class="carousel-track">
               <img src="Assets/img/post-tesi1.png" alt="Post Tesi 1" class="carousel-img active">
@@ -165,55 +183,54 @@
               <img src="Assets/img/post-tesi4.png" alt="Post Tesi 4" class="carousel-img">
             </div>
             <button class="carousel-arrow prev" aria-label="Precedente">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 16px; height: 16px;"><path d="M15 18l-6-6 6-6"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 14px; height: 14px;"><path d="M15 18l-6-6 6-6"/></svg>
             </button>
             <button class="carousel-arrow next" aria-label="Successivo">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 16px; height: 16px;"><path d="M9 18l6-6-6-6"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 14px; height: 14px;"><path d="M9 18l6-6-6-6"/></svg>
             </button>
-          </div>
-          <div class="gallery-text">
-            <div class="gallery-tag">Social · Serie di post</div>
-            <h3>The Wall of Fame</h3>
-            <p>Quattro post social in cui ogni R viene presentata come un atleta leggendario sulla propria placca celebrativa, collegando l'affidabilità dei componenti alla gloria tipica dello sport.</p>
           </div>
         </div>
 
-        <div class="gallery-item reverse reveal" style="grid-template-columns: 1.6fr 1fr; gap: 48px;">
-          <div class="gallery-visual" style="display: flex; gap: 16px; width: 100%; justify-content: center;">
-            <img src="Assets/img/brochure-mockup.png" alt="Brochure Mockup 1" style="width: calc(50% - 8px); max-width: 480px; height: auto; border-radius: 12px; border: 1px solid var(--line); display: block; object-fit: contain;">
-            <img src="Assets/img/brochure-mockup2.png" alt="Brochure Mockup 2" style="width: calc(50% - 8px); max-width: 480px; height: auto; border-radius: 12px; border: 1px solid var(--line); display: block; object-fit: contain;">
-          </div>
-          <div class="gallery-text">
+        <!-- SUSTAINERA BROCHURE SECTION -->
+        <div class="gallery-item-clean reveal" style="grid-template-columns: 1fr; gap: 24px;">
+          <div class="gallery-text" style="max-width: 680px;">
             <div class="gallery-tag">Materiale fisico · Officine e fiere</div>
             <h3>Sustainera Brochure</h3>
             <p>Materiale informativo pensato per presentare il programma Sustainera, il modello delle 4R e le opportunità offerte ai meccanici che scelgono di entrare nel network.</p>
+          </div>
+          <div class="gallery-visual" style="display: flex; gap: 20px; width: 100%; justify-content: flex-start; margin-top: 12px;">
+            <div style="flex: 1; max-width: 580px; border-radius: 16px; overflow: hidden;">
+              <img src="Assets/img/brochure-mockup.png" alt="Brochure Mockup 1" style="width: 100%; height: auto; border-radius: 16px; border: none; display: block; object-fit: contain;">
+            </div>
+            <div style="flex: 1; max-width: 580px; border-radius: 16px; overflow: hidden;">
+              <img src="Assets/img/brochure-mockup2.png" alt="Brochure Mockup 2" style="width: 100%; height: auto; border-radius: 16px; border: none; display: block; object-fit: contain;">
+            </div>
           </div>
         </div>
  
       </div>
     </div>
   </section>
- 
-  <!-- MECHCOACH / COACHES -->
-  <section id="coaches">
+   <!-- MECHCOACH / COACHES -->
+  <section id="coaches" class="section-ecosystem">
     <div class="wrap">
       <div class="section-label reveal">L'ecosistema: MechCoach</div>
-      <div class="two-col reveal" style="margin-bottom:40px;">
+      <div class="two-col reveal" style="margin-bottom: 16px;">
         <h2>Se i pezzi sono i campioni, qualcuno li deve allenare.</h2>
         <div class="body">
           <p>Nasce così <strong>MechCoach</strong>, brand ambassador di Sustainera: una voce tecnica e affidabile, ispirata al mondo dello sport, attorno a cui si sviluppano diversi format.</p>
         </div>
       </div>
  
-      <div class="two-col reveal" style="grid-template-columns: 1fr 1.3fr; align-items: center; margin-bottom: 40px; gap: 48px;">
-        <p style="color: var(--ink-dim); font-size: 15.5px; line-height: 1.6; margin: 0;">Il <strong>MechCoach</strong> indosserà una <strong>maglietta personalizzata</strong>, pensata e realizzata come una vera e propria <strong>divisa tecnica sportiva</strong>.</p>
+      <div class="two-col reveal" style="grid-template-columns: 1fr 1.3fr; align-items: center; margin-bottom: 32px; gap: 32px;">
+        <p style="color: var(--color-onyx-muted); font-size: 16px; line-height: 1.6; margin: 0;">Il <strong>MechCoach</strong> indosserà una <strong>maglietta personalizzata</strong>, pensata e realizzata come una vera e propria <strong>divisa tecnica sportiva</strong>.</p>
         <div style="max-width: 440px; width: 100%;">
-          <img src="Assets/img/maglia.png" alt="Maglia MechCoach" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); display: block;">
+          <img src="Assets/img/maglia.png" alt="Maglia MechCoach" style="width: 100%; height: auto; border-radius: 16px; border: none; display: block;">
         </div>
       </div>
-
-      <div class="format-list reveal">
-        <div class="format-row">
+ 
+      <div class="format-list">
+        <div class="format-row reveal">
           <div class="format-name">
             MechCoach Tips
             <div class="format-socials">
@@ -224,7 +241,7 @@
           </div>
           <div class="format-desc">Video in cui risponde alle domande che tutti si fanno sulla propria auto. Linguaggio semplice, ironico e diretto.</div>
         </div>
-        <div class="format-row">
+        <div class="format-row reveal">
           <div class="format-name">
             MechCoach Q&amp;A
             <div class="format-socials">
@@ -236,7 +253,7 @@
           </div>
           <div class="format-desc">Domande reali degli utenti prese direttamente dai thread di Reddit.</div>
         </div>
-        <div class="format-row">
+        <div class="format-row reveal">
           <div class="format-name">
             MechCoach Reacts
             <div class="format-socials">
@@ -247,7 +264,7 @@
           </div>
           <div class="format-desc">MechCoach commenta riparazioni discutibili e consigli sbagliati di altri creator, posizionandosi come voce autorevole del settore.</div>
         </div>
-        <div class="format-row">
+        <div class="format-row reveal">
           <div class="format-name">
             Mechfunny
             <div class="format-socials">
@@ -263,71 +280,103 @@
   </section>
  
   <!-- ARENA / FIERA -->
-  <section id="arena">
+  <section id="arena" class="section-ecosystem">
     <div class="wrap">
       <div class="section-label reveal">L'ecosistema: evento</div>
-      <div class="arena-steps reveal">
-        <div class="arena-step">
-          <div class="phase">Pre-fiera</div>
+      <div class="arena-steps">
+        <div class="arena-step reveal">
+          <h3>Pre-fiera</h3>
           <p><strong>Hype.</strong> MechCoach annuncia la presenza di Sustainera con un countdown giornaliero; storie di backstage mostrano l'allestimento dello stand.</p>
         </div>
-        <div class="arena-step">
-          <div class="phase">Durante</div>
+        <div class="arena-step reveal">
+          <h3>Durante la fiera</h3>
           <p><strong>Test the Champion:</strong> sfide dirette tra componenti rigenerati, usati e nuovi. <strong>MechCoach Talk:</strong> commento a fine giornata in stile conferenza stampa post-partita.</p>
         </div>
-        <div class="arena-step">
-          <div class="phase">Post-fiera</div>
+        <div class="arena-step reveal">
+          <h3>Post-fiera</h3>
           <p><strong>Rielaborazione.</strong> Highlights delle gare, interviste ironiche ai partecipanti, annuncio dei vincitori per mantenere viva la community.</p>
         </div>
       </div>
-      <p class="reveal" style="margin-top:32px; color:var(--ink-dim); font-size:15px; max-width:70ch;">Format hero: <strong style="color:var(--ink);">The Sustainera Cup</strong>, su YouTube &gt; squadre di meccanici si sfidano su prove pratiche (es. riparare un cambio in 2 ore) con imprevisti ogni 30 minuti, generando contenuti lunghi e coinvolgenti.</p>
+      <p class="reveal" style="margin-top:32px; color:var(--color-onyx-muted); font-size:16px; max-width:58ch;">Format hero: <strong style="color:var(--color-onyx);">The Sustainera Cup</strong>, su YouTube &gt; squadre di meccanici si sfidano su prove pratiche (es. riparare un cambio in 2 ore) con imprevisti ogni 30 minuti, generando contenuti lunghi e coinvolgenti.</p>
     </div>
   </section>
  
   <!-- NETWORK -->
-  <section id="network">
+  <section id="network" class="section-ecosystem">
     <div class="wrap">
       <div class="section-label reveal">L'ecosistema: il network</div>
       <div class="two-col reveal" style="margin-bottom:48px;">
         <h2>Espandere la rete di officine e meccanici.</h2>
         <div class="body">
-          <p>Una <strong>landing page</strong> pensata soprattutto per i meccanici, che spiega i <strong>vantaggi dell’ingresso nel network Sustainera</strong>, presenta la politica 4R e i diversi <strong>livelli di affiliazione</strong>, e accompagna l’utente verso un form di candidatura semplice e immediato. In parallelo, permette anche ai consumatori di trovare facilmente un’officina certificata.</p>
+          <p><strong>Una landing page</strong> dedicata ai <strong>meccanici</strong> presenta i vantaggi del network Sustainera, la politica 4R e i livelli di affiliazione. Allo stesso tempo permette ai consumatori di trovare un’<strong>officina certificata</strong>.</p>
         </div>
       </div>
  
-      <div class="network-features reveal">
-        <div class="network-feature">
+      <div class="network-features">
+        <div class="network-feature reveal">
           <strong>Leaderboard</strong>
-          Gamifica il network mostrando le officine più attive per pezzi installati e missioni completate: un riconoscimento pubblico delle migliori performance.
+          Una classifica premia le officine più attive per pezzi installati e missioni completate.
         </div>
-        <div class="network-feature">
+        <div class="network-feature reveal">
           <strong>Choose your level</strong>
           Tre livelli di affiliazione: Certified Player, Champion, Legend. Ognuno con requisiti e benefit chiari.
         </div>
-        <div class="network-feature">
+        <div class="network-feature reveal">
           <strong>MechCoach Explains</strong>
-          Tutorial approfonditi e consigli tecnici direttamente dal brand ambassador ufficiale di Sustainera, per imparare a vendere e installare i componenti rigenerati.
-        </div>
-      </div>
-
-      <div class="two-col reveal" style="grid-template-columns: 1fr 1.2fr; align-items: center; margin-top: 56px; margin-bottom: 32px; gap: 48px;">
-        <div>
-          <div class="gallery-tag">Certified Partner</div>
-          <h3 style="font-size: 24px; font-weight: 500; margin-bottom: 12px; color: var(--ink);">Welcome Kit</h3>
-          <p style="color: var(--ink-dim); font-size: 15.5px; line-height: 1.6; margin: 0;">Poster, lettera di benvenuto, medaglia "Certified Partner", cappellino e flyer con QR code per sconti riservati.</p>
-        </div>
-        <div style="max-width: 380px; width: 100%;">
-          <img src="Assets/img/welcomekit.png" alt="Sustainera Welcome Kit" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); display: block;">
+          Tutorial e consigli tecnici del brand ambassador Sustainera per vendere e installare componenti rigenerati.
         </div>
       </div>
  
-      <div class="network-cta reveal" style="margin-top:56px;">
-        <div>
-          <h3>Prototipo interattivo della Network Page</h3>
-          <p>Landing page come prototipo funzionante e navigabile.</p>
+      <!-- PROTOTYPE SHOWCASE CARD -->
+      <div class="prototype-showcase reveal">
+        <div class="prototype-browser-header">
+          <div class="browser-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
         </div>
-        <a href="sustainera-network-prototype.html" target="_blank" class="btn">Apri il prototipo live →</a>
+
+        <div class="prototype-body">
+          <div class="prototype-info">
+            <h2>Esplora la Landing Page di Sustainera Network</h2>
+          </div>
+
+          <div class="prototype-preview">
+            <a href="sustainera-network-prototype.html" target="_blank" class="prototype-preview-link">
+              <div class="prototype-preview-frame">
+                <div class="prototype-hero-snippet">
+                  <span class="mini-eyebrow">SUSTAINERA NETWORK</span>
+                  <h4>WELCOME BACK, CHAMPION</h4>
+                  <div class="prototype-cta-big">
+                    <span>SCOPRI IL PROTOTIPO</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 16px; height: 16px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </div>
+                </div>
+                <div class="prototype-overlay">
+                  <span class="play-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:20px; height:20px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </span>
+                  <span>Apri la landing page live ↗</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
+
+      <!-- WELCOME KIT -->
+      <div class="two-col reveal" style="grid-template-columns: 1fr 1.2fr; align-items: center; margin-top: 56px; gap: 48px;">
+        <div>
+          <div class="gallery-tag">Certified Partner</div>
+          <h3 style="font-weight: 500; margin-bottom: 12px; color: var(--color-onyx);">Welcome Kit</h3>
+          <p style="color: var(--color-onyx-muted); font-size: 16px; line-height: 1.6; margin: 0;">Poster, lettera di benvenuto, medaglia "Certified Partner", cappellino e flyer con QR code per sconti riservati.</p>
+        </div>
+        <div style="max-width: 340px; width: 100%;">
+          <img src="Assets/img/welcomekit.png" alt="Sustainera Welcome Kit" style="width: 100%; height: auto; border-radius: 16px; border: none; display: block;">
+        </div>
+      </div>
+
     </div>
   </section>
  
@@ -347,6 +396,15 @@
   </nav>
  
   <footer>
+    <div class="wrap">
+      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;">Restiamo in contatto</span>
+      <nav class="footer-links">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank">Email</a>
+        <a href="https://www.linkedin.com/in/giulia-de-fazio-321a8a215/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/le_illustrazioni_di_lia/" target="_blank">Instagram</a>
+        <a href="https://www.behance.net/giuliadefazio" target="_blank">Behance</a>
+      </nav>
+    </div>
     <div class="wrap bottom">
       <span>© 2026 Giulia De Fazio</span>
       <span>Torino, Italia</span>

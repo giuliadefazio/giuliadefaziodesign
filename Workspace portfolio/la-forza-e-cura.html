@@ -6,25 +6,38 @@
   <title>La Forza è Cura — Giulia De Fazio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
  
-  <header>
-    <div class="wrap">
-      <a href="index.html" class="back-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-        Giulia De Fazio
-      </a>
-      <nav>
-        <ul>
-          <li><a href="about.html">Chi Sono</a></li>
-          <li><a href="progetti.html" class="active">Progetti</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-      </nav>
-    </div>
+  <!-- PROGRESSIVE BLUR HEADER -->
+  <div class="header-blur-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo-mark">Giulia De Fazio</a>
+    
+    <nav>
+      <ul class="nav-links-list">
+        <li><a href="about.html">Chi Sono</a></li>
+        <li><a href="progetti.html" class="active">Progetti</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </nav>
+
+    <!-- KOMMA KOMMA BUTTON-043 -->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
+      <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+      <span class="button-043__inner">
+        <span>Scrivimi</span>
+        <span class="button-043__icon-wrap">
+          <span class="button-043__icon-list">
+            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </span>
+      </span>
+    </a>
   </header>
  
   <!-- TOP NAV -->
@@ -48,7 +61,6 @@
         <div class="hero-eyebrow">Campagna culturale — progetto universitario</div>
         <h1>La Forza è Cura</h1>
         <div class="claim">"La forza non è dominare. È prendersi cura del futuro."</div>
-        <p class="hero-sub">Una campagna che reinterpreta Leia Organa come linguaggio culturale per ridefinire il concetto di forza nel presente.</p>
       </div>
       <div class="hero-img reveal">
         <img src="Assets/img/mockup-affissioni-forza.jpg" alt="Copertina del progetto La Forza è Cura — Leia Organa, da icona pop a modello contemporaneo">
@@ -63,100 +75,80 @@
       <div class="two-col reveal">
         <h2>Analisi</h2>
         <div class="body">
-          <p>Nell’immaginario contemporaneo, la forza viene spesso associata al <strong>dominio, alla guerra e al controllo</strong>. Il progetto propone invece una visione alternativa attraverso Leia Organa, che incarna una <strong>forza etica, politica e relazionale</strong>.</p>
-          <p>Pur essendo sensibile alla Forza e addestrata, Leia sceglie di <strong>non fondare su di essa la propria identità</strong>. La sua forza si esprime attraverso <strong>lucidità, intelletto, disciplina, leadership e responsabilità</strong> verso gli altri, <strong>trasformando il potere in cura e impegno</strong>.</p>
+          <p>Nell’immaginario contemporaneo, la forza viene spesso associata al dominio, alla guerra e al controllo. Il progetto propone invece una <strong>visione alternativa</strong> attraverso <strong>Leia Organa</strong>, che incarna una forza etica e relazionale.</p>
         </div>
       </div>
     </div>
   </section>
  
   <!-- CONCEPT -->
-  <section id="concept">
+  <section id="concept" class="section-accent">
     <div class="wrap">
       <div class="section-label reveal">Il concept</div>
       <div class="two-col reveal">
         <h2>Concept</h2>
         <div class="body">
-          <p>La campagna <strong>trasforma Leia Organa da icona narrativa a modello concreto di forza etica</strong>. Invita le persone a riconoscere la forza <strong>non nello scontro o nel potere distruttivo, ma nella responsabilità condivisa, nella cura e nella capacità di costruire il futuro</strong>.</p>
-          <p>Il posizionamento propone quindi un’idea di <strong>forza collettiva, alternativa all’eroismo individuale</strong> e alla violenza intesa come soluzione. Il tono di voce è <strong>lucido, politico e inclusivo: calmo, ma fermo e determinato</strong>.</p>
+          <p>La campagna trasforma <strong>Leia Organa</strong> da icona narrativa a <strong>simbolo</strong> di una <strong>forza etica e collettiva</strong>, fondata su responsabilità, cura e capacità di costruire il futuro. Una visione alternativa all’eroismo individuale e alla violenza come soluzione, raccontata attraverso un <strong>tono lucido, politico e inclusivo</strong>: calmo, ma fermo e determinato.</p>
         </div>
       </div>
     </div>
   </section>
  
-  <!-- K-VISUAL -->
-  <section id="kvisual" style="background: var(--bg-panel); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
-    <div class="wrap">
-      <div class="section-label reveal">La proposta visiva</div>
-      
-      <div class="reveal" style="max-width: 800px; margin-bottom: 48px;">
-        <p style="font-family: 'Fraunces', serif; font-size: 20px; font-style: italic; color: var(--ink); line-height: 1.6; border-left: 3px solid var(--accent-2); padding-left: 24px; margin: 0;">
-          Non un'immagine singola, ma un sistema multi-soggetto coerente, in cui ogni visual esplora una declinazione della forza come responsabilità. Leia Organa non appare mai come ritratto: è nel gesto, nella rinuncia, nel simbolo.
-        </p>
-      </div>
 
-      <div class="visual-block reveal" style="max-width: 960px; margin: 0 auto; position: relative;">
-        <img src="Assets/img/mockup-affissioni-forza.jpg" alt="Sistema K-visual multi-soggetto del progetto La Forza è Cura" style="width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); display: block; box-shadow: 0 30px 60px rgba(0,0,0,0.45);">
-        <div style="text-align: right; margin-top: 16px; font-size: 13px; color: var(--ink-dim); font-style: italic;">
-          Mockup delle tre affissioni principali posizionate in ambiente urbano.
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- SISTEMA VISIVO / PALETTE -->
   <section id="sistema-visivo">
     <div class="wrap">
       <div class="section-label reveal">Il sistema visivo</div>
-      <div class="two-col reveal" style="margin-bottom:48px;">
+      <div class="two-col reveal">
         <h2>Direzione visiva</h2>
         <div class="body">
-          <p>Il sistema visivo adotta un linguaggio <strong>essenziale, simbolico e misurato</strong>, lontano sia dall’enfasi spettacolare sia dall’estetica nostalgica di <em>Star Wars</em>.</p>
-          <p>Le composizioni sono pulite, costruite attraverso <strong>spazio negativo, equilibrio e sottrazione</strong>. Non compaiono riferimenti diretti al franchise.</p>
+          <p>Il sistema visivo adotta un linguaggio <strong>essenziale e simbolico</strong>, basato su equilibrio, <strong>spazio negativo</strong> e sottrazione, evitando riferimenti diretti al franchise e ogni estetica nostalgica o spettacolare.</p>
         </div>
       </div>
 
-      <div class="palette-container reveal" style="display: flex; flex-wrap: wrap; gap: 32px; margin-top: 32px; justify-content: flex-start;">
-        <div style="display: flex; align-items: center; gap: 14px;">
-          <div style="width: 48px; height: 48px; border-radius: 50%; background: #0B1020; border: 1px solid var(--line);"></div>
+      <!-- PALETTE SWATCHES -->
+      <div class="palette-grid-circles reveal">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: #0B1020; border: 1px solid var(--line-color); flex-shrink: 0;"></div>
           <div>
-            <div style="font-size: 13.5px; font-weight: 600; color: var(--ink);">#0B1020</div>
-            <div style="font-size: 12px; color: var(--ink-dim);">Blu notte</div>
+            <div style="font-size: 13px; font-weight: 700; color: var(--color-onyx); font-family: var(--font-sans);">#0B1020</div>
+            <div style="font-size: 11.5px; color: var(--color-onyx-muted); font-family: var(--font-sans);">Blu notte</div>
           </div>
         </div>
-        <div style="display: flex; align-items: center; gap: 14px;">
-          <div style="width: 48px; height: 48px; border-radius: 50%; background: #111418; border: 1px solid var(--line);"></div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: #111418; border: 1px solid var(--line-color); flex-shrink: 0;"></div>
           <div>
-            <div style="font-size: 13.5px; font-weight: 600; color: var(--ink);">#111418</div>
-            <div style="font-size: 12px; color: var(--ink-dim);">Antracite</div>
+            <div style="font-size: 13px; font-weight: 700; color: var(--color-onyx); font-family: var(--font-sans);">#111418</div>
+            <div style="font-size: 11.5px; color: var(--color-onyx-muted); font-family: var(--font-sans);">Antracite</div>
           </div>
         </div>
-        <div style="display: flex; align-items: center; gap: 14px;">
-          <div style="width: 48px; height: 48px; border-radius: 50%; background: #1C2129; border: 1px solid var(--line);"></div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: #1C2129; border: 1px solid var(--line-color); flex-shrink: 0;"></div>
           <div>
-            <div style="font-size: 13.5px; font-weight: 600; color: var(--ink);">#1C2129</div>
-            <div style="font-size: 12px; color: var(--ink-dim);">Grigio profondo</div>
+            <div style="font-size: 13px; font-weight: 700; color: var(--color-onyx); font-family: var(--font-sans);">#1C2129</div>
+            <div style="font-size: 11.5px; color: var(--color-onyx-muted); font-family: var(--font-sans);">Grigio profondo</div>
           </div>
         </div>
-        <div style="display: flex; align-items: center; gap: 14px;">
-          <div style="width: 48px; height: 48px; border-radius: 50%; background: #F1E9DA; border: 1px solid var(--line);"></div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: #F1E9DA; border: 1px solid var(--line-color); flex-shrink: 0;"></div>
           <div>
-            <div style="font-size: 13.5px; font-weight: 600; color: var(--ink);">#F1E9DA</div>
-            <div style="font-size: 12px; color: var(--ink-dim);">Avorio caldo</div>
+            <div style="font-size: 13px; font-weight: 700; color: var(--color-onyx); font-family: var(--font-sans);">#F1E9DA</div>
+            <div style="font-size: 11.5px; color: var(--color-onyx-muted); font-family: var(--font-sans);">Avorio caldo</div>
           </div>
         </div>
-        <div style="display: flex; align-items: center; gap: 14px;">
-          <div style="width: 48px; height: 48px; border-radius: 50%; background: #CFC6B8; border: 1px solid var(--line);"></div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: #CFC6B8; border: 1px solid var(--line-color); flex-shrink: 0;"></div>
           <div>
-            <div style="font-size: 13.5px; font-weight: 600; color: var(--ink);">#CFC6B8</div>
-            <div style="font-size: 12px; color: var(--ink-dim);">Grigio caldo</div>
+            <div style="font-size: 13px; font-weight: 700; color: var(--color-onyx); font-family: var(--font-sans);">#CFC6B8</div>
+            <div style="font-size: 11.5px; color: var(--color-onyx-muted); font-family: var(--font-sans);">Grigio caldo</div>
           </div>
         </div>
-        <div style="display: flex; align-items: center; gap: 14px;">
-          <div style="width: 48px; height: 48px; border-radius: 50%; background: #8E2A2A; border: 1px solid var(--line);"></div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: #8E2A2A; border: 1px solid var(--line-color); flex-shrink: 0;"></div>
           <div>
-            <div style="font-size: 13.5px; font-weight: 600; color: var(--ink);">#8E2A2A</div>
-            <div style="font-size: 12px; color: var(--ink-dim);">Rosso ribellione</div>
+            <div style="font-size: 13px; font-weight: 700; color: var(--color-onyx); font-family: var(--font-sans);">#8E2A2A</div>
+            <div style="font-size: 11.5px; color: var(--color-onyx-muted); font-family: var(--font-sans);">Rosso ribellione</div>
           </div>
         </div>
       </div>
@@ -164,7 +156,7 @@
   </section>
 
   <!-- STORYTELLING -->
-  <section id="storytelling">
+  <section id="storytelling" class="section-tint">
     <div class="wrap">
       <div class="section-label reveal">Lo storytelling della campagna</div>
       <div class="story-steps reveal">
@@ -196,24 +188,24 @@
   <section id="canali">
     <div class="wrap">
       <div class="section-label reveal">I canali</div>
-      <div class="channels-grid reveal">
-        <div class="channel-card">
+      <div class="channels-grid">
+        <div class="channel-card reveal">
           <h3>Volantini</h3>
           <p>Volantini diffusi in città, università, eventi e mostre a tema.</p>
           <img src="Assets/img/volantino-forza.png" alt="Volantino La Forza è Cura">
         </div>
-        <div class="channel-card">
-          <h3>Installazione urbana</h3>
-          <p>L’installazione è un lungo muro partecipativo collocato in uno spazio pubblico. Le persone completano frasi aperte con azioni e impegni concreti. Nel tempo, il muro diventa un archivio collettivo che racconta la forza come responsabilità condivisa e costruzione comune.</p>
-          <img src="Assets/img/installazione-forza.png" alt="Installazione urbana La Forza è Cura">
+        <div class="channel-card reveal">
+          <h3>Installazione</h3>
+          <p>Un muro partecipativo nello spazio pubblico raccoglie azioni e pensieri delle persone, trasformandosi nel tempo in un archivio collettivo della forza come responsabilità condivisa.</p>
+          <img src="Assets/img/installazione-forza.png" alt="Installazione La Forza è Cura">
         </div>
-        <div class="channel-card">
+        <div class="channel-card reveal">
           <h3>Guerrilla</h3>
-          <p>L’azione urbana consiste in un filo rosso che attraversa progressivamente lo spazio pubblico. Una persona lo tiene per prima, poi altre si uniscono, creando una linea condivisa. Il gesto rende visibili connessione, responsabilità e continuità tra le persone.</p>
+          <p>Un filo rosso attraversa lo spazio pubblico coinvolgendo progressivamente le persone, creando una linea condivisa che rende visibili connessione, responsabilità e continuità collettiva.</p>
           <img src="Assets/img/guerrilla-forza.png" alt="Guerrilla La Forza è Cura">
         </div>
       </div>
-      <p class="reveal" style="margin-top:56px; color:var(--ink-dim); font-size:14.5px; max-width:70ch;">I <strong style="color:var(--ink);">social media</strong> hanno funzione di connessione e apertura del discorso, non promozione, ma un luogo dove il pubblico è invitato a interrogarsi sul significato contemporaneo di forza, responsabilità e speranza, condividendo piccoli gesti quotidiani.</p>
+      <p class="reveal" style="margin-top:56px; color:var(--color-onyx-muted); font-size:16px; max-width:58ch;"><strong>I social</strong> diventano uno spazio di connessione e confronto, dove il pubblico riflette sul significato di forza, responsabilità e speranza attraverso la condivisione di piccoli gesti quotidiani.</p>
     </div>
   </section>
  
@@ -232,6 +224,15 @@
   </nav>
  
   <footer>
+    <div class="wrap">
+      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;">Restiamo in contatto</span>
+      <nav class="footer-links">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank">Email</a>
+        <a href="https://www.linkedin.com/in/giulia-de-fazio-321a8a215/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/le_illustrazioni_di_lia/" target="_blank">Instagram</a>
+        <a href="https://www.behance.net/giuliadefazio" target="_blank">Behance</a>
+      </nav>
+    </div>
     <div class="wrap bottom">
       <span>© 2026 Giulia De Fazio</span>
       <span>Torino, Italia</span>

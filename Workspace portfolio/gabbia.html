@@ -6,25 +6,38 @@
   <title>Gabbia — Giulia De Fazio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
  
-  <header>
-    <div class="wrap">
-      <a href="index.html" class="back-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-        Giulia De Fazio
-      </a>
-      <nav>
-        <ul>
-          <li><a href="about.html">Chi Sono</a></li>
-          <li><a href="progetti.html" class="active">Progetti</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-      </nav>
-    </div>
+  <!-- PROGRESSIVE BLUR HEADER -->
+  <div class="header-blur-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo-mark">Giulia De Fazio</a>
+    
+    <nav>
+      <ul class="nav-links-list">
+        <li><a href="about.html">Chi Sono</a></li>
+        <li><a href="progetti.html" class="active">Progetti</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </nav>
+
+    <!-- KOMMA KOMMA BUTTON-043 -->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
+      <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+      <span class="button-043__inner">
+        <span>Scrivimi</span>
+        <span class="button-043__icon-wrap">
+          <span class="button-043__icon-list">
+            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </span>
+      </span>
+    </a>
   </header>
  
   <!-- TOP NAV -->
@@ -32,11 +45,11 @@
     <div class="wrap">
       <a href="welcome-back-champion.html">
         <span class="dir">← Progetto precedente</span>
-        <span class="title">Welcome back, champion</span>
+        <span class="title">Welcome back, Champion</span>
       </a>
       <a href="la-forza-e-cura.html">
         <span class="dir">Prossimo progetto →</span>
-        <span class="title">La forza è cura</span>
+        <span class="title">La Forza è Cura</span>
       </a>
     </div>
   </nav>
@@ -44,9 +57,9 @@
   <!-- HERO -->
   <section class="project-detail-hero">
     <div class="wrap">
-      <div class="hero-eyebrow">Virtual Reality / Immersive Experience Design — Progetto universitario</div>
+      <div class="hero-eyebrow">Esperienza Immersiva — Progetto universitario</div>
       <h1>Gabbia</h1>
-      <div class="claim">Il cambiamento inizia con te. Non lasciare che il silenzio sia complice.</div>
+      <div class="claim">"Il cambiamento inizia con te. Non lasciare che il silenzio sia complice."</div>
     </div>
   </section>
 
@@ -54,78 +67,80 @@
   <section id="esperienza">
     <div class="wrap">
       <div class="section-label reveal">L'esperienza VR</div>
-      <p class="reveal" style="color:var(--ink-dim); font-size:15px; max-width:70ch; margin-bottom:24px;">Gabbia è un'<strong>esperienza immersiva in realtà virtuale</strong> che sensibilizza sulla spirale della violenza di genere. L'utente attraversa un corridoio che collega <strong>cinque stanze</strong>, ognuna una fase della spirale della violenza.</p>
+      <p class="reveal" style="color:var(--color-onyx-muted); font-size:16px; max-width:58ch; margin-bottom:24px;"><strong>Gabbia</strong> è un’<strong>esperienza</strong> immersiva in <strong>realtà virtuale</strong> che racconta la <strong>spirale della violenza di genere</strong> attraverso un percorso in <strong>cinque stanze</strong>, corrispondenti alle diverse fasi del ciclo della violenza.</p>
  
-      <div class="experience-carousel-wrap reveal">
-        <div class="experience-carousel-track">
+      <div class="experience-carousel-wrap reveal" role="region" aria-roledescription="carosello" aria-label="Tappe dell'esperienza">
+        <div class="experience-carousel-viewport">
+          <div class="experience-carousel-track">
  
-          <div class="experience-slide">
-            <img src="Assets/img/gabbia0.png" alt="Ingresso nella casa apparentemente normale">
-            <div class="experience-slide-text">
-              <div class="experience-slide-num">01 — La casa</div>
-              <h3>Prima di entrare</h3>
-              <p>Davanti a te c’è una casa comune, silenziosa e apparentemente innocua. Avvicinandoti, senti passi e suoni distorti. La porta si apre e una voce ti invita a osservare con attenzione: <b>la violenza spesso si nasconde proprio negli spazi più normali.</b></p>
+            <div class="experience-slide">
+              <img src="Assets/img/gabbia0.png" alt="Ingresso nella casa apparentemente normale">
+              <div class="experience-slide-text">
+                <div class="experience-slide-num">01 — La casa</div>
+                <h3>Prima di entrare</h3>
+                <p>Davanti a te c’è una casa comune, silenziosa e apparentemente innocua. Avvicinandoti, senti passi e suoni distorti. La porta si apre e una voce ti invita a osservare con attenzione: <b>la violenza spesso si nasconde proprio negli spazi più normali.</b></p>
+              </div>
             </div>
-          </div>
  
-          <div class="experience-slide">
-            <img src="Assets/img/gabbia1.png" alt="Stanza 1 - Micro-aggressioni">
-            <div class="experience-slide-text">
-              <div class="experience-slide-num">02 — Stanza 1</div>
-              <h3>Micro-aggressioni</h3>
-              <p>Al centro della stanza c’è uno specchio integro. Intorno compaiono figure che pronunciano battute sessiste e commenti sul tuo corpo. A ogni frase, una nuova crepa attraversa il riflesso, fino a renderlo irriconoscibile. Una voce ti chiede <b>quante volte hai ignorato situazioni simili.</b></p>
+            <div class="experience-slide">
+              <img src="Assets/img/gabbia1.png" alt="Stanza 1 - Micro-aggressioni">
+              <div class="experience-slide-text">
+                <div class="experience-slide-num">02 — Stanza 1</div>
+                <h3>Micro-aggressioni</h3>
+                <p>Al centro della stanza c’è uno specchio integro. Intorno compaiono figure che pronunciano battute sessiste e commenti sul tuo corpo. A ogni frase, una nuova crepa attraversa il riflesso, fino a renderlo irriconoscibile. Una voce ti chiede <b>quante volte hai ignorato situazioni simili.</b></p>
+              </div>
             </div>
-          </div>
  
-          <div class="experience-slide">
-            <img src="Assets/img/gabbia2.png" alt="Stanza 2 - Controllo e Manipolazione">
-            <div class="experience-slide-text">
-              <div class="experience-slide-num">03 — Stanza 2</div>
-              <h3>Controllo e Manipolazione</h3>
-              <p>Frecce luminose e messaggi premurosi ti guidano dentro un labirinto. Poco alla volta, però, le indicazioni diventano ordini e i corridoi si restringono. Obbedire porta sollievo, ma riduce la libertà. <b>L’uscita appare solo quando smetti di seguire il percorso imposto.</b></p>
+            <div class="experience-slide">
+              <img src="Assets/img/gabbia2.png" alt="Stanza 2 - Controllo e Manipolazione">
+              <div class="experience-slide-text">
+                <div class="experience-slide-num">03 — Stanza 2</div>
+                <h3>Controllo e Manipolazione</h3>
+                <p>Frecce luminose e messaggi premurosi ti guidano dentro un labirinto. Poco alla volta, però, le indicazioni diventano ordini e i corridoi si restringono. Obbedire porta sollievo, ma riduce la libertà. <b>L’uscita appare solo quando smetti di seguire il percorso imposto.</b></p>
+              </div>
             </div>
-          </div>
  
-          <div class="experience-slide">
-            <img src="Assets/img/gabbia3.png" alt="Stanza 3 - Violenza Psicologica">
-            <div class="experience-slide-text">
-              <div class="experience-slide-num">04 — Stanza 3</div>
-              <h3>Violenza Psicologica</h3>
-              <p>La stanza sembra accogliente e al centro trovi un diario. Le frasi inizialmente affettuose diventano insulti e accuse. Intorno a te, luci, oggetti e pareti si deteriorano. Anche senza ferite visibili, percepisci <b>il peso della violenza psicologica.</b></p>
+            <div class="experience-slide">
+              <img src="Assets/img/gabbia3.png" alt="Stanza 3 - Violenza Psicologica">
+              <div class="experience-slide-text">
+                <div class="experience-slide-num">04 — Stanza 3</div>
+                <h3>Violenza Psicologica</h3>
+                <p>La stanza sembra accogliente e al centro trovi un diario. Le frasi inizialmente affettuose diventano insulti e accuse. Intorno a te, luci, oggetti e pareti si deteriorano. Anche senza ferite visibili, percepisci <b>il peso della violenza psicologica.</b></p>
+              </div>
             </div>
-          </div>
  
-          <div class="experience-slide">
-            <img src="Assets/img/gabbia4.png" alt="Stanza 4 - Violenza Fisica">
-            <div class="experience-slide-text">
-              <div class="experience-slide-num">05 — Stanza 4</div>
-              <h3>Violenza Fisica</h3>
-              <p>Ombre minacciose ti inseguono in uno spazio buio, mentre oggetti si rompono e i colpi risuonano intorno a te. Non esiste una vera via di fuga. Alla fine, il silenzio rivela un letto e un cuscino macchiato di rosso e bagnato dalle lacrime di <b>chi ha sofferto.</b></p>
+            <div class="experience-slide">
+              <img src="Assets/img/gabbia4.png" alt="Stanza 4 - Violenza Fisica">
+              <div class="experience-slide-text">
+                <div class="experience-slide-num">05 — Stanza 4</div>
+                <h3>Violenza Fisica</h3>
+                <p>Ombre minacciose ti inseguono in uno spazio buio, mentre oggetti si rompono e i colpi risuonano intorno a te. Non esiste una vera via di fuga. Alla fine, il silenzio rivela un letto e un cuscino macchiato di rosso e bagnato dalle lacrime di <b>chi ha sofferto.</b></p>
+              </div>
             </div>
-          </div>
  
-          <div class="experience-slide">
-            <img src="Assets/img/gabbia5.png" alt="Stanza 5 - Femminicidio">
-            <div class="experience-slide-text">
-              <div class="experience-slide-num">06 — Stanza 5</div>
-              <h3>Femminicidio</h3>
-              <p>Dopo un crescendo di urla e rumori, entri in una stanza bianca e silenziosa. A terra restano fotografie e oggetti personali che raccontano una vita interrotta. Davanti a uno specchio compare una domanda: <b>vuoi restare osservatore o diventare alleato?</b></p>
+            <div class="experience-slide">
+              <img src="Assets/img/gabbia5.png" alt="Stanza 5 - Femminicidio">
+              <div class="experience-slide-text">
+                <div class="experience-slide-num">06 — Stanza 5</div>
+                <h3>Femminicidio</h3>
+                <p>Dopo un crescendo di urla e rumori, entri in una stanza bianca e silenziosa. A terra restano fotografie e oggetti personali che raccontano una vita interrotta. Davanti a uno specchio compare una domanda: <b>vuoi restare osservatore o diventare alleato?</b></p>
+              </div>
             </div>
-          </div>
  
-          <div class="experience-slide">
-            <img src="Assets/img/gabbia6.png" alt="Uscita e chiamata all'azione">
-            <div class="experience-slide-text">
-              <div class="experience-slide-num">07 — L’uscita</div>
-              <h3>L’uscita</h3>
-              <p>La porta finale conduce in uno spazio luminoso. Compaiono testimonianze, informazioni e strumenti per reconocer e contrastare la violenza. La casa è ancora alle tue spalle, ma ora sai che il silenzio può diventare complicità. <b>Il cambiamento inizia con te. Non lasciare che il silenzio sia complice.</b></p>
+            <div class="experience-slide">
+              <img src="Assets/img/gabbia6.png" alt="Uscita e chiamata all'azione">
+              <div class="experience-slide-text">
+                <div class="experience-slide-num">07 — L’uscita</div>
+                <h3>L’uscita</h3>
+                <p>La porta finale conduce in uno spazio luminoso. Compaiono testimonianze, informazioni e strumenti per reconocer e contrastare la violenza. La casa è ancora alle tue spalle, ma ora sai che il silenzio può diventare complicità. <b>Il cambiamento inizia con te. Non lasciare che il silenzio sia complice.</b></p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
  
-      <!-- Carousel Controls -->
+        <!-- Carousel Controls -->
         <div class="experience-controls">
-          <div class="experience-counter">01 / 07</div>
+          <div class="experience-counter" aria-live="polite">01 / 07</div>
           <div class="experience-dots"></div>
           <div class="experience-nav-btns">
             <button class="exp-btn prev" aria-label="Passo precedente">
@@ -137,67 +152,55 @@
           </div>
         </div>
       </div>
-      <p class="reveal" style="font-size: 12px; font-style: italic; color: var(--ink-faint); margin-top: 12px; text-align: center;">
+      <p class="reveal" style="font-size: 12px; font-style: italic; color: var(--color-onyx-faint); margin-top: 16px; text-align: left; max-width: 58ch;">
         Nota: Le immagini in questa sezione sono illustrazioni fittizie generate tramite Intelligenza Artificiale a scopo dimostrativo.
       </p>
     </div>
   </section>
 
   <!-- ISPIRAZIONE E CONCEPT -->
-  <section id="concept">
+  <section id="concept" class="section-accent">
     <div class="wrap">
       <div class="section-label reveal">Ispirazione e concept</div>
-      <div class="two-col reveal" style="align-items:flex-start;">
+      <h2 class="reveal" style="margin-bottom: 32px;">Gabbia</h2>
+      <div class="two-col reveal" style="align-items: flex-start;">
         <div>
-          <h2>Gabbia</h2>
-          <div class="visual-block reveal" style="margin-top:24px; border-radius:14px; overflow:hidden; border:1px solid var(--line);">
-            <img src="Assets/img/ana-mendieta.webp" alt="Ana Mendieta" style="width:100%; display:block; height:auto;">
+          <div class="visual-block" style="border-radius: 16px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.3);">
+            <img src="Assets/img/ana-mendieta.webp" alt="Ana Mendieta" style="width: 100%; display: block; height: auto;">
+          </div>
+          <div style="font-family: var(--font-serif); font-size: 14.5px; font-style: italic; color: var(--color-onyx-muted); line-height: 1.55; border-left: 3px solid var(--accent-color); padding: 16px 20px; background: var(--bg-panel); border-radius: 12px; margin-top: 20px;">
+            "Gabbia è un'estensione digitale della ricerca di Ana Mendieta: trasformare lo spettatore da osservatore passivo a partecipante attivo nella comprensione e nel contrasto della violenza di genere."
           </div>
         </div>
         <div class="body">
-          <div style="font-family: 'Fraunces', serif; font-size: 18px; font-style: italic; color: var(--ink); line-height: 1.6; border-left: 3px solid var(--accent-2); padding-left: 24px; margin-bottom: 28px;">
-            "La mia arte è basata sulla fede in una energia universale che attraversa qualsiasi cosa: dall'insetto all'uomo, dall'uomo allo spettro, dallo spettro alla pianta, dalla pianta alla galassia." - Ana Mendieta
-          </div>
-          <p>Il progetto nasce dall'eredità artistica di <strong>Ana Mendieta</strong>, artista cubana che ha usato il proprio corpo per affrontare temi di violenza di genere e identità, e dal linguaggio immersivo di <strong>Carne y Arena</strong> della Fondazione Prada. Da questi riferimenti nasce l'idea di trasformare un messaggio artistico in un'<strong>esperienza interattiva</strong> capace di far vivere la violenza in prima persona, non solo di raccontarla.</p>
-          <p>Gabbia traduce la <strong>spirale della violenza</strong> in uno spazio fisico che si restringe: un unico corridoio, cinque stanze, nessuna via di fuga visibile. Ogni piano combina simboli, audio e interazioni sensoriali per rendere tangibile ciò che spesso resta invisibile.</p>
+          <p>Gabbia nasce dall’eredità di <strong>Ana Mendieta</strong>, artista cubana che ha usato il proprio corpo per affrontare temi di violenza di genere e identità, e dal linguaggio immersivo di <strong>Carne y Arena</strong>, trasformando la denuncia della violenza di genere in un’esperienza da vivere in prima persona.</p>
+          <p>La <strong>spirale della violenza</strong> prende forma in uno spazio che si restringe: un corridoio e cinque stanze in cui simboli, suoni e interazioni rendono visibile ciò che spesso rimane nascosto.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MESSAGGIO FINALE -->
-  <section id="messaggio" style="background: var(--bg-panel); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
-    <div class="wrap">
-      <div class="section-label reveal">L'obiettivo</div>
-      <div class="reveal" style="max-width: 800px;">
-        <p style="font-family: 'Inter', sans-serif; font-size: 16px; color: var(--ink); line-height: 1.6; border-left: 3px solid var(--accent-2); padding-left: 24px; margin: 0;">
-          Gabbia è un'estensione digitale dei principi che Ana Mendieta ha incarnato nella sua arte: rendere visibili le dinamiche di oppressione e trasformare lo spettatore da osservatore passivo ad alleato attivo contro la violenza di genere.
-        </p>
       </div>
     </div>
   </section>
 
   <!-- TECNOLOGIE E METODI -->
-  <section id="tecnologie">
+  <section id="tecnologie" class="section-tint">
     <div class="wrap">
       <div class="section-label reveal">Tecnologie e metodi</div>
-      <div class="research-grid reveal">
-        <div class="research-card">
+      <div class="research-grid">
+        <div class="research-card reveal">
           <div class="research-num">Interattività</div>
           <h3>Motion tracking</h3>
-          <p>L'utente diventa parte attiva dell'esperienza: <strong>tocca oggetti simbolici</strong>, segue percorsi obbligati, percepisce vibrazioni che simulano un impatto senza causare dolore reale.</p>
+          <p>L’utente vive l’esperienza in prima persona attraverso <strong>oggetti simbolici</strong>, percorsi e <strong>stimoli sensoriali</strong> che rendono percepibile la violenza.</p>
         </div>
-        <div class="research-card">
+        <div class="research-card reveal">
           <div class="research-num">Ambiente</div>
           <h3>Spazi multisensoriali</h3>
-          <p>Suoni immersivi, vibrazioni e variazioni di luce e temperatura costruiscono un'<strong>atmosfera claustrofobica</strong> che si intensifica stanza dopo stanza.</p>
+          <p>Suoni immersivi, vibrazioni e variazioni di luce e temperatura intensificano progressivamente l’<strong>atmosfera claustrofobica</strong> dell’esperienza.</p>
         </div>
-        <div class="research-card">
+        <div class="research-card reveal">
           <div class="research-num">Collaborazioni</div>
           <h3>Accuratezza e rispetto</h3>
-          <p>Il progetto coinvolge <strong>associazioni femminili, psicologi e attivisti</strong> per garantire un racconto accurato e rispettoso di un tema così delicato.</p>
+          <p>Il progetto coinvolge <strong>associazioni, psicologi e attivisti</strong> per garantire un racconto accurato e rispettoso sul tema.</p>
         </div>
-        <div class="research-card">
+        <div class="research-card reveal">
           <div class="research-num">Accessibilità</div>
           <h3>Dentro e fuori dal museo</h3>
           <p>L'esperienza è pensata per essere fruibile sia in <strong>spazi fisici</strong> come musei e scuole, sia su <strong>piattaforme VR domestiche</strong>.</p>
@@ -216,12 +219,21 @@
       </a>
       <a href="la-forza-e-cura.html">
         <span class="dir">Prossimo progetto →</span>
-        <span class="title">La forza è cura</span>
+        <span class="title">La Forza è Cura</span>
       </a>
     </div>
   </nav>
  
   <footer>
+    <div class="wrap">
+      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;">Restiamo in contatto</span>
+      <nav class="footer-links">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank">Email</a>
+        <a href="https://www.linkedin.com/in/giulia-de-fazio-321a8a215/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/le_illustrazioni_di_lia/" target="_blank">Instagram</a>
+        <a href="https://www.behance.net/giuliadefazio" target="_blank">Behance</a>
+      </nav>
+    </div>
     <div class="wrap bottom">
       <span>© 2026 Giulia De Fazio</span>
       <span>Torino, Italia</span>
@@ -229,48 +241,6 @@
   </footer>
  
   <script src="main.js"></script>
-  <script>
-    // Experience Carousel Logic
-    document.addEventListener('DOMContentLoaded', () => {
-      const track = document.querySelector('.experience-carousel-track');
-      const slides = document.querySelectorAll('.experience-slide');
-      const prevBtn = document.querySelector('.exp-btn.prev');
-      const nextBtn = document.querySelector('.exp-btn.next');
-      const counter = document.querySelector('.experience-counter');
-      const dotsContainer = document.querySelector('.experience-dots');
-
-      if(!track || !slides.length) return;
-
-      let currentIndex = 0;
-      const totalSlides = slides.length;
-
-      slides.forEach((_, i) => {
-        const dot = document.createElement('div');
-        dot.classList.add('exp-dot');
-        if (i === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => goToSlide(i));
-        dotsContainer.appendChild(dot);
-      });
-
-      const dots = document.querySelectorAll('.exp-dot');
-
-      function updateCarousel() {
-        track.style.transform = `translateX(-${currentIndex * 100}%)`;
-        counter.textContent = `0${currentIndex + 1} / 0${totalSlides}`;
-        dots.forEach((dot, i) => {
-          dot.classList.toggle('active', i === currentIndex);
-        });
-      }
-
-      function goToSlide(index) {
-        currentIndex = (index + totalSlides) % totalSlides;
-        updateCarousel();
-      }
-
-      if(prevBtn) prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
-      if(nextBtn) nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
-    });
-  </script>
  
 </body>
 </html>
