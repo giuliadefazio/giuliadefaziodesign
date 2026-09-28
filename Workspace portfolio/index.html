@@ -22,6 +22,7 @@
     <nav>
       <ul class="nav-links-list">
         <li><a href="about.html">Chi Sono</a></li>
+        <li><a href="illustrazioni.html">Illustrazioni</a></li>
         <li><a href="progetti.html">Progetti</a></li>
         <li><a href="contatti.html">Contatti</a></li>
       </ul>
@@ -62,15 +63,21 @@
       <div class="home-hero__slide" data-index="2">
         <img src="Assets/img/nome-anteprima.png" alt="Nomen">
       </div>
-      <div class="home-hero__slide" data-index="3">
-        <img src="Assets/img/tesi-affissioni.png" alt="Welcome back, Champion">
+      <div class="home-hero__slide home-hero__slide--illus" data-index="3">
+        <img src="Assets/img/charles.png" alt='Copertina "Il compagno di sbronze"'>
+      </div>
+      <div class="home-hero__slide home-hero__slide--illus" data-index="4">
+        <img src="Assets/img/re-leone.png" alt='Locandina "Il Re Leone"'>
+      </div>
+      <div class="home-hero__slide home-hero__slide--illus" data-index="5">
+        <img src="Assets/img/linganno-della-donna-del-bosco.png" alt="L'inganno della donna del bosco">
       </div>
     </div>
 
     <div class="home-hero__shade" aria-hidden="true"></div>
 
     <div class="home-hero__content">
-      <span class="home-hero__featured-label">Progetto in evidenza</span>
+      <span class="home-hero__featured-label">In evidenza</span>
       
       <h1 class="home-hero__title" id="hero-slide-title">Flow State</h1>
       
@@ -82,7 +89,7 @@
         <a href="flowstate.html" id="hero-slide-link" class="button-043">
           <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
           <span class="button-043__inner">
-            <span>Vedi progetto</span>
+            <span id="hero-slide-btn-text">Vedi progetto</span>
             <span class="button-043__icon-wrap">
               <span class="button-043__icon-list">
                 <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -97,14 +104,16 @@
           <button type="button" class="home-hero__dot is--current" data-index="0" aria-label="Mostra Flow State"></button>
           <button type="button" class="home-hero__dot" data-index="1" aria-label="Mostra Trama"></button>
           <button type="button" class="home-hero__dot" data-index="2" aria-label="Mostra Nomen"></button>
-          <button type="button" class="home-hero__dot" data-index="3" aria-label="Mostra Welcome back champion"></button>
+          <button type="button" class="home-hero__dot" data-index="3" aria-label="Mostra Copertina Il compagno di sbronze"></button>
+          <button type="button" class="home-hero__dot" data-index="4" aria-label="Mostra Locandina Il Re Leone"></button>
+          <button type="button" class="home-hero__dot" data-index="5" aria-label="Mostra L'inganno della donna del bosco"></button>
         </div>
       </div>
     </div>
   </section>
 
   <!-- INTRO / CHI SONO SECTION -->
-  <section class="intro-section section-tint" id="chi-sono">
+  <section class="intro-section section-tint" id="chi-sono" style="border-bottom: none;">
     <div class="wrap">
       <div class="section-label reveal">Chi Sono · Digital Communication Designer</div>
       
@@ -161,102 +170,337 @@
     </div>
   </section>
 
-  <!-- ORBIT TILES (3D TILT PROJECT DECK) -->
-  <section class="orbit-section" id="progetti">
+  <!-- SELECTED PROJECTS (EDITORIAL INDEX SYSTEM) -->
+  <section class="project-index-section" id="progetti">
     <div class="wrap">
-      <div class="section-label reveal">Progetti Selezionati</div>
+      <div class="section-label reveal" style="margin-bottom: 32px;">Progetti Selezionati</div>
 
-      <div class="orbit-grid">
+      <!-- EDITORIAL INDEX LIST -->
+      <div class="project-index reveal" id="project-index" role="list">
+        
+        <!-- ROW 01: FLOW STATE -->
+        <a href="flowstate.html" class="project-row" data-project-idx="0" role="listitem">
+          <div class="project-row__inner">
+            <div class="project-row__left">
+              <span class="project-row__num">01</span>
+              <h3 class="project-row__title">Flow State</h3>
+            </div>
+            <div class="project-row__right">
+              <span class="project-row__cat">Branding &amp; Packaging</span>
+              <span class="project-row__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+          <!-- Mobile preview image (visible on mobile only) -->
+          <div class="project-row__mobile-media">
+            <img src="Assets/img/anteprima-juli.png" alt="Flow State" loading="lazy">
+          </div>
+        </a>
 
-      <!-- Orbit Card 1 -->
-      <a href="flowstate.html" class="orbit-card" data-orbit-tilt>
-        <div class="orbit-card__tilt">
-          <div class="orbit-card__media">
-            <img src="Assets/img/anteprima-juli.png" alt="Flow State">
+        <!-- ROW 02: TRAMA -->
+        <a href="trama.html" class="project-row" data-project-idx="1" role="listitem">
+          <div class="project-row__inner">
+            <div class="project-row__left">
+              <span class="project-row__num">02</span>
+              <h3 class="project-row__title">Trama</h3>
+            </div>
+            <div class="project-row__right">
+              <span class="project-row__cat">Esperienza Immersiva</span>
+              <span class="project-row__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
           </div>
-          <div class="orbit-card__shade"></div>
-        </div>
-        <div class="orbit-card__info">
-          <div>
-            <span class="orbit-card__num">Branding &amp; Packaging</span>
-            <h3 class="orbit-card__title">Flow State</h3>
-            <p class="orbit-card__desc">Capsule collection di acqua premium pensata come rituale quotidiano per rilassarsi.</p>
+          <div class="project-row__mobile-media">
+            <img src="Assets/img/trama4.png" alt="Trama" loading="lazy">
           </div>
-          <span class="orbit-card__cta">Esplora ↗</span>
-        </div>
-      </a>
+        </a>
 
-      <!-- Orbit Card 2 -->
-      <a href="trama.html" class="orbit-card" data-orbit-tilt>
-        <div class="orbit-card__tilt">
-          <div class="orbit-card__media">
-            <img src="Assets/img/trama4.png" alt="Trama">
+        <!-- ROW 03: NOMEN -->
+        <a href="nomen.html" class="project-row" data-project-idx="2" role="listitem">
+          <div class="project-row__inner">
+            <div class="project-row__left">
+              <span class="project-row__num">03</span>
+              <h3 class="project-row__title">Nomen</h3>
+            </div>
+            <div class="project-row__right">
+              <span class="project-row__cat">Video &amp; Motion</span>
+              <span class="project-row__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
           </div>
-          <div class="orbit-card__shade"></div>
-        </div>
-        <div class="orbit-card__info">
-          <div>
-            <span class="orbit-card__num">Esperienza Immersiva</span>
-            <h3 class="orbit-card__title">Trama</h3>
-            <p class="orbit-card__desc">Un’installazione urbana sui difetti che nascondiamo vista attraverso gli occhi degli altri.</p>
+          <div class="project-row__mobile-media">
+            <img src="Assets/img/nome-anteprima.png" alt="Nomen" loading="lazy">
           </div>
-          <span class="orbit-card__cta">Esplora ↗</span>
-        </div>
-      </a>
+        </a>
 
-      <!-- Orbit Card 3 -->
-      <a href="nomen.html" class="orbit-card" data-orbit-tilt>
-        <div class="orbit-card__tilt">
-          <div class="orbit-card__media">
-            <img src="Assets/img/nome-anteprima.png" alt="Nomen">
+        <!-- ROW 04: GABBIA -->
+        <a href="gabbia.html" class="project-row" data-project-idx="3" role="listitem">
+          <div class="project-row__inner">
+            <div class="project-row__left">
+              <span class="project-row__num">04</span>
+              <h3 class="project-row__title">Gabbia</h3>
+            </div>
+            <div class="project-row__right">
+              <span class="project-row__cat">Esperienza Immersiva</span>
+              <span class="project-row__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
           </div>
-          <div class="orbit-card__shade"></div>
-        </div>
-        <div class="orbit-card__info">
-          <div>
-            <span class="orbit-card__num">Video &amp; Motion</span>
-            <h3 class="orbit-card__title">Nomen</h3>
-            <p class="orbit-card__desc">Cortometraggio mystery ambientato nella Torino esoterica, tra tarocchi e coincidenze.</p>
+          <div class="project-row__mobile-media">
+            <img src="Assets/img/gabbia1.png" alt="Gabbia" loading="lazy">
           </div>
-          <span class="orbit-card__cta">Esplora ↗</span>
-        </div>
-      </a>
+        </a>
 
-      <!-- Orbit Card 4 -->
-      <a href="welcome-back-champion.html" class="orbit-card" data-orbit-tilt>
-        <div class="orbit-card__tilt">
-          <div class="orbit-card__media">
-            <img src="Assets/img/tesi-affissioni.png" alt="Welcome back, Champion">
-          </div>
-          <div class="orbit-card__shade"></div>
-        </div>
-        <div class="orbit-card__info">
-          <div>
-            <span class="orbit-card__num">Campagna Crossmediale</span>
-            <h3 class="orbit-card__title">Welcome back, Champion</h3>
-            <p class="orbit-card__desc">Campagna per SUSTAINera che presenta i ricambi rigenerati come campioni che tornano in gioco.</p>
-          </div>
-          <span class="orbit-card__cta">Esplora ↗</span>
-        </div>
-      </a>
+      </div>
 
-    </div>
+      <!-- DESKTOP FLOATING CURSOR PREVIEW -->
+      <div class="project-preview-card" id="project-preview-card" aria-hidden="true">
+        <div class="project-preview-card__img is-active" data-preview-idx="0">
+          <img src="Assets/img/anteprima-juli.png" alt="Flow State">
+        </div>
+        <div class="project-preview-card__img" data-preview-idx="1">
+          <img src="Assets/img/trama4.png" alt="Trama">
+        </div>
+        <div class="project-preview-card__img" data-preview-idx="2">
+          <img src="Assets/img/nome-anteprima.png" alt="Nomen">
+        </div>
+        <div class="project-preview-card__img" data-preview-idx="3">
+          <img src="Assets/img/gabbia1.png" alt="Gabbia">
+        </div>
+      </div>
 
-    <!-- BUTTON: SCOPRI TUTTI I PROGETTI -->
-    <div style="margin-top: 48px; display: flex; justify-content: center;">
-      <a href="progetti.html" class="button-043">
-        <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
-        <span class="button-043__inner">
-          <span>Scopri tutti i progetti</span>
-          <span class="button-043__icon-wrap">
-            <span class="button-043__icon-list">
-              <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      <!-- BUTTON: SCOPRI TUTTI I PROGETTI -->
+      <div style="margin-top: 54px; display: flex; justify-content: center;">
+        <a href="progetti.html" class="button-043">
+          <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+          <span class="button-043__inner">
+            <span>Scopri tutti i progetti</span>
+            <span class="button-043__icon-wrap">
+              <span class="button-043__icon-list">
+                <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
             </span>
           </span>
-        </span>
-      </a>
+        </a>
+      </div>
     </div>
+  </section>
+
+  <!-- ILLUSTRAZIONI TEASER (3D PAPER SKETCHBOOK) -->
+  <section class="illus-teaser-section" id="illustrazioni">
+    <div class="wrap">
+      <div class="illus-teaser__container reveal">
+        
+        <!-- LEFT: TEXT -->
+        <div class="illus-teaser__text">
+          <div class="section-label" style="margin-bottom: 16px;">Illustrazioni</div>
+          <h2 class="illus-teaser__title">
+            Un album di disegni.
+          </h2>
+          <p class="illus-teaser__desc">
+            Quello che mi piace illustrare, tra tablet e matita.
+          </p>
+          <a href="illustrazioni.html" class="illus-teaser__link">
+            Scopri di più &rarr;
+          </a>
+        </div>
+
+        <!-- RIGHT: 3D PAPER BOOK (CLOSED -> OPEN DUAL-PAGE SYSTEM) -->
+        <div class="sketchbook-wrap">
+          <div class="sketchbook is-closed" id="sketchbook" role="region" tabindex="0" aria-label="Album illustrazioni di Giulia">
+            
+            <!-- Base shadow & paper stack edges -->
+            <div class="sketchbook__base-spread" aria-hidden="true"></div>
+
+            <!-- Central thin spine in deep forest teal (#0C423B) -->
+            <div class="sketchbook__spine" aria-hidden="true"></div>
+
+            <!-- Left inside lining (visible underneath all left pages) -->
+            <div class="sketchbook__left-lining" aria-hidden="true">
+              <div class="page__gutter-shadow page__gutter-shadow--left"></div>
+            </div>
+
+            <!-- Right base: 6th CTA PAGE (Revealed after 5th illustration) -->
+            <div class="sketchbook__right-base" id="sketchbook-right-base">
+              <div class="page__cta-wrapper">
+                <div class="cta-plate">
+                  <div class="cta-plate__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                      <circle cx="8.5" cy="8.5" r="1.5"/>
+                      <polyline points="21 15 16 10 5 21"/>
+                    </svg>
+                  </div>
+                  <h4 class="cta-plate__title">Tutte le Tavole</h4>
+                  <a href="illustrazioni.html" class="button-043 button-043--compact">
+                    <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+                    <span class="button-043__inner">
+                      <span>Vedi tutte le illustrazioni</span>
+                      <span class="button-043__icon-wrap">
+                        <span class="button-043__icon-list">
+                          <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                          <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </span>
+                      </span>
+                    </span>
+                  </a>
+                  <span class="cta-plate__hint">oppure clicca per richiudere</span>
+                </div>
+              </div>
+              <div class="page__gutter-shadow page__gutter-shadow--right" aria-hidden="true"></div>
+              <div class="sketchbook__cast-shadow" aria-hidden="true"></div>
+            </div>
+
+            <!-- THE 5 PHYSICAL SHEETS (4 TAVOLE + COPERTINA + CONCLUSIONE) -->
+            <div class="sketchbook__pages">
+
+              <!-- SHEET 0: FRONT = FRONT COVER | BACK = TAVOLA 01 TEXT (Charles) -->
+              <div class="sketchbook__sheet" data-sheet="0">
+                <!-- Front: Copertina -->
+                <div class="sheet__face sheet__front sheet__front--cover">
+                  <div class="cover__spine-band" aria-hidden="true"></div>
+                  <div class="cover__content">
+                    <span class="cover__subtitle">Album di Giulia</span>
+                    <h3 class="cover__title">Illustrazioni</h3>
+                  </div>
+                  <div class="page__curl" aria-hidden="true"></div>
+                  <div class="page__shade page__shade--front" aria-hidden="true"></div>
+                </div>
+                <!-- Back: Testo Tavola 01 (Charles) -->
+                <div class="sheet__face sheet__back">
+                  <div class="page__editorial">
+                    <span class="page__editorial-tag">Tavola 01 · Digitale · 2024</span>
+                    <h3 class="page__editorial-title">Copertina "Il compagno di sbronze"</h3>
+                    <p class="page__editorial-desc">
+                      Copertina illustrata di "Compagno di sbronze" di Charles Bukowski, realizzata per un progetto universitario di progettazione editoriale per la collana Narratori di Feltrinelli.
+                    </p>
+                  </div>
+                  <div class="page__gutter-shadow page__gutter-shadow--left" aria-hidden="true"></div>
+                  <div class="page__shade page__shade--back" aria-hidden="true"></div>
+                </div>
+              </div>
+
+              <!-- SHEET 1: FRONT = TAVOLA 01 ART (Charles) | BACK = TAVOLA 02 TEXT (Re Leone) -->
+              <div class="sketchbook__sheet" data-sheet="1">
+                <!-- Front: Art Tavola 01 (Charles) -->
+                <div class="sheet__face sheet__front">
+                  <div class="page__art">
+                    <img src="Assets/img/charles.png" alt='Copertina "Il compagno di sbronze"' style="object-position: center 15%;">
+                  </div>
+                  <div class="page__caption">
+                    <span class="page__name">Il compagno di sbronze</span>
+                  </div>
+                  <div class="page__curl" aria-hidden="true"></div>
+                  <div class="page__gutter-shadow page__gutter-shadow--right" aria-hidden="true"></div>
+                  <div class="page__shade page__shade--front" aria-hidden="true"></div>
+                </div>
+                <!-- Back: Testo Tavola 02 (Locandina Il Re Leone) -->
+                <div class="sheet__face sheet__back">
+                  <div class="page__editorial">
+                    <span class="page__editorial-tag">Tavola 02 · Digitale · 2024</span>
+                    <h3 class="page__editorial-title">Locandina "Il Re Leone"</h3>
+                    <p class="page__editorial-desc">
+                      Locandina del film Il Re Leone, realizzata in digitale con Procreate per un progetto universitario, disponibile in una versione a colori e una monocromatica.
+                    </p>
+                  </div>
+                  <div class="page__gutter-shadow page__gutter-shadow--left" aria-hidden="true"></div>
+                  <div class="page__shade page__shade--back" aria-hidden="true"></div>
+                </div>
+              </div>
+
+              <!-- SHEET 2: FRONT = TAVOLA 02 ART (Re Leone) | BACK = TAVOLA 03 TEXT (L'inganno) -->
+              <div class="sketchbook__sheet" data-sheet="2">
+                <!-- Front: Art Tavola 02 (Re Leone) -->
+                <div class="sheet__face sheet__front">
+                  <div class="page__art">
+                    <img src="Assets/img/re-leone.png" alt='Locandina "Il Re Leone"' style="object-position: center 20%;">
+                  </div>
+                  <div class="page__caption">
+                    <span class="page__name">Locandina "Il Re Leone"</span>
+                  </div>
+                  <div class="page__curl" aria-hidden="true"></div>
+                  <div class="page__gutter-shadow page__gutter-shadow--right" aria-hidden="true"></div>
+                  <div class="page__shade page__shade--front" aria-hidden="true"></div>
+                </div>
+                <!-- Back: Testo Tavola 03 (L'inganno) -->
+                <div class="sheet__face sheet__back">
+                  <div class="page__editorial">
+                    <span class="page__editorial-tag">Tavola 03 · Digitale · 2025</span>
+                    <h3 class="page__editorial-title">L'inganno della donna del bosco</h3>
+                    <p class="page__editorial-desc">
+                      L'illustrazione rappresenta la duplice natura della Huldra, spirito femminile del folklore scandinavo: la bellezza luminosa in superficie cela una natura oscura e animale riflessa nelle acque.
+                    </p>
+                  </div>
+                  <div class="page__gutter-shadow page__gutter-shadow--left" aria-hidden="true"></div>
+                  <div class="page__shade page__shade--back" aria-hidden="true"></div>
+                </div>
+              </div>
+
+              <!-- SHEET 3: FRONT = TAVOLA 03 ART (L'inganno) | BACK = TAVOLA 04 TEXT (Girl) -->
+              <div class="sketchbook__sheet" data-sheet="3">
+                <!-- Front: Art Tavola 03 (L'inganno) -->
+                <div class="sheet__face sheet__front">
+                  <div class="page__art">
+                    <img src="Assets/img/linganno-della-donna-del-bosco.png" alt="L'inganno della donna del bosco" style="object-position: center 25%;">
+                  </div>
+                  <div class="page__caption">
+                    <span class="page__name">L'inganno della donna del bosco</span>
+                  </div>
+                  <div class="page__curl" aria-hidden="true"></div>
+                  <div class="page__gutter-shadow page__gutter-shadow--right" aria-hidden="true"></div>
+                  <div class="page__shade page__shade--front" aria-hidden="true"></div>
+                </div>
+                <!-- Back: Testo Tavola 04 (Gothic Girl) -->
+                <div class="sheet__face sheet__back">
+                  <div class="page__editorial">
+                    <span class="page__editorial-tag">Tavola 04 · Carta · 2026</span>
+                    <h3 class="page__editorial-title">Gothic Girl</h3>
+                    <p class="page__editorial-desc">
+                      Ritratto in stile gotico horror: occhi enormi, cuciture ai lati della bocca, orecchini a croce e un girocollo nero.
+                    </p>
+                  </div>
+                  <div class="page__gutter-shadow page__gutter-shadow--left" aria-hidden="true"></div>
+                  <div class="page__shade page__shade--back" aria-hidden="true"></div>
+                </div>
+              </div>
+
+              <!-- SHEET 4: FRONT = TAVOLA 04 ART (Girl) | BACK = PAGINA FINALE "C'è altro da vedere." -->
+              <div class="sketchbook__sheet" data-sheet="4">
+                <!-- Front: Art Tavola 04 (Girl) -->
+                <div class="sheet__face sheet__front">
+                  <div class="page__art">
+                    <img src="Assets/img/girl.png" alt="Gothic Girl" style="object-position: center;">
+                  </div>
+                  <div class="page__caption">
+                    <span class="page__name">Gothic Girl</span>
+                  </div>
+                  <div class="page__curl" aria-hidden="true"></div>
+                  <div class="page__gutter-shadow page__gutter-shadow--right" aria-hidden="true"></div>
+                  <div class="page__shade page__shade--front" aria-hidden="true"></div>
+                </div>
+                <!-- Back: Pagina finale sinistra -->
+                <div class="sheet__face sheet__back">
+                  <div class="page__editorial page__editorial--conclusion">
+                    <h3 class="page__conclusion-title">C'è altro da vedere.</h3>
+                    <p class="page__conclusion-desc">
+                      Una raccolta più ampia di poster, personaggi e sperimentazioni visive realizzate tra carta e digitale.
+                    </p>
+                  </div>
+                  <div class="page__gutter-shadow page__gutter-shadow--left" aria-hidden="true"></div>
+                  <div class="page__shade page__shade--back" aria-hidden="true"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- SKETCHBOOK CONTROLS & HINT -->
+          <div class="sketchbook__meta">
+            <div class="sketchbook__meta-row">
+              <span class="sketchbook__hint" id="sketchbook-hint">Clicca per aprire</span>
+              <span class="sketchbook__counter" id="sketchbook-counter"></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -282,7 +526,7 @@
             <span class="label">Email</span>
             <div class="val">giuliadefazio.work@gmail.com</div>
           </div>
-          <span class="action-tag">Scrivimi ↗</span>
+          <span class="action-tag">Scrivimi <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
         </a>
 
         <!-- LINKEDIN -->
@@ -291,7 +535,7 @@
             <span class="label">LinkedIn</span>
             <div class="val">Giulia De Fazio</div>
           </div>
-          <span class="action-tag">Profilo ↗</span>
+          <span class="action-tag">Profilo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
         </a>
 
         <!-- INSTAGRAM -->
@@ -300,7 +544,7 @@
             <span class="label">Instagram</span>
             <div class="val">@le_illustrazioni_di_lia</div>
           </div>
-          <span class="action-tag">Segui ↗</span>
+          <span class="action-tag">Segui <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
         </a>
 
         <!-- BEHANCE -->
@@ -309,7 +553,7 @@
             <span class="label">Behance</span>
             <div class="val">giuliadefazio</div>
           </div>
-          <span class="action-tag">Portfolio ↗</span>
+          <span class="action-tag">Portfolio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
         </a>
 
       </div>
