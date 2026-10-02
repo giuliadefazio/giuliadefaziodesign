@@ -189,6 +189,65 @@ header.site-header > * {
   width: 100%;
 }
 
+/* ---------- HEADER ACTIONS & LANGUAGE SWITCHER ---------- */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line-color);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-onyx);
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.lang-switch:hover {
+  border-color: var(--line-burgundy);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.lang-switch__btn {
+  background: none;
+  border: none;
+  padding: 2px 3px;
+  font: inherit;
+  color: var(--color-onyx-faint);
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s ease;
+  border-radius: 4px;
+}
+
+.lang-switch__btn:hover {
+  color: var(--accent-color);
+}
+
+.lang-switch__btn.is-active {
+  color: var(--accent-color);
+  font-weight: 800;
+}
+
+.lang-switch__divider {
+  opacity: 0.35;
+  font-size: 10px;
+  pointer-events: none;
+}
+
 /* ---------- BUTTON-043 (KOMMA KOMMA PILL BUTTON WITH MASKED ARROW) ---------- */
 .button-043 {
   position: relative;
@@ -2658,7 +2717,8 @@ p {
 
 @media (max-width: 768px) {
   .nav-links-list,
-  header.site-header > .button-043 {
+  header.site-header > .button-043,
+  .header-actions > .button-043 {
     display: none;
   }
 
