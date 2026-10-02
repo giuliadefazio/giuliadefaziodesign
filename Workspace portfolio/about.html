@@ -21,26 +21,35 @@
     
     <nav>
       <ul class="nav-links-list">
-        <li><a href="about.html" class="active">Chi Sono</a></li>
-        <li><a href="illustrazioni.html">Illustrazioni</a></li>
-        <li><a href="progetti.html">Progetti</a></li>
-        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="about.html" class="active" data-i18n="nav.about">Chi Sono</a></li>
+        <li><a href="illustrazioni.html" data-i18n="nav.illustrations">Illustrazioni</a></li>
+        <li><a href="progetti.html" data-i18n="nav.projects">Progetti</a></li>
+        <li><a href="contatti.html" data-i18n="nav.contact">Contatti</a></li>
       </ul>
     </nav>
 
-    <!-- KOMMA KOMMA BUTTON-043 -->
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
-      <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
-      <span class="button-043__inner">
-        <span>Scrivimi</span>
-        <span class="button-043__icon-wrap">
-          <span class="button-043__icon-list">
-            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    <div class="header-actions">
+      <!-- LANGUAGE SWITCHER -->
+      <div class="lang-switch" role="group" aria-label="Lingua / Language">
+        <button type="button" class="lang-switch__btn is-active" data-lang="it" aria-pressed="true">IT</button>
+        <span class="lang-switch__divider" aria-hidden="true">/</span>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+
+      <!-- KOMMA KOMMA BUTTON-043 -->
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
+        <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+        <span class="button-043__inner">
+          <span data-i18n="nav.contact_btn">Scrivimi</span>
+          <span class="button-043__icon-wrap">
+            <span class="button-043__icon-list">
+              <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
           </span>
         </span>
-      </span>
-    </a>
+      </a>
+    </div>
   </header>
 
   <!-- EDITORIAL HERO HEADER -->
@@ -50,20 +59,20 @@
 
         <!-- LEFT: testo -->
         <div class="about-hero-text">
-          <h1 class="reveal" style="font-family: var(--font-serif); font-weight: 400; font-size: clamp(38px, 5.5vw, 76px); line-height: 0.95; letter-spacing: -0.02em; color: var(--color-onyx); margin-bottom: 20px;">
+          <h1 class="reveal" style="font-family: var(--font-serif); font-weight: 400; font-size: clamp(38px, 5.5vw, 76px); line-height: 0.95; letter-spacing: -0.02em; color: var(--color-onyx); margin-bottom: 20px;" data-i18n="about.hero_title">
             Ciao, sono <span class="serif-highlight">Giulia.</span>
           </h1>
-          <p class="reveal" style="font-family: var(--font-serif); font-style: italic; font-size: clamp(16px, 1.5vw, 21px); color: var(--color-onyx-muted); max-width: 640px; line-height: 1.4;">
+          <p class="reveal" style="font-family: var(--font-serif); font-style: italic; font-size: clamp(16px, 1.5vw, 21px); color: var(--color-onyx-muted); max-width: 640px; line-height: 1.4;" data-i18n="about.hero_desc">
             Digital Communication Designer di Torino.<br>Progetto esperienze che uniscono strategia, sensibilità visiva e narrazione.
           </p>
 
           <!-- MINIMALIST DISCIPLINE TAGS -->
           <div class="reveal tag-row" style="margin-top: 28px;">
-            <span class="tag-chip">Identità Visiva</span>
-            <span class="tag-chip">Campagne Crossmediali</span>
-            <span class="tag-chip">Video &amp; Motion</span>
-            <span class="tag-chip">Immersive Experience</span>
-            <span class="tag-chip">Illustrazione</span>
+            <span class="tag-chip" data-i18n="about.tag_visual">Identità Visiva</span>
+            <span class="tag-chip" data-i18n="about.tag_crossmedia">Campagne Crossmediali</span>
+            <span class="tag-chip" data-i18n="about.tag_video">Video &amp; Motion</span>
+            <span class="tag-chip" data-i18n="about.tag_immersive">Immersive Experience</span>
+            <span class="tag-chip" data-i18n="about.tag_illustration">Illustrazione</span>
           </div>
         </div>
 
@@ -83,16 +92,16 @@
         
         <!-- LEFT COLUMN: BIO PARAGRAPHS -->
         <div class="reveal" style="font-family: var(--font-sans); font-size: clamp(16px, 1.7vw, 20px); color: var(--color-onyx-muted); line-height: 1.65; display: flex; flex-direction: column; gap: 24px; max-width: 58ch;">
-          <p>
+          <p data-i18n="about.bio_p1">
             Sono una designer della comunicazione digitale e progetto esperienze e sistemi di comunicazione che prendono forma attraverso <strong>installazioni immersive, identità visive, contenuti, video, motion e campagne</strong>.
           </p>
-          <p>
+          <p data-i18n="about.bio_p2">
             Il mio approccio parte dall'<strong>ascolto</strong>, dalla <strong>ricerca</strong> e dall'<strong>analisi</strong> dei bisogni, cercando il giusto equilibrio tra strategia, sensibilità visiva e attenzione ai dettagli.
           </p>
-          <p>
+          <p data-i18n="about.bio_p3">
             Inoltre sono una <strong>illustratrice</strong> e disegno tutto ciò che mi piace e mi passa per la testa.
           </p>
-          <p>
+          <p data-i18n="about.bio_p4">
             Sono una persona <strong>curiosa, proattiva</strong> e credo nel design come strumento per <strong>attivare, connettere persone e dare forma a valori condivisi</strong>.
           </p>
         </div>
@@ -100,8 +109,8 @@
         <!-- RIGHT COLUMN: ELEGANT DARK CV POSTER CARD -->
         <div class="reveal" style="background: var(--color-onyx); color: #FFFFFF; padding: 40px 32px; border-radius: 20px; display: flex; flex-direction: column; justify-content: space-between; gap: 28px; box-shadow: 0 12px 28px rgba(0,0,0,0.06);">
           <div>
-            <span style="font-family: var(--font-sans); font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 12px;">Curriculum</span>
-            <h2 style="font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 19px; line-height: 1.4; color: #FFFFFF;">
+            <span style="font-family: var(--font-sans); font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 12px;" data-i18n="about.cv_badge">Curriculum</span>
+            <h2 style="font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 19px; line-height: 1.4; color: #FFFFFF;" data-i18n="about.cv_title">
               Esplora il mio percorso.
             </h2>
           </div>
@@ -110,11 +119,11 @@
             <a href="Assets/giulia_defazio_cv.pdf" target="_blank" class="button-043 button-cv-dark">
               <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
               <span class="button-043__inner">
-                <span>Scarica CV</span>
+                <span data-i18n="about.cv_btn">Scarica CV</span>
                 <span class="button-043__icon-wrap">
                   <span class="button-043__icon-list">
                     <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-                    <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7-7 7"/></svg>
+                    <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
                   </span>
                 </span>
               </span>
@@ -129,28 +138,28 @@
   <!-- COME LAVORO / METODO -->
   <section id="metodo" class="section-tint">
     <div class="wrap">
-      <div class="section-label reveal">Metodo</div>
-      <h2 class="reveal" style="margin-bottom: 36px;">Come lavoro</h2>
+      <div class="section-label reveal" data-i18n="about.method_label">Metodo</div>
+      <h2 class="reveal" style="margin-bottom: 36px;" data-i18n="about.method_title">Come lavoro</h2>
       <div class="story-steps">
         <div class="story-step reveal">
           <div class="n">01</div>
-          <h3>Ascolto</h3>
-          <p>Immergersi nel contesto, comprendere gli obiettivi e ascoltare i bisogni reali delle persone e dei brand.</p>
+          <h3 data-i18n="about.step1_title">Ascolto</h3>
+          <p data-i18n="about.step1_desc">Immergersi nel contesto, comprendere gli obiettivi e ascoltare i bisogni reali delle persone e dei brand.</p>
         </div>
         <div class="story-step reveal">
           <div class="n">02</div>
-          <h3>Ricerca</h3>
-          <p>Esplorare linguaggi visivi, analizzare scenari e raccogliere spunti per costruire una base solida.</p>
+          <h3 data-i18n="about.step2_title">Ricerca</h3>
+          <p data-i18n="about.step2_desc">Esplorare linguaggi visivi, analizzare scenari e raccogliere spunti per costruire una base solida.</p>
         </div>
         <div class="story-step reveal">
           <div class="n">03</div>
-          <h3>Concept</h3>
-          <p>Definire l'idea chiave, il tono di voce e l'identità visiva che daranno forma e direzione al progetto.</p>
+          <h3 data-i18n="about.step3_title">Concept</h3>
+          <p data-i18n="about.step3_desc">Definire l'idea chiave, il tono di voce e l'identità visiva che daranno forma e direzione al progetto.</p>
         </div>
         <div class="story-step reveal">
           <div class="n">04</div>
-          <h3>Cura</h3>
-          <p>Sviluppare i contenuti, curare la resa tecnica e i dettagli per una realizzazione coerente ed efficace.</p>
+          <h3 data-i18n="about.step4_title">Cura</h3>
+          <p data-i18n="about.step4_desc">Sviluppare i contenuti, curare la resa tecnica e i dettagli per una realizzazione coerente ed efficace.</p>
         </div>
       </div>
     </div>
@@ -159,11 +168,11 @@
   <!-- STRUMENTI & COMPETENZE -->
   <section id="strumenti">
     <div class="wrap">
-      <div class="section-label reveal">Toolkit</div>
+      <div class="section-label reveal" data-i18n="about.toolkit_label">Toolkit</div>
       <div class="two-col reveal">
-        <h2>Strumenti</h2>
+        <h2 data-i18n="about.toolkit_title">Strumenti</h2>
         <div class="body">
-          <p style="margin-bottom: 24px;">Cosa utilizzo nel mio lavoro:</p>
+          <p style="margin-bottom: 24px;" data-i18n="about.toolkit_intro">Cosa utilizzo nel mio lavoro:</p>
           <div class="tool-icon-grid">
             <div class="app-icon-badge" data-tooltip="Photoshop" aria-label="Photoshop">Ps</div>
             <div class="app-icon-badge" data-tooltip="Adobe Illustrator" aria-label="Adobe Illustrator">Ai</div>
@@ -190,7 +199,7 @@
 
   <footer>
     <div class="wrap">
-      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;">Restiamo in contatto</span>
+      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;" data-i18n="footer.stay_in_touch">Restiamo in contatto</span>
       <nav class="footer-links">
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank">Email</a>
         <a href="https://www.linkedin.com/in/giulia-de-fazio-321a8a215/" target="_blank">LinkedIn</a>
@@ -200,10 +209,11 @@
     </div>
     <div class="wrap bottom">
       <span>© 2026 Giulia De Fazio</span>
-      <span>Torino, Italia</span>
+      <span data-i18n="footer.location">Torino, Italia</span>
     </div>
   </footer>
 
+  <script src="translations.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const arrowPrev = document.getElementById('hero-arrow-prev');
   const arrowNext = document.getElementById('hero-arrow-next');
 
-  const heroData = [
+  const defaultHeroData = [
     {
       title: "Flow State",
       desc: "Capsule collection di acqua premium pensata come rituale quotidiano per rilassarsi e gestire lo stress.",
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: "Trama",
-      desc: "Un’installazione urbana sui difetti che nascondiamo e su come cambiano quando li guardiamo attraverso gli occhi di uno sconosciuto.",
+      desc: "Esperienza teatrale immersiva che esplora le sfumature della manipolazione psicologica e del gaslighting.",
       link: "trama.html",
       btnText: "Vedi progetto"
     },
@@ -106,8 +106,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ];
 
+  const getHeroData = () => {
+    const lang = (window.portfolioI18n && window.portfolioI18n.getLanguage()) || 'it';
+    if (window.HERO_TRANSLATIONS && window.HERO_TRANSLATIONS[lang]) {
+      return window.HERO_TRANSLATIONS[lang];
+    }
+    return defaultHeroData;
+  };
+
   let currentSlide = 0;
   let slideInterval = null;
+
+  const updateHeroContent = (targetIndex, animate = true) => {
+    const heroData = getHeroData();
+    if (!heroTitle || !heroDesc || !heroLink || !heroData[targetIndex]) return;
+
+    if (animate) {
+      heroTitle.style.opacity = '0';
+      heroDesc.style.opacity = '0';
+
+      setTimeout(() => {
+        heroTitle.textContent = heroData[targetIndex].title;
+        heroDesc.textContent = heroData[targetIndex].desc;
+        heroLink.setAttribute('href', heroData[targetIndex].link);
+        if (heroBtnText) {
+          heroBtnText.textContent = heroData[targetIndex].btnText || 'Vedi progetto';
+        }
+        heroTitle.style.opacity = '1';
+        heroDesc.style.opacity = '1';
+      }, 150);
+    } else {
+      heroTitle.textContent = heroData[targetIndex].title;
+      heroDesc.textContent = heroData[targetIndex].desc;
+      heroLink.setAttribute('href', heroData[targetIndex].link);
+      if (heroBtnText) {
+        heroBtnText.textContent = heroData[targetIndex].btnText || 'Vedi progetto';
+      }
+    }
+  };
 
   const goToSlide = (index) => {
     let targetIndex = index;
@@ -121,24 +157,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroDots[targetIndex]) heroDots[targetIndex].classList.add('is--current');
 
     currentSlide = targetIndex;
-
-    if (heroTitle && heroDesc && heroLink && heroData[targetIndex]) {
-      heroTitle.style.opacity = '0';
-      heroDesc.style.opacity = '0';
-
-      setTimeout(() => {
-        heroTitle.textContent = heroData[targetIndex].title;
-        heroDesc.textContent = heroData[targetIndex].desc;
-        heroLink.setAttribute('href', heroData[targetIndex].link);
-        if (heroBtnText) {
-          heroBtnText.textContent = heroData[targetIndex].btnText || 'Vedi progetto';
-        }
-
-        heroTitle.style.opacity = '1';
-        heroDesc.style.opacity = '1';
-      }, 150);
-    }
+    updateHeroContent(targetIndex, true);
   };
+
+  window.addEventListener('languagechange', () => {
+    updateHeroContent(currentSlide, false);
+  });
 
   if (heroSlides.length > 0) {
     // Dot click listeners
@@ -515,8 +539,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update UI elements (counter and hint)
     function updateMeta(spread) {
-      const tapWord = window.matchMedia('(pointer: coarse)').matches ? 'Tocca' : 'Clicca';
+      const isTouch = window.matchMedia('(pointer: coarse)').matches;
+      const lang = (window.portfolioI18n && window.portfolioI18n.getLanguage()) || 'it';
       const numPlates = totalSheets - 1;
+
       if (counterEl) {
         if (spread >= 1 && spread <= numPlates) {
           counterEl.textContent = `0${spread} / 0${numPlates}`;
@@ -526,15 +552,31 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (hintEl) {
-        if (spread === 0) {
-          hintEl.textContent = `${tapWord} per aprire`;
-        } else if (spread === maxSpread) {
-          hintEl.textContent = `${tapWord} per richiudere`;
+        if (lang === 'en') {
+          const tapWord = isTouch ? 'Tap' : 'Click';
+          if (spread === 0) {
+            hintEl.textContent = `${tapWord} to open`;
+          } else if (spread === maxSpread) {
+            hintEl.textContent = `${tapWord} to close`;
+          } else {
+            hintEl.textContent = `${tapWord} to flip page`;
+          }
         } else {
-          hintEl.textContent = `${tapWord} per sfogliare`;
+          const tapWord = isTouch ? 'Tocca' : 'Clicca';
+          if (spread === 0) {
+            hintEl.textContent = `${tapWord} per aprire`;
+          } else if (spread === maxSpread) {
+            hintEl.textContent = `${tapWord} per richiudere`;
+          } else {
+            hintEl.textContent = `${tapWord} per sfogliare`;
+          }
         }
       }
     }
+
+    window.addEventListener('languagechange', () => {
+      updateMeta(currentSpread);
+    });
 
     // Adatta l'album alla larghezza disponibile (su telefono lo rimpicciolisce,
     // mantenendo la doppia pagina visibile). Su desktop la scala resta 1.
