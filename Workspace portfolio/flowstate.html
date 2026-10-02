@@ -19,37 +19,46 @@
     
     <nav>
       <ul class="nav-links-list">
-        <li><a href="about.html">Chi Sono</a></li>
-        <li><a href="illustrazioni.html">Illustrazioni</a></li>
-        <li><a href="progetti.html" class="active">Progetti</a></li>
-        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="about.html" data-i18n="nav.about">Chi Sono</a></li>
+        <li><a href="illustrazioni.html" data-i18n="nav.illustrations">Illustrazioni</a></li>
+        <li><a href="progetti.html" class="active" data-i18n="nav.projects">Progetti</a></li>
+        <li><a href="contatti.html" data-i18n="nav.contact">Contatti</a></li>
       </ul>
     </nav>
 
-    <!-- KOMMA KOMMA BUTTON-043 -->
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
-      <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
-      <span class="button-043__inner">
-        <span>Scrivimi</span>
-        <span class="button-043__icon-wrap">
-          <span class="button-043__icon-list">
-            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    <div class="header-actions">
+      <!-- LANGUAGE SWITCHER -->
+      <div class="lang-switch" role="group" aria-label="Language selection">
+        <button class="lang-switch__btn is-active" data-lang="it" aria-pressed="true">IT</button>
+        <span class="lang-switch__divider" aria-hidden="true">|</span>
+        <button class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+
+      <!-- KOMMA KOMMA BUTTON-043 -->
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
+        <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+        <span class="button-043__inner">
+          <span data-i18n="nav.contact_btn">Scrivimi</span>
+          <span class="button-043__icon-wrap">
+            <span class="button-043__icon-list">
+              <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
           </span>
         </span>
-      </span>
-    </a>
+      </a>
+    </div>
   </header>
  
   <!-- TOP NAV -->
   <nav class="project-nav project-nav-top">
     <div class="wrap">
       <a href="la-forza-e-cura.html">
-        <span class="dir">← Progetto precedente</span>
+        <span class="dir" data-i18n="project.prev">← Progetto precedente</span>
         <span class="title">La Forza è Cura</span>
       </a>
       <a href="trama.html">
-        <span class="dir">Prossimo progetto →</span>
+        <span class="dir" data-i18n="project.next">Prossimo progetto →</span>
         <span class="title">Trama</span>
       </a>
     </div>
@@ -59,9 +68,9 @@
   <section class="project-detail-hero">
     <div class="wrap hero-grid">
       <div class="hero-text">
-        <div class="hero-eyebrow">Branding &amp; Digital Marketing — Progetto universitario</div>
+        <div class="hero-eyebrow" data-i18n="fs.hero_eyebrow">Branding &amp; Digital Marketing — Progetto universitario</div>
         <h1>Flow State - Juli</h1>
-        <div class="claim">"Dove la tensione svanisce."</div>
+        <div class="claim" data-i18n="fs.claim">"Dove la tensione svanisce."</div>
       </div>
       <div class="hero-img reveal">
         <img src="Assets/img/pack_bottiglie.png" alt="Bottiglia Juli in terracotta avvolta con corde shibari rosse, variante Flow State">
@@ -72,11 +81,11 @@
   <!-- BRIEF -->
   <section id="brief">
     <div class="wrap">
-      <div class="section-label reveal">Il brief</div>
+      <div class="section-label reveal" data-i18n="fs.brief_label">Il brief</div>
       <div class="two-col reveal">
-        <h2>Il brief</h2>
+        <h2 data-i18n="fs.brief_title">Il brief</h2>
         <div class="body">
-          <p>In un mercato delle acque premium e funzionali in crescita ma saturo, <strong>Juli</strong> si distingue attraverso artification e capsule collection. Nasce così <strong>Flow State</strong>, un’acqua funzionale con funghi nootropi, pensata per chi vive sotto stress e cerca un breve momento di sollievo e concentrazione.</p>
+          <p data-i18n="fs.brief_text">In un mercato delle acque premium e funzionali in crescita ma saturo, <strong>Juli</strong> si distingue attraverso artification e capsule collection. Nasce così <strong>Flow State</strong>, un’acqua funzionale con funghi nootropi, pensata per chi vive sotto stress e cerca un breve momento di sollievo e concentrazione.</p>
         </div>
       </div>
     </div>
@@ -85,16 +94,16 @@
   <!-- CONCEPT -->
   <section id="concept" class="section-accent">
     <div class="wrap">
-      <div class="section-label reveal">Il concept</div>
+      <div class="section-label reveal" data-i18n="fs.concept_label">Il concept</div>
       <div class="two-col reveal">
         <div>
-          <h2 style="margin-bottom: 24px;">Shibari: la costrizione come via al rilascio.</h2>
+          <h2 style="margin-bottom: 24px;" data-i18n="fs.concept_title">Shibari: la costrizione come via al rilascio.</h2>
           <div style="border-radius: 16px; overflow: hidden; border: 1px solid var(--line-color); max-width: 440px; width: 100%;">
             <img src="Assets/img/shibari.jpg" alt="Corde Shibari" style="width: 100%; height: auto; display: block;">
           </div>
         </div>
         <div class="body" style="align-self: center;">
-          <p>Ispirato allo <strong>shibari</strong>, <strong>Flow State</strong> racconta il passaggio dalla tensione alla quiete. Le bottiglie in terracotta, lavorate e legate a mano, trasformano un gesto quotidiano in un rituale che invita a rallentare e lasciare fluire la mente.</p>
+          <p data-i18n="fs.concept_text">Ispirato allo <strong>shibari</strong>, <strong>Flow State</strong> racconta il passaggio dalla tensione alla quiete. Le bottiglie in terracotta, lavorate e legate a mano, trasformano un gesto quotidiano in un rituale che invita a rallentare e lasciare fluire la mente.</p>
         </div>
       </div>
     </div>
@@ -103,8 +112,8 @@
   <!-- VARIANTI -->
   <section id="varianti" class="section-tint">
     <div class="wrap">
-      <div class="section-label reveal">Le cinque varianti</div>
-      <p class="variants-intro reveal">Ogni variante prende un <strong>nome giapponese</strong> ed è associata a un diverso <strong>fungo nootropo</strong>, raccontando con un tono ironico e diretto i piccoli momenti di stress della quotidianità.</p>
+      <div class="section-label reveal" data-i18n="fs.variants_label">Le cinque varianti</div>
+      <p class="variants-intro reveal" data-i18n="fs.variants_intro">Ogni variante prende un <strong>nome giapponese</strong> ed è associata a un diverso <strong>fungo nootropo</strong>, raccontando con un tono ironico e diretto i piccoli momenti di stress della quotidianità.</p>
       <div class="variants-grid">
         <div class="variant-card reveal">
           <img src="Assets/img/nagi.png" alt="Variante Nagi" class="variant-img">
@@ -112,9 +121,9 @@
             <span class="variant-name">Nagi</span>
             <span class="variant-glyph">凪</span>
           </div>
-          <div class="variant-fungo">Fungo Reishi</div>
-          <div class="variant-copy">"Per chi ha bisogno di calmarsi prima di rispondere a quella email."</div>
-          <div class="variant-benefit">Abbassa il cortisolo</div>
+          <div class="variant-fungo" data-i18n="fs.nagi_fungo">Fungo Reishi</div>
+          <div class="variant-copy" data-i18n="fs.nagi_copy">"Per chi ha bisogno di calmarsi prima di rispondere a quella email."</div>
+          <div class="variant-benefit" data-i18n="fs.nagi_benefit">Abbassa il cortisolo</div>
         </div>
 
         <div class="variant-card reveal">
@@ -123,9 +132,9 @@
             <span class="variant-name">Hikari</span>
             <span class="variant-glyph">光</span>
           </div>
-          <div class="variant-fungo">Fungo Lion's Mane</div>
-          <div class="variant-copy">"Per chi rilegge la stessa riga tre volte e capisce ancora meno."</div>
-          <div class="variant-benefit">Aumenta la memoria</div>
+          <div class="variant-fungo" data-i18n="fs.hikari_fungo">Fungo Lion's Mane</div>
+          <div class="variant-copy" data-i18n="fs.hikari_copy">"Per chi rilegge la stessa riga tre volte e capisce ancora meno."</div>
+          <div class="variant-benefit" data-i18n="fs.hikari_benefit">Aumenta la memoria</div>
         </div>
 
         <div class="variant-card reveal">
@@ -134,9 +143,9 @@
             <span class="variant-name">Ki</span>
             <span class="variant-glyph">気</span>
           </div>
-          <div class="variant-fungo">Fungo Cordyceps</div>
-          <div class="variant-copy">"I monaci tibetani lo usavano per scalare montagne. Tu devi solo sopravvivere al lunedì."</div>
-          <div class="variant-benefit">Aumenta l'energia</div>
+          <div class="variant-fungo" data-i18n="fs.ki_fungo">Fungo Cordyceps</div>
+          <div class="variant-copy" data-i18n="fs.ki_copy">"I monaci tibetani lo usavano per scalare montagne. Tu devi solo sopravvivere al lunedì."</div>
+          <div class="variant-benefit" data-i18n="fs.ki_benefit">Aumenta l'energia</div>
         </div>
 
         <div class="variant-card reveal">
@@ -145,9 +154,9 @@
             <span class="variant-name">Mori</span>
             <span class="variant-glyph">森</span>
           </div>
-          <div class="variant-fungo">Fungo Chaga</div>
-          <div class="variant-copy">"Ispirata al Shinrin-yoku per ritrovare la connessione con la natura in città."</div>
-          <div class="variant-benefit">Radicamento &amp; Armonia</div>
+          <div class="variant-fungo" data-i18n="fs.mori_fungo">Fungo Chaga</div>
+          <div class="variant-copy" data-i18n="fs.mori_copy">"Ispirata al Shinrin-yoku per ritrovare la connessione con la natura in città."</div>
+          <div class="variant-benefit" data-i18n="fs.mori_benefit">Radicamento &amp; Armonia</div>
         </div>
 
         <div class="variant-card reveal">
@@ -156,9 +165,9 @@
             <span class="variant-name">Wa</span>
             <span class="variant-glyph">環</span>
           </div>
-          <div class="variant-fungo">Fungo Maitake</div>
-          <div class="variant-copy">"Equilibrio ormonale e benessere per accompagnare i rituali di cura personali."</div>
-          <div class="variant-benefit">Rigenerazione</div>
+          <div class="variant-fungo" data-i18n="fs.wa_fungo">Fungo Maitake</div>
+          <div class="variant-copy" data-i18n="fs.wa_copy">"Equilibrio ormonale e benessere per accompagnare i rituali di cura personali."</div>
+          <div class="variant-benefit" data-i18n="fs.wa_benefit">Rigenerazione</div>
         </div>
       </div>
     </div>
@@ -167,13 +176,13 @@
   <!-- SISTEMA VISIVO -->
   <section id="sistema-visivo">
     <div class="wrap">
-      <div class="section-label reveal">Sistema Visivo</div>
+      <div class="section-label reveal" data-i18n="fs.visual_label">Sistema Visivo</div>
       <div class="gallery-item-asymmetric reveal" style="margin-bottom: 48px;">
         <div class="visual-img">
           <img src="Assets/img/wa-1.png" alt="Sistema Visivo Flow State" style="width: 100%; max-width: 400px; height: auto; border-radius: 14px; border: 1px solid var(--line-color); display: block; margin: 0 auto;">
         </div>
         <div class="visual-info">
-          <p class="visual-note" style="color: var(--color-onyx-muted); font-size: 16px; line-height: 1.6; max-width: 58ch; text-align: left;">La palette in <strong>nero, rosso e bianco</strong> evoca la carta giapponese e le corde <strong>shibari</strong>. Il packaging diventa il primo racconto del brand: ogni bottiglia legata a mano si trasforma in un piccolo oggetto editoriale.</p>
+          <p class="visual-note" style="color: var(--color-onyx-muted); font-size: 16px; line-height: 1.6; max-width: 58ch; text-align: left;" data-i18n="fs.visual_text">La palette in <strong>nero, rosso e bianco</strong> evoca la carta giapponese e le corde <strong>shibari</strong>. Il packaging diventa il primo racconto del brand: ogni bottiglia legata a mano si trasforma in un piccolo oggetto editoriale.</p>
         </div>
       </div>
     </div>
@@ -182,14 +191,14 @@
   <!-- CAMPAGNA DIGITALE -->
   <section id="campagna-digitale">
     <div class="wrap">
-      <div class="section-label reveal">La campagna digitale</div>
-      <p class="reveal" style="color: var(--color-onyx-muted); font-size: 16px; line-height: 1.6; max-width: 58ch; margin-bottom: 40px;">L'obiettivo dei contenuti social è quello di creare curiosità tramite un <strong>mood elitario e misterioso</strong>.</p>
+      <div class="section-label reveal" data-i18n="fs.campaign_label">La campagna digitale</div>
+      <p class="reveal" style="color: var(--color-onyx-muted); font-size: 16px; line-height: 1.6; max-width: 58ch; margin-bottom: 40px;" data-i18n="fs.campaign_intro">L'obiettivo dei contenuti social è quello di creare curiosità tramite un <strong>mood elitario e misterioso</strong>.</p>
          <!-- TEASER CAROUSEL SECTION -->
         <div class="gallery-item-clean reveal">
           <div class="gallery-text">
-            <div class="gallery-tag">Teaser</div>
-            <h3>Teaser pre lancio</h3>
-            <p>Quattro post nei giorni precedenti al lancio, senza prodotto: solo corde, terracotta, fungo e l'ombra di una bottiglia. Bastano a costruire curiosità.</p>
+            <div class="gallery-tag" data-i18n="fs.teaser_tag">Teaser</div>
+            <h3 data-i18n="fs.teaser_title">Teaser pre lancio</h3>
+            <p data-i18n="fs.teaser_text">Quattro post nei giorni precedenti al lancio, senza prodotto: solo corde, terracotta, fungo e l'ombra di una bottiglia. Bastano a costruire curiosità.</p>
           </div>
           <div class="carousel-container gallery-visual">
             <div class="carousel-track">
@@ -198,10 +207,10 @@
               <img src="Assets/img/teaser3.png" alt="Teaser 3" class="carousel-img">
               <img src="Assets/img/teaser4.png" alt="Teaser 4" class="carousel-img">
             </div>
-            <button class="carousel-arrow prev" aria-label="Precedente">
+            <button class="carousel-arrow prev" aria-label="Precedente" data-i18n-aria="illus.lb_prev">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 14px; height: 14px;"><path d="M15 18l-6-6 6-6"/></svg>
             </button>
-            <button class="carousel-arrow next" aria-label="Successivo">
+            <button class="carousel-arrow next" aria-label="Successivo" data-i18n-aria="illus.lb_next">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 14px; height: 14px;"><path d="M9 18l6-6-6-6"/></svg>
             </button>
           </div>
@@ -210,9 +219,9 @@
         <!-- SOCIAL QUIZ CAROUSEL SECTION -->
         <div class="gallery-item-clean reveal">
           <div class="gallery-text">
-            <div class="gallery-tag">Social · Carosello interattivo</div>
-            <h3>"Quale variante Flow State sei?"</h3>
-            <p>Un quiz-carosello che transforma la scelta del prodotto in un piccolo test di personalità, pensato per essere condiviso e salvato.</p>
+            <div class="gallery-tag" data-i18n="fs.quiz_tag">Social · Carosello interattivo</div>
+            <h3 data-i18n="fs.quiz_title">"Quale variante Flow State sei?"</h3>
+            <p data-i18n="fs.quiz_text">Un quiz-carosello che transforma la scelta del prodotto in un piccolo test di personalità, pensato per essere condiviso e salvato.</p>
           </div>
           <div class="carousel-container gallery-visual">
             <div class="carousel-track">
@@ -223,10 +232,10 @@
               <img src="Assets/img/post5.png" alt="Post 5" class="carousel-img">
               <img src="Assets/img/post6.png" alt="Post 6" class="carousel-img">
             </div>
-            <button class="carousel-arrow prev" aria-label="Precedente">
+            <button class="carousel-arrow prev" aria-label="Precedente" data-i18n-aria="illus.lb_prev">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 14px; height: 14px;"><path d="M15 18l-6-6 6-6"/></svg>
             </button>
-            <button class="carousel-arrow next" aria-label="Successivo">
+            <button class="carousel-arrow next" aria-label="Successivo" data-i18n-aria="illus.lb_next">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 14px; height: 14px;"><path d="M9 18l6-6-6-6"/></svg>
             </button>
           </div>
@@ -235,9 +244,9 @@
         <!-- EVENTO PRIVATO STORYTELLING SECTION -->
         <div class="gallery-item-clean reveal">
           <div class="gallery-text">
-            <div class="gallery-tag">Esperienza immersiva</div>
-            <h3>Evento privato</h3>
-            <p>La narrazione di Juli si completa con un’esperienza di degustazione immersiva fatta di luci, suoni, immagini e un percorso sensoriale attraverso le <strong>cinque varianti</strong> del brand.</p>
+            <div class="gallery-tag" data-i18n="fs.event_tag">Esperienza immersiva</div>
+            <h3 data-i18n="fs.event_title">Evento privato</h3>
+            <p data-i18n="fs.event_text">La narrazione di Juli si completa con un’esperienza di degustazione immersiva fatta di luci, suoni, immagini e un percorso sensoriale attraverso le <strong>cinque varianti</strong> del brand.</p>
           </div>
           <div class="carousel-container carousel-large gallery-visual">
             <div class="carousel-track">
@@ -258,10 +267,10 @@
               <img src="Assets/img/evento-privato15.jpg" alt="Evento Storytelling 15" class="carousel-img">
               <img src="Assets/img/evento-privato16.jpg" alt="Evento Storytelling 16" class="carousel-img">
             </div>
-            <button class="carousel-arrow prev" aria-label="Precedente">
+            <button class="carousel-arrow prev" aria-label="Precedente" data-i18n-aria="illus.lb_prev">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 14px; height: 14px;"><path d="M15 18l-6-6 6-6"/></svg>
             </button>
-            <button class="carousel-arrow next" aria-label="Successivo">
+            <button class="carousel-arrow next" aria-label="Successivo" data-i18n-aria="illus.lb_next">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 14px; height: 14px;"><path d="M9 18l6-6-6-6"/></svg>
             </button>
           </div>
@@ -273,9 +282,9 @@
           </div>
           <div class="ritual-launch-content">
             <div class="ritual-launch-text-block">
-              <div class="gallery-tag">Altri sviluppi</div>
-              <h3 style="margin-bottom: 24px;">Rituali &amp; Lancio</h3>
-              <p style="margin-bottom: 0;">Juli trasforma l’acquisto in un rito: <strong>bottiglia in terracotta</strong>, <strong>refill</strong> e nel Set Completo i <strong>due bicchierini</strong> stile giapponese. Il lancio continua tra <strong>installazioni</strong> e <strong>inviti personalizzati</strong>.</p>
+              <div class="gallery-tag" data-i18n="fs.ritual_tag">Altri sviluppi</div>
+              <h3 style="margin-bottom: 24px;" data-i18n="fs.ritual_title">Rituali &amp; Lancio</h3>
+              <p style="margin-bottom: 0;" data-i18n="fs.ritual_text">Juli trasforma l’acquisto in un rito: <strong>bottiglia in terracotta</strong>, <strong>refill</strong> e nel Set Completo i <strong>due bicchierini</strong> stile giapponese. Il lancio continua tra <strong>installazioni</strong> e <strong>inviti personalizzati</strong>.</p>
             </div>
             <div class="ritual-launch-sub-images">
               <img src="Assets/img/guerrilla.png" alt="Guerrilla Marketing" class="ritual-launch-sub-img">
@@ -294,11 +303,11 @@
   <nav class="project-nav">
     <div class="wrap">
       <a href="la-forza-e-cura.html">
-        <span class="dir">← Progetto precedente</span>
-        <span class="title">La Forza è Cura</span>
+        <span class="dir" data-i18n="project.prev">← Progetto precedente</span>
+        <span class="title" data-i18n="projects.card6_title">La Forza è Cura</span>
       </a>
       <a href="trama.html">
-        <span class="dir">Prossimo progetto →</span>
+        <span class="dir" data-i18n="project.next">Prossimo progetto →</span>
         <span class="title">Trama</span>
       </a>
     </div>
@@ -306,7 +315,7 @@
  
   <footer>
     <div class="wrap">
-      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;">Restiamo in contatto</span>
+      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;" data-i18n="footer.stay_in_touch">Restiamo in contatto</span>
       <nav class="footer-links">
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank">Email</a>
         <a href="https://www.linkedin.com/in/giulia-de-fazio-321a8a215/" target="_blank">LinkedIn</a>
@@ -316,10 +325,11 @@
     </div>
     <div class="wrap bottom">
       <span>© 2026 Giulia De Fazio</span>
-      <span>Torino, Italia</span>
+      <span data-i18n="footer.location">Torino, Italia</span>
     </div>
   </footer>
  
+  <script src="translations.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

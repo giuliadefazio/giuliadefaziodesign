@@ -19,37 +19,46 @@
     
     <nav>
       <ul class="nav-links-list">
-        <li><a href="about.html">Chi Sono</a></li>
-        <li><a href="illustrazioni.html">Illustrazioni</a></li>
-        <li><a href="progetti.html" class="active">Progetti</a></li>
-        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="about.html" data-i18n="nav.about">Chi Sono</a></li>
+        <li><a href="illustrazioni.html" data-i18n="nav.illustrations">Illustrazioni</a></li>
+        <li><a href="progetti.html" class="active" data-i18n="nav.projects">Progetti</a></li>
+        <li><a href="contatti.html" data-i18n="nav.contact">Contatti</a></li>
       </ul>
     </nav>
 
-    <!-- KOMMA KOMMA BUTTON-043 -->
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
-      <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
-      <span class="button-043__inner">
-        <span>Scrivimi</span>
-        <span class="button-043__icon-wrap">
-          <span class="button-043__icon-list">
-            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    <div class="header-actions">
+      <!-- LANGUAGE SWITCHER -->
+      <div class="lang-switch" role="group" aria-label="Language selection">
+        <button class="lang-switch__btn is-active" data-lang="it" aria-pressed="true">IT</button>
+        <span class="lang-switch__divider" aria-hidden="true">|</span>
+        <button class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+
+      <!-- KOMMA KOMMA BUTTON-043 -->
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
+        <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+        <span class="button-043__inner">
+          <span data-i18n="nav.contact_btn">Scrivimi</span>
+          <span class="button-043__icon-wrap">
+            <span class="button-043__icon-list">
+              <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
           </span>
         </span>
-      </span>
-    </a>
+      </a>
+    </div>
   </header>
  
   <!-- TOP NAV -->
   <nav class="project-nav project-nav-top">
     <div class="wrap">
       <a href="gabbia.html">
-        <span class="dir">← Progetto precedente</span>
+        <span class="dir" data-i18n="project.prev">← Progetto precedente</span>
         <span class="title">Gabbia</span>
       </a>
       <a href="welcome-back-champion.html">
-        <span class="dir">Prossimo progetto →</span>
+        <span class="dir" data-i18n="project.next">Prossimo progetto →</span>
         <span class="title">Welcome back, Champion</span>
       </a>
     </div>
@@ -59,9 +68,9 @@
   <section class="project-detail-hero">
     <div class="wrap hero-grid">
       <div class="hero-text">
-        <div class="hero-eyebrow">Video &amp; Motion — Progetto universitario</div>
+        <div class="hero-eyebrow" data-i18n="nomen.hero_eyebrow">Video &amp; Motion — Progetto universitario</div>
         <h1>Nomen</h1>
-        <div class="claim">Un cortometraggio thriller sospeso tra i tarocchi e il destino nella Torino esoterica.</div>
+        <div class="claim" data-i18n="nomen.claim">Un cortometraggio thriller sospeso tra i tarocchi e il destino nella Torino esoterica.</div>
       </div>
       <div class="hero-img reveal" style="max-width: 440px; width: 100%; border-radius: 16px; overflow: hidden; border: 1px solid var(--line-color);">
         <img src="Assets/img/nome-anteprima.png" alt="Anteprima Nomen" style="width: 100%; height: auto; display: block;">
@@ -72,11 +81,11 @@
   <!-- BRIEF / CONCEPT -->
   <section id="brief" class="section-accent">
     <div class="wrap">
-      <div class="section-label reveal">Il concept</div>
+      <div class="section-label reveal" data-i18n="nomen.concept_label">Il concept</div>
       <div class="two-col reveal">
-        <h2>Quando il destino chiama per nome</h2>
+        <h2 data-i18n="nomen.concept_title">Quando il destino chiama per nome</h2>
         <div class="body">
-          <p><strong>NOMEN</strong> è un <strong>cortometraggio thriller</strong> ambientato nella <strong>Torino esoterica</strong>. Una studentessa fuorisede trova un antico mazzo di <strong>tarocchi</strong> appartenuto a Gustavo Rol, dando inizio a una serie di coincidenze inquietanti che mettono in dubbio il confine tra realtà e soprannaturale. Il progetto esplora il rapporto tra <strong>destino, caso e identità</strong> attraverso i simboli dei tarocchi e l’immaginario occulto della città.</p>
+          <p data-i18n="nomen.concept_text"><strong>NOMEN</strong> è un <strong>cortometraggio thriller</strong> ambientato nella <strong>Torino esoterica</strong>. Una studentessa fuorisede trova un antico mazzo di <strong>tarocchi</strong> appartenuto a Gustavo Rol, dando inizio a una serie di coincidenze inquietanti che mettono in dubbio il confine tra realtà e soprannaturale. Il progetto esplora il rapporto tra <strong>destino, caso e identità</strong> attraverso i simboli dei tarocchi e l’immaginario occulto della città.</p>
         </div>
       </div>
     </div>
@@ -85,7 +94,7 @@
   <!-- VIDEO INTEGRALE -->
   <section id="video" class="section-tint">
     <div class="wrap">
-      <div class="section-label reveal">Il progetto</div>
+      <div class="section-label reveal" data-i18n="nomen.project_label">Il progetto</div>
       <div class="reveal">
         <div class="player-wrap">
           <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -98,13 +107,13 @@
           </div>
         </div>
         <div class="player-caption">
-          <span>Nomen — video integrale</span>
+          <span data-i18n="nomen.caption_title">Nomen — video integrale</span>
           <span>9:05 min</span>
         </div>
         <div class="project-description" style="margin-top: 32px; max-width: 58ch; color: var(--color-onyx-muted); font-size: 16px; line-height: 1.6;">
-          <p style="margin-bottom: 16px;">La <strong>direzione visiva</strong> accompagna la progressiva perdita di controllo della protagonista: dalla <strong>calma apparente</strong> delle prime scene, caratterizzate da luce morbida e tonalità naturali, si passa a una sensazione di <strong>ansia</strong> data spazi più scuri, ombre profonde e contrasti marcati.</p>
-          <p style="margin-bottom: 16px;">La <strong>luce</strong>, spesso proveniente da fonti interne alla scena, e la <strong>variazione cromatica</strong> tra toni caldi e freddi costruiscono un’atmosfera intima e inquietante.</p>
-          <p>Il <strong>montaggio</strong> accelera gradualmente, mentre immagini, <strong>suono</strong> e <strong>colore</strong> suggeriscono una presenza soprannaturale senza mostrarla mai del tutto.</p>
+          <p style="margin-bottom: 16px;" data-i18n="nomen.p1">La <strong>direzione visiva</strong> accompagna la progressiva perdita di controllo della protagonista: dalla <strong>calma apparente</strong> delle prime scene, caratterizzate da luce morbida e tonalità naturali, si passa a una sensazione di <strong>ansia</strong> data spazi più scuri, ombre profonde e contrasti marcati.</p>
+          <p style="margin-bottom: 16px;" data-i18n="nomen.p2">La <strong>luce</strong>, spesso proveniente da fonti interne alla scena, e la <strong>variazione cromatica</strong> tra toni caldi e freddi costruiscono un’atmosfera intima e inquietante.</p>
+          <p data-i18n="nomen.p3">Il <strong>montaggio</strong> accelera gradualmente, mentre immagini, <strong>suono</strong> e <strong>colore</strong> suggeriscono una presenza soprannaturale senza mostrarla mai del tutto.</p>
         </div>
       </div>
     </div>
@@ -115,11 +124,11 @@
   <nav class="project-nav">
     <div class="wrap">
       <a href="gabbia.html">
-        <span class="dir">← Progetto precedente</span>
+        <span class="dir" data-i18n="project.prev">← Progetto precedente</span>
         <span class="title">Gabbia</span>
       </a>
       <a href="welcome-back-champion.html">
-        <span class="dir">Prossimo progetto →</span>
+        <span class="dir" data-i18n="project.next">Prossimo progetto →</span>
         <span class="title">Welcome back, Champion</span>
       </a>
     </div>
@@ -127,7 +136,7 @@
  
   <footer>
     <div class="wrap">
-      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;">Restiamo in contatto</span>
+      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;" data-i18n="footer.stay_in_touch">Restiamo in contatto</span>
       <nav class="footer-links">
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank">Email</a>
         <a href="https://www.linkedin.com/in/giulia-de-fazio-321a8a215/" target="_blank">LinkedIn</a>
@@ -137,10 +146,11 @@
     </div>
     <div class="wrap bottom">
       <span>© 2026 Giulia De Fazio</span>
-      <span>Torino, Italia</span>
+      <span data-i18n="footer.location">Torino, Italia</span>
     </div>
   </footer>
  
+  <script src="translations.js"></script>
   <script src="main.js"></script>
  
 </body>
