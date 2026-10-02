@@ -21,42 +21,51 @@
     
     <nav>
       <ul class="nav-links-list">
-        <li><a href="about.html">Chi Sono</a></li>
-        <li><a href="illustrazioni.html">Illustrazioni</a></li>
-        <li><a href="progetti.html" class="active">Progetti</a></li>
-        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="about.html" data-i18n="nav.about">Chi Sono</a></li>
+        <li><a href="illustrazioni.html" data-i18n="nav.illustrations">Illustrazioni</a></li>
+        <li><a href="progetti.html" class="active" data-i18n="nav.projects">Progetti</a></li>
+        <li><a href="contatti.html" data-i18n="nav.contact">Contatti</a></li>
       </ul>
     </nav>
 
-    <!-- KOMMA KOMMA BUTTON-043 -->
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
-      <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
-      <span class="button-043__inner">
-        <span>Scrivimi</span>
-        <span class="button-043__icon-wrap">
-          <span class="button-043__icon-list">
-            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    <div class="header-actions">
+      <!-- LANGUAGE SWITCHER -->
+      <div class="lang-switch" role="group" aria-label="Lingua / Language">
+        <button type="button" class="lang-switch__btn is-active" data-lang="it" aria-pressed="true">IT</button>
+        <span class="lang-switch__divider" aria-hidden="true">/</span>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+
+      <!-- KOMMA KOMMA BUTTON-043 -->
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
+        <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+        <span class="button-043__inner">
+          <span data-i18n="nav.contact_btn">Scrivimi</span>
+          <span class="button-043__icon-wrap">
+            <span class="button-043__icon-list">
+              <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
           </span>
         </span>
-      </span>
-    </a>
+      </a>
+    </div>
   </header>
 
   <!-- PROJECTS PAGE HERO -->
   <section class="intro-section page-top-hero" style="padding-top: 140px; padding-bottom: 32px; border-bottom: none;">
     <div class="wrap">
-      <h1 class="reveal" style="font-family: var(--font-serif); font-weight: 400; font-size: clamp(38px, 5.5vw, 76px); line-height: 0.95; letter-spacing: -0.02em; color: var(--color-onyx); margin-bottom: 24px;">
+      <h1 class="reveal" style="font-family: var(--font-serif); font-weight: 400; font-size: clamp(38px, 5.5vw, 76px); line-height: 0.95; letter-spacing: -0.02em; color: var(--color-onyx); margin-bottom: 24px;" data-i18n="projects.hero_title">
         Tutti i <span class="serif-highlight">Progetti</span>
       </h1>
 
       <!-- ELEGANT DISCIPLINE TAGS -->
       <div class="reveal tag-row">
-        <span class="tag-chip">Brand Identity &amp; Packaging</span>
-        <span class="tag-chip">Esperienza Immersiva</span>
-        <span class="tag-chip">Video &amp; Motion</span>
-        <span class="tag-chip">Campagna Crossmediale</span>
-        <span class="tag-chip">Campagna Sociale</span>
+        <span class="tag-chip" data-i18n="projects.tag_branding">Brand Identity &amp; Packaging</span>
+        <span class="tag-chip" data-i18n="projects.tag_immersive">Esperienza Immersiva</span>
+        <span class="tag-chip" data-i18n="projects.tag_video">Video &amp; Motion</span>
+        <span class="tag-chip" data-i18n="projects.tag_crossmedia">Campagna Crossmediale</span>
+        <span class="tag-chip" data-i18n="projects.tag_social">Campagna Sociale</span>
       </div>
     </div>
   </section>
@@ -75,11 +84,11 @@
           </div>
           <div class="orbit-card__info">
             <div>
-              <span class="orbit-card__num">Brand Identity &amp; Packaging</span>
+              <span class="orbit-card__num" data-i18n="projects.tag_branding">Brand Identity &amp; Packaging</span>
               <h3 class="orbit-card__title">Flow State</h3>
-              <p class="orbit-card__desc">Capsule collection di acqua premium pensata come rituale quotidiano per rilassarsi e gestire lo stress.</p>
+              <p class="orbit-card__desc" data-i18n="projects.card1_desc">Capsule collection di acqua premium pensata come rituale quotidiano per rilassarsi e gestire lo stress.</p>
             </div>
-            <span class="orbit-card__cta">Esplora ↗</span>
+            <span class="orbit-card__cta" data-i18n="projects.card_explore">Esplora ↗</span>
           </div>
         </a>
 
@@ -93,11 +102,11 @@
           </div>
           <div class="orbit-card__info">
             <div>
-              <span class="orbit-card__num">Esperienza Immersiva</span>
+              <span class="orbit-card__num" data-i18n="projects.tag_immersive">Esperienza Immersiva</span>
               <h3 class="orbit-card__title">Trama</h3>
-              <p class="orbit-card__desc">Un’installazione urbana sui difetti che nascondiamo e su come cambiano quando li guardiamo attraverso gli occhi di uno sconosciuto.</p>
+              <p class="orbit-card__desc" data-i18n="projects.card2_desc">Un’installazione urbana sui difetti che nascondiamo e su come cambiano quando li guardiamo attraverso gli occhi di uno sconosciuto.</p>
             </div>
-            <span class="orbit-card__cta">Esplora ↗</span>
+            <span class="orbit-card__cta" data-i18n="projects.card_explore">Esplora ↗</span>
           </div>
         </a>
 
@@ -111,11 +120,11 @@
           </div>
           <div class="orbit-card__info">
             <div>
-              <span class="orbit-card__num">Esperienza Immersiva</span>
+              <span class="orbit-card__num" data-i18n="projects.tag_immersive">Esperienza Immersiva</span>
               <h3 class="orbit-card__title">Gabbia</h3>
-              <p class="orbit-card__desc">Una casa che da fuori sembra normale. Dentro, un'esperienza VR che fa vivere la violenza di genere in prima persona.</p>
+              <p class="orbit-card__desc" data-i18n="projects.card3_desc">Una casa che da fuori sembra normale. Dentro, un'esperienza VR che fa vivere la violenza di genere in prima persona.</p>
             </div>
-            <span class="orbit-card__cta">Esplora ↗</span>
+            <span class="orbit-card__cta" data-i18n="projects.card_explore">Esplora ↗</span>
           </div>
         </a>
 
@@ -129,11 +138,11 @@
           </div>
           <div class="orbit-card__info">
             <div>
-              <span class="orbit-card__num">Video &amp; Motion</span>
+              <span class="orbit-card__num" data-i18n="projects.tag_video">Video &amp; Motion</span>
               <h3 class="orbit-card__title">Nomen</h3>
-              <p class="orbit-card__desc">Cortometraggio mystery ambientato nella Torino esoterica, tra tarocchi, coincidenze inquietanti e una parola misteriosa.</p>
+              <p class="orbit-card__desc" data-i18n="projects.card4_desc">Cortometraggio mystery ambientato nella Torino esoterica, tra tarocchi, coincidenze inquietanti e una parola misteriosa.</p>
             </div>
-            <span class="orbit-card__cta">Esplora ↗</span>
+            <span class="orbit-card__cta" data-i18n="projects.card_explore">Esplora ↗</span>
           </div>
         </a>
 
@@ -147,11 +156,11 @@
           </div>
           <div class="orbit-card__info">
             <div>
-              <span class="orbit-card__num">Campagna Crossmediale</span>
+              <span class="orbit-card__num" data-i18n="projects.tag_crossmedia">Campagna Crossmediale</span>
               <h3 class="orbit-card__title">Welcome back, Champion</h3>
-              <p class="orbit-card__desc">Campagna per SUSTAINera che presenta i ricambi rigenerati come prodotti affidabili, performanti e sostenibili.</p>
+              <p class="orbit-card__desc" data-i18n="projects.card5_desc">Campagna per SUSTAINera che presenta i ricambi rigenerati come prodotti affidabili, performanti e sostenibili.</p>
             </div>
-            <span class="orbit-card__cta">Esplora ↗</span>
+            <span class="orbit-card__cta" data-i18n="projects.card_explore">Esplora ↗</span>
           </div>
         </a>
 
@@ -165,11 +174,11 @@
           </div>
           <div class="orbit-card__info">
             <div>
-              <span class="orbit-card__num">Campagna Sociale</span>
-              <h3 class="orbit-card__title">La Forza è Cura</h3>
-              <p class="orbit-card__desc">Campagna partecipativa che racconta la forza come responsabilità, protezione e azione collettiva.</p>
+              <span class="orbit-card__num" data-i18n="projects.tag_social">Campagna Sociale</span>
+              <h3 class="orbit-card__title" data-i18n="projects.card6_title">La Forza è Cura</h3>
+              <p class="orbit-card__desc" data-i18n="projects.card6_desc">Campagna partecipativa che racconta la forza come responsabilità, protezione e azione collettiva.</p>
             </div>
-            <span class="orbit-card__cta">Esplora ↗</span>
+            <span class="orbit-card__cta" data-i18n="projects.card_explore">Esplora ↗</span>
           </div>
         </a>
 
@@ -179,7 +188,7 @@
 
   <footer>
     <div class="wrap">
-      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;">Restiamo in contatto</span>
+      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;" data-i18n="footer.stay_in_touch">Restiamo in contatto</span>
       <nav class="footer-links">
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank">Email</a>
         <a href="https://www.linkedin.com/in/giulia-de-fazio-321a8a215/" target="_blank">LinkedIn</a>
@@ -189,10 +198,11 @@
     </div>
     <div class="wrap bottom">
       <span>© 2026 Giulia De Fazio</span>
-      <span>Torino, Italia</span>
+      <span data-i18n="footer.location">Torino, Italia</span>
     </div>
   </footer>
 
+  <script src="translations.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

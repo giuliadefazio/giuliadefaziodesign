@@ -19,37 +19,46 @@
     
     <nav>
       <ul class="nav-links-list">
-        <li><a href="about.html">Chi Sono</a></li>
-        <li><a href="illustrazioni.html">Illustrazioni</a></li>
-        <li><a href="progetti.html" class="active">Progetti</a></li>
-        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="about.html" data-i18n="nav.about">Chi Sono</a></li>
+        <li><a href="illustrazioni.html" data-i18n="nav.illustrations">Illustrazioni</a></li>
+        <li><a href="progetti.html" class="active" data-i18n="nav.projects">Progetti</a></li>
+        <li><a href="contatti.html" data-i18n="nav.contact">Contatti</a></li>
       </ul>
     </nav>
 
-    <!-- KOMMA KOMMA BUTTON-043 -->
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
-      <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
-      <span class="button-043__inner">
-        <span>Scrivimi</span>
-        <span class="button-043__icon-wrap">
-          <span class="button-043__icon-list">
-            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    <div class="header-actions">
+      <!-- LANGUAGE SWITCHER -->
+      <div class="lang-switch" role="group" aria-label="Language selection">
+        <button class="lang-switch__btn is-active" data-lang="it" aria-pressed="true">IT</button>
+        <span class="lang-switch__divider" aria-hidden="true">|</span>
+        <button class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+
+      <!-- KOMMA KOMMA BUTTON-043 -->
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
+        <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+        <span class="button-043__inner">
+          <span data-i18n="nav.contact_btn">Scrivimi</span>
+          <span class="button-043__icon-wrap">
+            <span class="button-043__icon-list">
+              <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
           </span>
         </span>
-      </span>
-    </a>
+      </a>
+    </div>
   </header>
  
   <!-- TOP NAV -->
   <nav class="project-nav project-nav-top">
     <div class="wrap">
       <a href="nomen.html">
-        <span class="dir">← Progetto precedente</span>
+        <span class="dir" data-i18n="project.prev">← Progetto precedente</span>
         <span class="title">Nomen</span>
       </a>
       <a href="la-forza-e-cura.html">
-        <span class="dir">Prossimo progetto →</span>
+        <span class="dir" data-i18n="project.next">Prossimo progetto →</span>
         <span class="title">La Forza è Cura</span>
       </a>
     </div>
@@ -59,9 +68,9 @@
   <section class="project-detail-hero">
     <div class="wrap hero-grid">
       <div class="hero-text">
-        <div class="hero-eyebrow">Campagna crossmediale — Progetto universitario</div>
+        <div class="hero-eyebrow" data-i18n="wbc.hero_eyebrow">Campagna crossmediale — Progetto universitario</div>
         <h1>Welcome back, Champion</h1>
-        <div class="claim">"Sustainera is the place that says to champions: welcome back."</div>
+        <div class="claim" data-i18n="wbc.claim">"Sustainera is the place that says to champions: welcome back."</div>
       </div>
       <div class="hero-img reveal">
         <img src="Assets/img/tesi-affissioni.png" alt="Copertina del progetto Welcome back, Champion per Sustainera">
@@ -72,17 +81,17 @@
   <!-- CHI E' SUSTAINERA / BRIEF -->
   <section id="brief">
     <div class="wrap">
-      <div class="section-label reveal">Il brand e il brief</div>
+      <div class="section-label reveal" data-i18n="wbc.brief_label">Il brand e il brief</div>
       <div class="two-col reveal" style="align-items: flex-start;">
         <div>
-          <h2>Non solo un sub-brand, ma un'evoluzione sostenibile.</h2>
+          <h2 data-i18n="wbc.brief_title">Non solo un sub-brand, ma un'evoluzione sostenibile.</h2>
           <div style="margin-top: 32px; max-width: 260px; background: var(--color-onyx); padding: 18px 24px; border-radius: 14px; box-shadow: 0 10px 24px rgba(0,0,0,0.15);">
             <img src="Assets/img/logo-sustainera.png" alt="Logo Sustainera" style="width: 100%; height: auto; display: block;">
           </div>
         </div>
         <div class="body">
-          <p><strong>Sustainera</strong> è la business unit di Stellantis dedicata alla rigenerazione, riparazione, riutilizzo e riciclo di veicoli e componenti per ridurre sprechi e impatto ambientale.</p>
-          <p>Il progetto comunica i servizi <strong>4R</strong> attraverso una strategia <strong>disruptive e sostenibile</strong>, con concept creativo, touchpoint digitali e piano media volti a superare i pregiudizi sulla filiera circolare.</p>
+          <p data-i18n="wbc.brief_p1"><strong>Sustainera</strong> è la business unit di Stellantis dedicata alla rigenerazione, riparazione, riutilizzo e riciclo di veicoli e componenti per ridurre sprechi e impatto ambientale.</p>
+          <p data-i18n="wbc.brief_p2">Il progetto comunica i servizi <strong>4R</strong> attraverso una strategia <strong>disruptive e sostenibile</strong>, con concept creativo, touchpoint digitali e piano media volti a superare i pregiudizi sulla filiera circolare.</p>
         </div>
       </div>
     </div>
@@ -91,22 +100,22 @@
   <!-- SFIDE -->
   <section id="sfide">
     <div class="wrap">
-      <div class="section-label reveal">Le tre sfide</div>
+      <div class="section-label reveal" data-i18n="wbc.challenges_label">Le tre sfide</div>
       <div class="challenges">
         <div class="challenge-card reveal">
           <div class="challenge-num">01</div>
-          <h3>Brand awareness</h3>
-          <p>Dalle interviste ai meccanici e dai sondaggi sui consumatori è emerso che <strong>Sustainera</strong> è ancora <strong>poco conosciuta</strong>.</p>
+          <h3 data-i18n="wbc.c1_title">Brand awareness</h3>
+          <p data-i18n="wbc.c1_desc">Dalle interviste ai meccanici e dai sondaggi sui consumatori è emerso che <strong>Sustainera</strong> è ancora <strong>poco conosciuta</strong>.</p>
         </div>
         <div class="challenge-card reveal">
           <div class="challenge-num">02</div>
-          <h3>Costruire fiducia</h3>
-          <p>La <strong>sostenibilità</strong> va comunicata come <strong>valore aggiunto</strong> tramite dati concreti, standard originali, certificazione Stellantis.</p>
+          <h3 data-i18n="wbc.c2_title">Costruire fiducia</h3>
+          <p data-i18n="wbc.c2_desc">La <strong>sostenibilità</strong> va comunicata come <strong>valore aggiunto</strong> tramite dati concreti, standard originali, certificazione Stellantis.</p>
         </div>
         <div class="challenge-card reveal">
           <div class="challenge-num">03</div>
-          <h3>Cambiare percezione</h3>
-          <p>I pezzi Sustainera non sono il <strong>ripiego</strong> di chi non può permettersi il nuovo, ma la <strong>scelta intelligente e ovvia</strong>.</p>
+          <h3 data-i18n="wbc.c3_title">Cambiare percezione</h3>
+          <p data-i18n="wbc.c3_desc">I pezzi Sustainera non sono il <strong>ripiego</strong> di chi non può permettersi il nuovo, ma la <strong>scelta intelligente e ovvia</strong>.</p>
         </div>
       </div>
     </div>
@@ -115,12 +124,12 @@
   <!-- CONCEPT -->
   <section id="concept" class="section-accent">
     <div class="wrap">
-      <div class="section-label reveal">Il concept</div>
+      <div class="section-label reveal" data-i18n="wbc.concept_label">Il concept</div>
       <div class="two-col reveal">
-        <h2>Welcome back, Champion</h2>
+        <h2 data-i18n="wbc.concept_title">Welcome back, Champion</h2>
         <div class="body">
-          <p><strong>Welcome back, Champion</strong> trasforma la rigenerazione in un comeback: un componente recuperato e riqualificato torna in gioco come un <strong>campione</strong>, esprimendo nuovamente valore, prestazioni e affidabilità.</p>
-          <p>Sustainera valorizza ciò che esiste già, riducendo l’impatto ambientale e creando un vantaggio concreto.</p>
+          <p data-i18n="wbc.concept_p1"><strong>Welcome back, Champion</strong> trasforma la rigenerazione in un comeback: un componente recuperato e riqualificato torna in gioco come un <strong>campione</strong>, esprimendo nuovamente valore, prestazioni e affidabilità.</p>
+          <p data-i18n="wbc.concept_p2">Sustainera valorizza ciò che esiste già, riducendo l’impatto ambientale e creando un vantaggio concreto.</p>
         </div>
       </div>
       <div class="visual-block reveal" style="margin-top:40px;">
@@ -132,33 +141,33 @@
   <!-- THE CHAMPIONS -->
   <section id="champions" class="section-ecosystem">
     <div class="wrap">
-      <div class="section-label reveal">L'ecosistema: The Champions</div>
+      <div class="section-label reveal" data-i18n="wbc.champions_label">L'ecosistema: The Champions</div>
       <div class="two-col reveal" style="margin-bottom:48px;">
-        <h2>Ogni R ha una storia.</h2>
+        <h2 data-i18n="wbc.champions_title">Ogni R ha una storia.</h2>
         <div class="body">
-          <p>Per rendere le 4R più immediate e memorabili, abbiamo costruito un <strong>personaggio per ogni R</strong>, creando una <strong>squadra di campioni</strong>.</p>
+          <p data-i18n="wbc.champions_desc">Per rendere le 4R più immediate e memorabili, abbiamo costruito un <strong>personaggio per ogni R</strong>, creando una <strong>squadra di campioni</strong>.</p>
         </div>
       </div>
       <div class="champions-grid">
         <div class="champion-card reveal">
           <div class="champion-r">Repair Champion</div>
-          <div class="champion-title">Il campione ferito</div>
-          <div class="champion-desc">Si rompe nel momento migliore della carriera. Un lavoro tecnico preciso lo rimette in condizione di tornare a vincere.</div>
+          <div class="champion-title" data-i18n="wbc.r1_title">Il campione ferito</div>
+          <div class="champion-desc" data-i18n="wbc.r1_desc">Si rompe nel momento migliore della carriera. Un lavoro tecnico preciso lo rimette in condizione di tornare a vincere.</div>
         </div>
         <div class="champion-card reveal">
           <div class="champion-r">Reman Champion</div>
-          <div class="champion-title">Il campione ricostruito</div>
-          <div class="champion-desc">Una leggenda smontata, ricondizionata, ricertificata e rimessa in gara non come copia, ma come originale al suo standard.</div>
+          <div class="champion-title" data-i18n="wbc.r2_title">Il campione ricostruito</div>
+          <div class="champion-desc" data-i18n="wbc.r2_desc">Una leggenda smontata, ricondizionata, ricertificata e rimessa in gara non come copia, ma come originale al suo standard.</div>
         </div>
         <div class="champion-card reveal">
           <div class="champion-r">Reuse Champion</div>
-          <div class="champion-title">Il veterano</div>
-          <div class="champion-desc">Cambia squadra ma non ha perso valore. In un nuovo contesto torna decisivo: non un ripiego, una scelta intelligente.</div>
+          <div class="champion-title" data-i18n="wbc.r3_title">Il veterano</div>
+          <div class="champion-desc" data-i18n="wbc.r3_desc">Cambia squadra ma non ha perso valore. In un nuovo contesto torna decisivo: non un ripiego, una scelta intelligente.</div>
         </div>
         <div class="champion-card reveal">
           <div class="champion-r">Recycle Champion</div>
-          <div class="champion-title">La leggenda che cambia forma</div>
-          <div class="champion-desc">Chiude un ciclo, ma la sua materia ed energia diventano qualcos'altro di forte, utile e contemporaneo.</div>
+          <div class="champion-title" data-i18n="wbc.r4_title">La leggenda che cambia forma</div>
+          <div class="champion-desc" data-i18n="wbc.r4_desc">Chiude un ciclo, ma la sua materia ed energia diventano qualcos'altro di forte, utile e contemporaneo.</div>
         </div>
       </div>
     </div>
@@ -172,9 +181,9 @@
         <!-- WALL OF FAME CAROUSEL SECTION -->
         <div class="gallery-item-clean reveal">
           <div class="gallery-text">
-            <div class="gallery-tag">Social · Serie di post</div>
-            <h3>The Wall of Fame</h3>
-            <p>Quattro post social in cui ogni R viene presentata come un atleta leggendario sulla propria placca celebrativa, collegando l'affidabilità dei componenti alla gloria tipica dello sport.</p>
+            <div class="gallery-tag" data-i18n="wbc.wof_tag">Social · Serie di post</div>
+            <h3 data-i18n="wbc.wof_title">The Wall of Fame</h3>
+            <p data-i18n="wbc.wof_desc">Quattro post social in cui ogni R viene presentata come un atleta leggendario sulla propria placca celebrativa, collegando l'affidabilità dei componenti alla gloria tipica dello sport.</p>
           </div>
           <div class="carousel-container gallery-visual">
             <div class="carousel-track">
@@ -183,10 +192,10 @@
               <img src="Assets/img/post-tesi3.png" alt="Post Tesi 3" class="carousel-img">
               <img src="Assets/img/post-tesi4.png" alt="Post Tesi 4" class="carousel-img">
             </div>
-            <button class="carousel-arrow prev" aria-label="Precedente">
+            <button class="carousel-arrow prev" aria-label="Precedente" data-i18n-aria="illus.lb_prev">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 14px; height: 14px;"><path d="M15 18l-6-6 6-6"/></svg>
             </button>
-            <button class="carousel-arrow next" aria-label="Successivo">
+            <button class="carousel-arrow next" aria-label="Successivo" data-i18n-aria="illus.lb_next">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 14px; height: 14px;"><path d="M9 18l6-6-6-6"/></svg>
             </button>
           </div>
@@ -195,9 +204,9 @@
         <!-- SUSTAINERA BROCHURE SECTION -->
         <div class="gallery-item-clean reveal" style="grid-template-columns: 1fr; gap: 24px;">
           <div class="gallery-text" style="max-width: 680px;">
-            <div class="gallery-tag">Materiale fisico · Officine e fiere</div>
-            <h3>Sustainera Brochure</h3>
-            <p>Materiale informativo pensato per presentare il programma Sustainera, il modello delle 4R e le opportunità offerte ai meccanici che scelgono di entrare nel network.</p>
+            <div class="gallery-tag" data-i18n="wbc.brochure_tag">Materiale fisico · Officine e fiere</div>
+            <h3 data-i18n="wbc.brochure_title">Sustainera Brochure</h3>
+            <p data-i18n="wbc.brochure_desc">Materiale informativo pensato per presentare il programma Sustainera, il modello delle 4R e le opportunità offerte ai meccanici che scelgono di entrare nel network.</p>
           </div>
           <div class="gallery-visual" style="display: flex; gap: 20px; width: 100%; justify-content: flex-start; margin-top: 12px;">
             <div style="flex: 1; max-width: 580px; border-radius: 16px; overflow: hidden;">
@@ -215,16 +224,16 @@
    <!-- MECHCOACH / COACHES -->
   <section id="coaches" class="section-ecosystem">
     <div class="wrap">
-      <div class="section-label reveal">L'ecosistema: MechCoach</div>
+      <div class="section-label reveal" data-i18n="wbc.coach_label">L'ecosistema: MechCoach</div>
       <div class="two-col reveal" style="margin-bottom: 16px;">
-        <h2>Se i pezzi sono i campioni, qualcuno li deve allenare.</h2>
+        <h2 data-i18n="wbc.coach_title">Se i pezzi sono i campioni, qualcuno li deve allenare.</h2>
         <div class="body">
-          <p>Nasce così <strong>MechCoach</strong>, brand ambassador di Sustainera: una voce tecnica e affidabile, ispirata al mondo dello sport, attorno a cui si sviluppano diversi format.</p>
+          <p data-i18n="wbc.coach_lead">Nasce così <strong>MechCoach</strong>, brand ambassador di Sustainera: una voce tecnica e affidabile, ispirata al mondo dello sport, attorno a cui si sviluppano diversi format.</p>
         </div>
       </div>
  
       <div class="two-col reveal" style="grid-template-columns: 1fr 1.3fr; align-items: center; margin-bottom: 32px; gap: 32px;">
-        <p style="color: var(--color-onyx-muted); font-size: 16px; line-height: 1.6; margin: 0;">Il <strong>MechCoach</strong> indosserà una <strong>maglietta personalizzata</strong>, pensata e realizzata come una vera e propria <strong>divisa tecnica sportiva</strong>.</p>
+        <p style="color: var(--color-onyx-muted); font-size: 16px; line-height: 1.6; margin: 0;" data-i18n="wbc.coach_jersey">Il <strong>MechCoach</strong> indosserà una <strong>maglietta personalizzata</strong>, pensata e realizzata come una vera e propria <strong>divisa tecnica sportiva</strong>.</p>
         <div style="max-width: 440px; width: 100%;">
           <img src="Assets/img/maglia.png" alt="Maglia MechCoach" style="width: 100%; height: auto; border-radius: 16px; border: none; display: block;">
         </div>
@@ -240,7 +249,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="social-svg-mini" title="TikTok"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
             </div>
           </div>
-          <div class="format-desc">Video in cui risponde alle domande che tutti si fanno sulla propria auto. Linguaggio semplice, ironico e diretto.</div>
+          <div class="format-desc" data-i18n="wbc.f1_desc">Video in cui risponde alle domande che tutti si fanno sulla propria auto. Linguaggio semplice, ironico e diretto.</div>
         </div>
         <div class="format-row reveal">
           <div class="format-name">
@@ -252,7 +261,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="social-svg-mini" title="Reddit"><circle cx="12" cy="13.5" r="7.5"></circle><circle cx="9.5" cy="13.5" r="1"></circle><circle cx="14.5" cy="13.5" r="1"></circle><path d="M9.5 16.5c1.5 1.5 3.5 1.5 5 0"></path><path d="M12 6v3.5"></path><circle cx="12" cy="5" r="1.5"></circle></svg>
             </div>
           </div>
-          <div class="format-desc">Domande reali degli utenti prese direttamente dai thread di Reddit.</div>
+          <div class="format-desc" data-i18n="wbc.f2_desc">Domande reali degli utenti prese direttamente dai thread di Reddit.</div>
         </div>
         <div class="format-row reveal">
           <div class="format-name">
@@ -263,7 +272,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="social-svg-mini" title="TikTok"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
             </div>
           </div>
-          <div class="format-desc">MechCoach commenta riparazioni discutibili e consigli sbagliati di altri creator, posizionandosi come voce autorevole del settore.</div>
+          <div class="format-desc" data-i18n="wbc.f3_desc">MechCoach commenta riparazioni discutibili e consigli sbagliati di altri creator, posizionandosi come voce autorevole del settore.</div>
         </div>
         <div class="format-row reveal">
           <div class="format-name">
@@ -274,7 +283,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="social-svg-mini" title="TikTok"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
             </div>
           </div>
-          <div class="format-desc">Umanizzare il personaggio del MechCoach, trasformandolo da una figura istituzionale a qualcuno con cui le persone possano creare un legame affettivo.</div>
+          <div class="format-desc" data-i18n="wbc.f4_desc">Umanizzare il personaggio del MechCoach, trasformandolo da una figura istituzionale a qualcuno con cui le persone possano creare un legame affettivo.</div>
         </div>
       </div>
     </div>
@@ -283,46 +292,46 @@
   <!-- ARENA / FIERA -->
   <section id="arena" class="section-ecosystem">
     <div class="wrap">
-      <div class="section-label reveal">L'ecosistema: evento</div>
+      <div class="section-label reveal" data-i18n="wbc.event_label">L'ecosistema: evento</div>
       <div class="arena-steps">
         <div class="arena-step reveal">
-          <h3>Pre-fiera</h3>
-          <p><strong>Hype.</strong> MechCoach annuncia la presenza di Sustainera con un countdown giornaliero; storie di backstage mostrano l'allestimento dello stand.</p>
+          <h3 data-i18n="wbc.arena1_title">Pre-fiera</h3>
+          <p data-i18n="wbc.arena1_desc"><strong>Hype.</strong> MechCoach annuncia la presenza di Sustainera con un countdown giornaliero; storie di backstage mostrano l'allestimento dello stand.</p>
         </div>
         <div class="arena-step reveal">
-          <h3>Durante la fiera</h3>
-          <p><strong>Test the Champion:</strong> sfide dirette tra componenti rigenerati, usati e nuovi. <strong>MechCoach Talk:</strong> commento a fine giornata in stile conferenza stampa post-partita.</p>
+          <h3 data-i18n="wbc.arena2_title">Durante la fiera</h3>
+          <p data-i18n="wbc.arena2_desc"><strong>Test the Champion:</strong> sfide dirette tra componenti rigenerati, usati e nuovi. <strong>MechCoach Talk:</strong> commento a fine giornata in stile conferenza stampa post-partita.</p>
         </div>
         <div class="arena-step reveal">
-          <h3>Post-fiera</h3>
-          <p><strong>Rielaborazione.</strong> Highlights delle gare, interviste ironiche ai partecipanti, annuncio dei vincitori per mantenere viva la community.</p>
+          <h3 data-i18n="wbc.arena3_title">Post-fiera</h3>
+          <p data-i18n="wbc.arena3_desc"><strong>Rielaborazione.</strong> Highlights delle gare, interviste ironiche ai partecipanti, annuncio dei vincitori per mantenere viva la community.</p>
         </div>
       </div>
-      <p class="reveal" style="margin-top:32px; color:var(--color-onyx-muted); font-size:16px; max-width:58ch;">Format hero: <strong style="color:var(--color-onyx);">The Sustainera Cup</strong>, su YouTube &gt; squadre di meccanici si sfidano su prove pratiche (es. riparare un cambio in 2 ore) con imprevisti ogni 30 minuti, generando contenuti lunghi e coinvolgenti.</p>
+      <p class="reveal" style="margin-top:32px; color:var(--color-onyx-muted); font-size:16px; max-width:58ch;" data-i18n="wbc.cup_desc">Format hero: <strong style="color:var(--color-onyx);">The Sustainera Cup</strong>, su YouTube &gt; squadre di meccanici si sfidano su prove pratiche (es. riparare un cambio in 2 ore) con imprevisti ogni 30 minuti, generando contenuti lunghi e coinvolgenti.</p>
     </div>
   </section>
  
   <!-- NETWORK -->
   <section id="network" class="section-ecosystem">
     <div class="wrap">
-      <div class="section-label reveal">L'ecosistema: il network</div>
+      <div class="section-label reveal" data-i18n="wbc.network_label">L'ecosistema: il network</div>
       <div class="two-col reveal" style="margin-bottom:48px;">
-        <h2>Espandere la rete di officine e meccanici.</h2>
+        <h2 data-i18n="wbc.network_title">Espandere la rete di officine e meccanici.</h2>
         <div class="body">
-          <p><strong>Una landing page</strong> dedicata ai <strong>meccanici</strong> presenta i vantaggi del network Sustainera, la politica 4R e i livelli di affiliazione. Allo stesso tempo permette ai consumatori di trovare un’<strong>officina certificata</strong>.</p>
+          <p data-i18n="wbc.network_desc"><strong>Una landing page</strong> dedicata ai <strong>meccanici</strong> presenta i vantaggi del network Sustainera, la politica 4R e i livelli di affiliazione. Allo stesso tempo permette ai consumatori di trovare un’<strong>officina certificata</strong>.</p>
         </div>
       </div>
  
       <div class="network-features">
-        <div class="network-feature reveal">
+        <div class="network-feature reveal" data-i18n="wbc.feat_leaderboard">
           <strong>Leaderboard</strong>
           Una classifica premia le officine più attive per pezzi installati e missioni completate.
         </div>
-        <div class="network-feature reveal">
+        <div class="network-feature reveal" data-i18n="wbc.feat_levels">
           <strong>Choose your level</strong>
           Tre livelli di affiliazione: Certified Player, Champion, Legend. Ognuno con requisiti e benefit chiari.
         </div>
-        <div class="network-feature reveal">
+        <div class="network-feature reveal" data-i18n="wbc.feat_explains">
           <strong>MechCoach Explains</strong>
           Tutorial e consigli tecnici del brand ambassador Sustainera per vendere e installare componenti rigenerati.
         </div>
@@ -340,7 +349,7 @@
 
         <div class="prototype-body">
           <div class="prototype-info">
-            <h2>Esplora la Landing Page di Sustainera Network</h2>
+            <h2 data-i18n="wbc.proto_title">Esplora la Landing Page di Sustainera Network</h2>
           </div>
 
           <div class="prototype-preview">
@@ -350,7 +359,7 @@
                   <span class="mini-eyebrow">SUSTAINERA NETWORK</span>
                   <h4>WELCOME BACK, CHAMPION</h4>
                   <div class="prototype-cta-big">
-                    <span>SCOPRI IL PROTOTIPO</span>
+                    <span data-i18n="wbc.proto_btn">SCOPRI IL PROTOTIPO</span>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 16px; height: 16px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                   </div>
                 </div>
@@ -358,7 +367,7 @@
                   <span class="play-btn">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:20px; height:20px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
                   </span>
-                  <span>Apri la landing page live ↗</span>
+                  <span data-i18n="wbc.proto_link">Apri la landing page live ↗</span>
                 </div>
               </div>
             </a>
@@ -370,8 +379,8 @@
       <div class="two-col reveal" style="grid-template-columns: 1fr 1.2fr; align-items: center; margin-top: 56px; gap: 48px;">
         <div>
           <div class="gallery-tag">Certified Partner</div>
-          <h3 style="font-weight: 500; margin-bottom: 12px; color: var(--color-onyx);">Welcome Kit</h3>
-          <p style="color: var(--color-onyx-muted); font-size: 16px; line-height: 1.6; margin: 0;">Poster, lettera di benvenuto, medaglia "Certified Partner", cappellino e flyer con QR code per sconti riservati.</p>
+          <h3 style="font-weight: 500; margin-bottom: 12px; color: var(--color-onyx);" data-i18n="wbc.kit_title">Welcome Kit</h3>
+          <p style="color: var(--color-onyx-muted); font-size: 16px; line-height: 1.6; margin: 0;" data-i18n="wbc.kit_desc">Poster, lettera di benvenuto, medaglia "Certified Partner", cappellino e flyer con QR code per sconti riservati.</p>
         </div>
         <div style="max-width: 340px; width: 100%;">
           <img src="Assets/img/welcomekit.png" alt="Sustainera Welcome Kit" style="width: 100%; height: auto; border-radius: 16px; border: none; display: block;">
@@ -386,19 +395,19 @@
   <nav class="project-nav">
     <div class="wrap">
       <a href="nomen.html">
-        <span class="dir">← Progetto precedente</span>
+        <span class="dir" data-i18n="project.prev">← Progetto precedente</span>
         <span class="title">Nomen</span>
       </a>
       <a href="la-forza-e-cura.html">
-        <span class="dir">Prossimo progetto →</span>
-        <span class="title">La Forza è Cura</span>
+        <span class="dir" data-i18n="project.next">Prossimo progetto →</span>
+        <span class="title" data-i18n="projects.card6_title">La Forza è Cura</span>
       </a>
     </div>
   </nav>
  
   <footer>
     <div class="wrap">
-      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;">Restiamo in contatto</span>
+      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;" data-i18n="footer.stay_in_touch">Restiamo in contatto</span>
       <nav class="footer-links">
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank">Email</a>
         <a href="https://www.linkedin.com/in/giulia-de-fazio-321a8a215/" target="_blank">LinkedIn</a>
@@ -408,10 +417,11 @@
     </div>
     <div class="wrap bottom">
       <span>© 2026 Giulia De Fazio</span>
-      <span>Torino, Italia</span>
+      <span data-i18n="footer.location">Torino, Italia</span>
     </div>
   </footer>
  
+  <script src="translations.js"></script>
   <script src="main.js"></script>
  
 </body>

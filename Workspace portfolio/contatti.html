@@ -23,26 +23,35 @@
     
     <nav>
       <ul class="nav-links-list">
-        <li><a href="about.html">Chi Sono</a></li>
-        <li><a href="illustrazioni.html">Illustrazioni</a></li>
-        <li><a href="progetti.html">Progetti</a></li>
-        <li><a href="contatti.html" class="active">Contatti</a></li>
+        <li><a href="about.html" data-i18n="nav.about">Chi Sono</a></li>
+        <li><a href="illustrazioni.html" data-i18n="nav.illustrations">Illustrazioni</a></li>
+        <li><a href="progetti.html" data-i18n="nav.projects">Progetti</a></li>
+        <li><a href="contatti.html" class="active" data-i18n="nav.contact">Contatti</a></li>
       </ul>
     </nav>
 
-    <!-- KOMMA KOMMA BUTTON-043 -->
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
-      <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
-      <span class="button-043__inner">
-        <span>Scrivimi</span>
-        <span class="button-043__icon-wrap">
-          <span class="button-043__icon-list">
-            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    <div class="header-actions">
+      <!-- LANGUAGE SWITCHER -->
+      <div class="lang-switch" role="group" aria-label="Lingua / Language">
+        <button type="button" class="lang-switch__btn is-active" data-lang="it" aria-pressed="true">IT</button>
+        <span class="lang-switch__divider" aria-hidden="true">/</span>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+
+      <!-- KOMMA KOMMA BUTTON-043 -->
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
+        <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+        <span class="button-043__inner">
+          <span data-i18n="nav.contact_btn">Scrivimi</span>
+          <span class="button-043__icon-wrap">
+            <span class="button-043__icon-list">
+              <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
           </span>
         </span>
-      </span>
-    </a>
+      </a>
+    </div>
   </header>
 
   <!-- MAIN CONTACT SECTION (LIGHT ALABASTER EDITORIAL STYLE) -->
@@ -50,7 +59,7 @@
     
     <section style="padding: 20px clamp(24px, 5vw, 64px);">
       <div class="wrap">
-        <h1 class="reveal" style="font-family: var(--font-serif); font-style: normal; font-weight: 400; font-size: clamp(36px, 5.5vw, 76px); line-height: 1.05; letter-spacing: -0.02em; color: var(--color-onyx); margin-bottom: 24px;">
+        <h1 class="reveal" style="font-family: var(--font-serif); font-style: normal; font-weight: 400; font-size: clamp(36px, 5.5vw, 76px); line-height: 1.05; letter-spacing: -0.02em; color: var(--color-onyx); margin-bottom: 24px;" data-i18n="contact.page_title">
           Hai un’idea o un progetto da sviluppare insieme?
         </h1>
 
@@ -63,7 +72,7 @@
               <span class="label">Email</span>
               <div class="val">giuliadefazio.work@gmail.com</div>
             </div>
-            <span class="action-tag">Scrivimi ↗</span>
+            <span class="action-tag"><span data-i18n="contact.action_write">Scrivimi</span> ↗</span>
           </a>
 
           <!-- LINKEDIN -->
@@ -72,7 +81,7 @@
               <span class="label">LinkedIn</span>
               <div class="val">Giulia De Fazio</div>
             </div>
-            <span class="action-tag">Profilo ↗</span>
+            <span class="action-tag"><span data-i18n="contact.action_profile">Profilo</span> ↗</span>
           </a>
 
           <!-- INSTAGRAM -->
@@ -81,7 +90,7 @@
               <span class="label">Instagram</span>
               <div class="val">@le_illustrazioni_di_lia</div>
             </div>
-            <span class="action-tag">Segui ↗</span>
+            <span class="action-tag"><span data-i18n="contact.action_follow">Segui</span> ↗</span>
           </a>
 
           <!-- BEHANCE -->
@@ -90,7 +99,7 @@
               <span class="label">Behance</span>
               <div class="val">giuliadefazio</div>
             </div>
-            <span class="action-tag">Portfolio ↗</span>
+            <span class="action-tag"><span data-i18n="contact.action_portfolio">Portfolio</span> ↗</span>
           </a>
 
         </div>
@@ -102,7 +111,7 @@
 
   <footer>
     <div class="wrap">
-      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;">Restiamo in contatto</span>
+      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;" data-i18n="footer.stay_in_touch">Restiamo in contatto</span>
       <nav class="footer-links">
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank">Email</a>
         <a href="https://www.linkedin.com/in/giulia-de-fazio-321a8a215/" target="_blank">LinkedIn</a>
@@ -112,10 +121,11 @@
     </div>
     <div class="wrap bottom">
       <span>© 2026 Giulia De Fazio</span>
-      <span>Torino, Italia</span>
+      <span data-i18n="footer.location">Torino, Italia</span>
     </div>
   </footer>
 
+  <script src="translations.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

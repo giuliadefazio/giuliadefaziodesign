@@ -19,37 +19,46 @@
     
     <nav>
       <ul class="nav-links-list">
-        <li><a href="about.html">Chi Sono</a></li>
-        <li><a href="illustrazioni.html">Illustrazioni</a></li>
-        <li><a href="progetti.html" class="active">Progetti</a></li>
-        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="about.html" data-i18n="nav.about">Chi Sono</a></li>
+        <li><a href="illustrazioni.html" data-i18n="nav.illustrations">Illustrazioni</a></li>
+        <li><a href="progetti.html" class="active" data-i18n="nav.projects">Progetti</a></li>
+        <li><a href="contatti.html" data-i18n="nav.contact">Contatti</a></li>
       </ul>
     </nav>
 
-    <!-- KOMMA KOMMA BUTTON-043 -->
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
-      <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
-      <span class="button-043__inner">
-        <span>Scrivimi</span>
-        <span class="button-043__icon-wrap">
-          <span class="button-043__icon-list">
-            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    <div class="header-actions">
+      <!-- LANGUAGE SWITCHER -->
+      <div class="lang-switch" role="group" aria-label="Language selection">
+        <button class="lang-switch__btn is-active" data-lang="it" aria-pressed="true">IT</button>
+        <span class="lang-switch__divider" aria-hidden="true">|</span>
+        <button class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+
+      <!-- KOMMA KOMMA BUTTON-043 -->
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
+        <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+        <span class="button-043__inner">
+          <span data-i18n="nav.contact_btn">Scrivimi</span>
+          <span class="button-043__icon-wrap">
+            <span class="button-043__icon-list">
+              <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
           </span>
         </span>
-      </span>
-    </a>
+      </a>
+    </div>
   </header>
  
   <!-- TOP NAV -->
   <nav class="project-nav project-nav-top">
     <div class="wrap">
       <a href="welcome-back-champion.html">
-        <span class="dir">← Progetto precedente</span>
+        <span class="dir" data-i18n="project.prev">← Progetto precedente</span>
         <span class="title">Welcome back, Champion</span>
       </a>
       <a href="flowstate.html">
-        <span class="dir">Prossimo progetto →</span>
+        <span class="dir" data-i18n="project.next">Prossimo progetto →</span>
         <span class="title">Flow State - Juli</span>
       </a>
     </div>
@@ -59,9 +68,9 @@
   <section class="project-detail-hero">
     <div class="wrap hero-grid">
       <div class="hero-text">
-        <div class="hero-eyebrow">Campagna culturale — progetto universitario</div>
-        <h1>La Forza è Cura</h1>
-        <div class="claim">"La forza non è dominare. È prendersi cura del futuro."</div>
+        <div class="hero-eyebrow" data-i18n="lfc.hero_eyebrow">Campagna culturale — progetto universitario</div>
+        <h1 data-i18n="lfc.title">La Forza è Cura</h1>
+        <div class="claim" data-i18n="lfc.claim">"La forza non è dominare. È prendersi cura del futuro."</div>
       </div>
       <div class="hero-img reveal">
         <img src="Assets/img/mockup-affissioni-forza.jpg" alt="Copertina del progetto La Forza è Cura — Leia Organa, da icona pop a modello contemporaneo">
@@ -72,11 +81,11 @@
   <!-- IDEA DI PARTENZA -->
   <section id="idea">
     <div class="wrap">
-      <div class="section-label reveal">L'idea di partenza</div>
+      <div class="section-label reveal" data-i18n="lfc.idea_label">L'idea di partenza</div>
       <div class="two-col reveal">
-        <h2>Analisi</h2>
+        <h2 data-i18n="lfc.idea_title">Analisi</h2>
         <div class="body">
-          <p>Nell’immaginario contemporaneo, la forza viene spesso associata al dominio, alla guerra e al controllo. Il progetto propone invece una <strong>visione alternativa</strong> attraverso <strong>Leia Organa</strong>, che incarna una forza etica e relazionale.</p>
+          <p data-i18n="lfc.idea_text">Nell’immaginario contemporaneo, la forza viene spesso associata al dominio, alla guerra e al controllo. Il progetto propone invece una <strong>visione alternativa</strong> attraverso <strong>Leia Organa</strong>, che incarna una forza etica e relazionale.</p>
         </div>
       </div>
     </div>
@@ -85,26 +94,26 @@
   <!-- CONCEPT -->
   <section id="concept" class="section-accent">
     <div class="wrap">
-      <div class="section-label reveal">Il concept</div>
+      <div class="section-label reveal" data-i18n="lfc.concept_label">Il concept</div>
       <div class="two-col reveal">
-        <h2>Concept</h2>
+        <h2 data-i18n="lfc.concept_title">Concept</h2>
         <div class="body">
-          <p>La campagna trasforma <strong>Leia Organa</strong> da icona narrativa a <strong>simbolo</strong> di una <strong>forza etica e collettiva</strong>, fondata su responsabilità, cura e capacità di costruire il futuro. Una visione alternativa all’eroismo individuale e alla violenza come soluzione, raccontata attraverso un <strong>tono lucido, politico e inclusivo</strong>: calmo, ma fermo e determinato.</p>
+          <p data-i18n="lfc.concept_text">La campagna trasforma <strong>Leia Organa</strong> da icona narrativa a <strong>simbolo</strong> di una <strong>forza etica e collettiva</strong>, fondata su responsabilità, cura e capacità di costruire il futuro. Una visione alternativa all’eroismo individuale e alla violenza come soluzione, raccontata attraverso un <strong>tono lucido, politico e inclusivo</strong>: calmo, ma fermo e determinato.</p>
         </div>
       </div>
     </div>
   </section>
  
-
-
+ 
+ 
   <!-- SISTEMA VISIVO / PALETTE -->
   <section id="sistema-visivo">
     <div class="wrap">
-      <div class="section-label reveal">Il sistema visivo</div>
+      <div class="section-label reveal" data-i18n="lfc.visual_label">Il sistema visivo</div>
       <div class="two-col reveal">
-        <h2>Direzione visiva</h2>
+        <h2 data-i18n="lfc.visual_title">Direzione visiva</h2>
         <div class="body">
-          <p>Il sistema visivo adotta un linguaggio <strong>essenziale e simbolico</strong>, basato su equilibrio, <strong>spazio negativo</strong> e sottrazione, evitando riferimenti diretti al franchise e ogni estetica nostalgica o spettacolare.</p>
+          <p data-i18n="lfc.visual_text">Il sistema visivo adotta un linguaggio <strong>essenziale e simbolico</strong>, basato su equilibrio, <strong>spazio negativo</strong> e sottrazione, evitando riferimenti diretti al franchise e ogni estetica nostalgica o spettacolare.</p>
         </div>
       </div>
 
@@ -114,42 +123,42 @@
           <div style="width: 36px; height: 36px; border-radius: 50%; background: #0B1020; border: 1px solid var(--line-color); flex-shrink: 0;"></div>
           <div>
             <div style="font-size: 13px; font-weight: 700; color: var(--color-onyx); font-family: var(--font-sans);">#0B1020</div>
-            <div style="font-size: 11.5px; color: var(--color-onyx-muted); font-family: var(--font-sans);">Blu notte</div>
+            <div style="font-size: 11.5px; color: var(--color-onyx-muted); font-family: var(--font-sans);" data-i18n="lfc.color_nightblue">Blu notte</div>
           </div>
         </div>
         <div style="display: flex; align-items: center; gap: 10px;">
           <div style="width: 36px; height: 36px; border-radius: 50%; background: #111418; border: 1px solid var(--line-color); flex-shrink: 0;"></div>
           <div>
             <div style="font-size: 13px; font-weight: 700; color: var(--color-onyx); font-family: var(--font-sans);">#111418</div>
-            <div style="font-size: 11.5px; color: var(--color-onyx-muted); font-family: var(--font-sans);">Antracite</div>
+            <div style="font-size: 11.5px; color: var(--color-onyx-muted); font-family: var(--font-sans);" data-i18n="lfc.color_anthracite">Antracite</div>
           </div>
         </div>
         <div style="display: flex; align-items: center; gap: 10px;">
           <div style="width: 36px; height: 36px; border-radius: 50%; background: #1C2129; border: 1px solid var(--line-color); flex-shrink: 0;"></div>
           <div>
             <div style="font-size: 13px; font-weight: 700; color: var(--color-onyx); font-family: var(--font-sans);">#1C2129</div>
-            <div style="font-size: 11.5px; color: var(--color-onyx-muted); font-family: var(--font-sans);">Grigio profondo</div>
+            <div style="font-size: 11.5px; color: var(--color-onyx-muted); font-family: var(--font-sans);" data-i18n="lfc.color_deepgrey">Grigio profondo</div>
           </div>
         </div>
         <div style="display: flex; align-items: center; gap: 10px;">
           <div style="width: 36px; height: 36px; border-radius: 50%; background: #F1E9DA; border: 1px solid var(--line-color); flex-shrink: 0;"></div>
           <div>
             <div style="font-size: 13px; font-weight: 700; color: var(--color-onyx); font-family: var(--font-sans);">#F1E9DA</div>
-            <div style="font-size: 11.5px; color: var(--color-onyx-muted); font-family: var(--font-sans);">Avorio caldo</div>
+            <div style="font-size: 11.5px; color: var(--color-onyx-muted); font-family: var(--font-sans);" data-i18n="lfc.color_warmivory">Avorio caldo</div>
           </div>
         </div>
         <div style="display: flex; align-items: center; gap: 10px;">
           <div style="width: 36px; height: 36px; border-radius: 50%; background: #CFC6B8; border: 1px solid var(--line-color); flex-shrink: 0;"></div>
           <div>
             <div style="font-size: 13px; font-weight: 700; color: var(--color-onyx); font-family: var(--font-sans);">#CFC6B8</div>
-            <div style="font-size: 11.5px; color: var(--color-onyx-muted); font-family: var(--font-sans);">Grigio caldo</div>
+            <div style="font-size: 11.5px; color: var(--color-onyx-muted); font-family: var(--font-sans);" data-i18n="lfc.color_warmgrey">Grigio caldo</div>
           </div>
         </div>
         <div style="display: flex; align-items: center; gap: 10px;">
           <div style="width: 36px; height: 36px; border-radius: 50%; background: #8E2A2A; border: 1px solid var(--line-color); flex-shrink: 0;"></div>
           <div>
             <div style="font-size: 13px; font-weight: 700; color: var(--color-onyx); font-family: var(--font-sans);">#8E2A2A</div>
-            <div style="font-size: 11.5px; color: var(--color-onyx-muted); font-family: var(--font-sans);">Rosso ribellione</div>
+            <div style="font-size: 11.5px; color: var(--color-onyx-muted); font-family: var(--font-sans);" data-i18n="lfc.color_rebelred">Rosso ribellione</div>
           </div>
         </div>
       </div>
@@ -159,27 +168,27 @@
   <!-- STORYTELLING -->
   <section id="storytelling" class="section-tint">
     <div class="wrap">
-      <div class="section-label reveal">Lo storytelling della campagna</div>
+      <div class="section-label reveal" data-i18n="lfc.story_label">Lo storytelling della campagna</div>
       <div class="story-steps reveal">
         <div class="story-step">
           <div class="n">01</div>
-          <h3>Il presente</h3>
-          <p>Oggi la forza è associata a potere, scontro, violenza e produce frustrazione e impotenza.</p>
+          <h3 data-i18n="lfc.s1_title">Il presente</h3>
+          <p data-i18n="lfc.s1_desc">Oggi la forza è associata a potere, scontro, violenza e produce frustrazione e impotenza.</p>
         </div>
         <div class="story-step">
           <div class="n">02</div>
-          <h3>Rottura</h3>
-          <p>Entra Leia, non come personaggio ma come linguaggio culturale: possiede potere, ma non lo usa come dominio.</p>
+          <h3 data-i18n="lfc.s2_title">Rottura</h3>
+          <p data-i18n="lfc.s2_desc">Entra Leia, non come personaggio ma come linguaggio culturale: possiede potere, ma non lo usa come dominio.</p>
         </div>
         <div class="story-step">
           <div class="n">03</div>
-          <h3>Ridefinizione</h3>
-          <p>La forza diventa cura, scelta, collettività. Non lo si spiega: lo si fa vedere, dal verbale al visivo.</p>
+          <h3 data-i18n="lfc.s3_title">Ridefinizione</h3>
+          <p data-i18n="lfc.s3_desc">La forza diventa cura, scelta, collettività. Non lo si spiega: lo si fa vedere, dal verbale al visivo.</p>
         </div>
         <div class="story-step">
           <div class="n">04</div>
-          <h3>Apertura</h3>
-          <p>Il protagonista non è più Leia, ma il pubblico. La campagna non chiude il senso: invita a riconoscersi.</p>
+          <h3 data-i18n="lfc.s4_title">Apertura</h3>
+          <p data-i18n="lfc.s4_desc">Il protagonista non è più Leia, ma il pubblico. La campagna non chiude il senso: invita a riconoscersi.</p>
         </div>
       </div>
     </div>
@@ -188,25 +197,25 @@
   <!-- CANALI -->
   <section id="canali">
     <div class="wrap">
-      <div class="section-label reveal">I canali</div>
+      <div class="section-label reveal" data-i18n="lfc.channels_label">I canali</div>
       <div class="channels-grid">
         <div class="channel-card reveal">
-          <h3>Volantini</h3>
-          <p>Volantini diffusi in città, università, eventi e mostre a tema.</p>
+          <h3 data-i18n="lfc.c1_title">Volantini</h3>
+          <p data-i18n="lfc.c1_desc">Volantini diffusi in città, università, eventi e mostre a tema.</p>
           <img src="Assets/img/volantino-forza.png" alt="Volantino La Forza è Cura">
         </div>
         <div class="channel-card reveal">
-          <h3>Installazione</h3>
-          <p>Un muro partecipativo nello spazio pubblico raccoglie azioni e pensieri delle persone, trasformandosi nel tempo in un archivio collettivo della forza come responsabilità condivisa.</p>
+          <h3 data-i18n="lfc.c2_title">Installazione</h3>
+          <p data-i18n="lfc.c2_desc">Un muro partecipativo nello spazio pubblico raccoglie azioni e pensieri delle persone, trasformandosi nel tempo in un archivio collettivo della forza come responsabilità condivisa.</p>
           <img src="Assets/img/installazione-forza.png" alt="Installazione La Forza è Cura">
         </div>
         <div class="channel-card reveal">
-          <h3>Guerrilla</h3>
-          <p>Un filo rosso attraversa lo spazio pubblico coinvolgendo progressivamente le persone, creando una linea condivisa che rende visibili connessione, responsabilità e continuità collettiva.</p>
+          <h3 data-i18n="lfc.c3_title">Guerrilla</h3>
+          <p data-i18n="lfc.c3_desc">Un filo rosso attraversa lo spazio pubblico coinvolgendo progressivamente le persone, creando una linea condivisa che rende visibili connessione, responsabilità e continuità collettiva.</p>
           <img src="Assets/img/guerrilla-forza.png" alt="Guerrilla La Forza è Cura">
         </div>
       </div>
-      <p class="reveal" style="margin-top:56px; color:var(--color-onyx-muted); font-size:16px; max-width:58ch;"><strong>I social</strong> diventano uno spazio di connessione e confronto, dove il pubblico riflette sul significato di forza, responsabilità e speranza attraverso la condivisione di piccoli gesti quotidiani.</p>
+      <p class="reveal" style="margin-top:56px; color:var(--color-onyx-muted); font-size:16px; max-width:58ch;" data-i18n="lfc.social_desc"><strong>I social</strong> diventano uno spazio di connessione e confronto, dove il pubblico riflette sul significato di forza, responsabilità e speranza attraverso la condivisione di piccoli gesti quotidiani.</p>
     </div>
   </section>
  
@@ -214,11 +223,11 @@
   <nav class="project-nav">
     <div class="wrap">
       <a href="welcome-back-champion.html">
-        <span class="dir">← Progetto precedente</span>
+        <span class="dir" data-i18n="project.prev">← Progetto precedente</span>
         <span class="title">Welcome back, Champion</span>
       </a>
       <a href="flowstate.html">
-        <span class="dir">Prossimo progetto →</span>
+        <span class="dir" data-i18n="project.next">Prossimo progetto →</span>
         <span class="title">Flow State - Juli</span>
       </a>
     </div>
@@ -226,7 +235,7 @@
  
   <footer>
     <div class="wrap">
-      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;">Restiamo in contatto</span>
+      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;" data-i18n="footer.stay_in_touch">Restiamo in contatto</span>
       <nav class="footer-links">
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank">Email</a>
         <a href="https://www.linkedin.com/in/giulia-de-fazio-321a8a215/" target="_blank">LinkedIn</a>
@@ -236,10 +245,11 @@
     </div>
     <div class="wrap bottom">
       <span>© 2026 Giulia De Fazio</span>
-      <span>Torino, Italia</span>
+      <span data-i18n="footer.location">Torino, Italia</span>
     </div>
   </footer>
  
+  <script src="translations.js"></script>
   <script src="main.js"></script>
  
 </body>
