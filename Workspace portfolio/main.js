@@ -561,6 +561,24 @@ document.addEventListener('DOMContentLoaded', () => {
           } else {
             hintEl.textContent = `${tapWord} to flip page`;
           }
+        } else if (lang === 'es') {
+          const tapWord = isTouch ? 'Toca' : 'Haz clic';
+          if (spread === 0) {
+            hintEl.textContent = `${tapWord} para abrir`;
+          } else if (spread === maxSpread) {
+            hintEl.textContent = `${tapWord} para cerrar`;
+          } else {
+            hintEl.textContent = `${tapWord} para hojear`;
+          }
+        } else if (lang === 'de') {
+          const tapWord = isTouch ? 'Tippen' : 'Klicken';
+          if (spread === 0) {
+            hintEl.textContent = `${tapWord} zum Öffnen`;
+          } else if (spread === maxSpread) {
+            hintEl.textContent = `${tapWord} zum Schließen`;
+          } else {
+            hintEl.textContent = `${tapWord} zum Umblättern`;
+          }
         } else {
           const tapWord = isTouch ? 'Tocca' : 'Clicca';
           if (spread === 0) {
