@@ -29,11 +29,40 @@
     </nav>
 
     <div class="header-actions">
-      <!-- LANGUAGE SWITCHER -->
-      <div class="lang-switch" role="group" aria-label="Language selection">
-        <button class="lang-switch__btn is-active" data-lang="it" aria-pressed="true">IT</button>
-        <span class="lang-switch__divider" aria-hidden="true">|</span>
-        <button class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+            <!-- LANGUAGE DROPDOWN -->
+      <div class="lang-dropdown" id="lang-dropdown">
+        <button type="button" class="lang-dropdown__trigger" id="lang-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false" aria-label="Seleziona lingua / Select language">
+          <svg class="lang-dropdown__globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 2a14.5 14.5 0 0 0 0 20M12 2a14.5 14.5 0 0 1 0 20M2 12h20"></path>
+          </svg>
+          <span class="lang-dropdown__current" id="lang-current-code">IT</span>
+          <svg class="lang-dropdown__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m6 9 6 6 6-6"></path>
+          </svg>
+        </button>
+        <div class="lang-dropdown__menu" role="listbox" aria-labelledby="lang-dropdown-trigger">
+          <button type="button" class="lang-dropdown__item is-active" role="option" data-lang="it" aria-selected="true">
+            <span class="lang-dropdown__badge">IT</span>
+            <span class="lang-dropdown__name">Italiano</span>
+            <svg class="lang-dropdown__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </button>
+          <button type="button" class="lang-dropdown__item" role="option" data-lang="en" aria-selected="false">
+            <span class="lang-dropdown__badge">EN</span>
+            <span class="lang-dropdown__name">English</span>
+            <svg class="lang-dropdown__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </button>
+          <button type="button" class="lang-dropdown__item" role="option" data-lang="es" aria-selected="false">
+            <span class="lang-dropdown__badge">ES</span>
+            <span class="lang-dropdown__name">Español</span>
+            <svg class="lang-dropdown__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </button>
+          <button type="button" class="lang-dropdown__item" role="option" data-lang="de" aria-selected="false">
+            <span class="lang-dropdown__badge">DE</span>
+            <span class="lang-dropdown__name">Deutsch</span>
+            <svg class="lang-dropdown__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </button>
+        </div>
       </div>
 
       <!-- KOMMA KOMMA BUTTON-043 -->

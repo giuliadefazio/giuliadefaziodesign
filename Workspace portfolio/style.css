@@ -196,56 +196,176 @@ header.site-header > * {
   gap: 14px;
 }
 
-.lang-switch {
+/* ---------- LANGUAGE DROPDOWN (EDITORIAL MINIMAL) ---------- */
+.lang-dropdown {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  font-family: var(--font-sans);
+}
+
+.lang-dropdown__trigger {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  padding: 6px 12px;
+  gap: 7px;
+  height: 38px;
+  padding: 0 12px 0 10px;
   border-radius: 999px;
   border: 1px solid var(--line-color);
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--color-onyx);
   font-family: var(--font-sans);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-onyx);
-  transition: all 0.25s ease;
-  user-select: none;
-}
-
-.lang-switch:hover {
-  border-color: var(--line-burgundy);
-  background: rgba(255, 255, 255, 0.9);
-}
-
-.lang-switch__btn {
-  background: none;
-  border: none;
-  padding: 2px 3px;
-  font: inherit;
-  color: var(--color-onyx-faint);
   cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.lang-dropdown__trigger:hover,
+.lang-dropdown.is-open .lang-dropdown__trigger {
+  border-color: var(--line-burgundy);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 14px rgba(90, 24, 39, 0.08);
+}
+
+.lang-dropdown__globe {
+  width: 14px;
+  height: 14px;
+  stroke: var(--accent-color);
+  opacity: 0.85;
+  flex-shrink: 0;
+}
+
+.lang-dropdown__current {
   line-height: 1;
-  transition: color 0.2s ease;
-  border-radius: 4px;
-}
-
-.lang-switch__btn:hover {
-  color: var(--accent-color);
-}
-
-.lang-switch__btn.is-active {
-  color: var(--accent-color);
+  color: var(--color-onyx);
   font-weight: 800;
+  min-width: 18px;
+  text-align: center;
 }
 
-.lang-switch__divider {
-  opacity: 0.35;
-  font-size: 10px;
+.lang-dropdown__chevron {
+  width: 12px;
+  height: 12px;
+  stroke: var(--color-onyx-muted);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.lang-dropdown.is-open .lang-dropdown__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown popover menu */
+.lang-dropdown__menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 168px;
+  padding: 6px;
+  border-radius: 14px;
+  background: rgba(253, 251, 248, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(90, 24, 39, 0.14);
+  box-shadow: 0 16px 36px rgba(35, 24, 18, 0.12), 0 4px 10px rgba(0, 0, 0, 0.03);
+  opacity: 0;
+  visibility: hidden;
   pointer-events: none;
+  transform: translateY(-6px) scale(0.97);
+  transform-origin: top right;
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.2s;
+  z-index: 1000;
+}
+
+.lang-dropdown.is-open .lang-dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.lang-dropdown__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  text-align: left;
+  transition: all 0.18s ease;
+  color: var(--color-onyx);
+}
+
+.lang-dropdown__item:hover {
+  background: rgba(90, 24, 39, 0.06);
+  color: var(--accent-color);
+}
+
+.lang-dropdown__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 20px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--color-onyx-muted);
+  transition: all 0.18s ease;
+}
+
+.lang-dropdown__item:hover .lang-dropdown__badge {
+  background: rgba(90, 24, 39, 0.12);
+  color: var(--accent-color);
+}
+
+.lang-dropdown__name {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  flex: 1;
+}
+
+.lang-dropdown__check {
+  width: 14px;
+  height: 14px;
+  stroke: var(--accent-color);
+  opacity: 0;
+  transition: opacity 0.18s ease;
+  flex-shrink: 0;
+}
+
+/* Active State */
+.lang-dropdown__item.is-active {
+  background: rgba(90, 24, 39, 0.08);
+}
+
+.lang-dropdown__item.is-active .lang-dropdown__badge {
+  background: var(--accent-color);
+  color: #FFFFFF;
+}
+
+.lang-dropdown__item.is-active .lang-dropdown__name {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.lang-dropdown__item.is-active .lang-dropdown__check {
+  opacity: 1;
 }
 
 /* ---------- BUTTON-043 (KOMMA KOMMA PILL BUTTON WITH MASKED ARROW) ---------- */
