@@ -2738,6 +2738,7 @@ p {
   .two-col,
   .experience-slide,
   .app-row,
+  .app-row--2col,
   .palette-row,
   .research-grid,
   .story-steps,
@@ -3567,6 +3568,10 @@ section[id] {
   gap: 24px;
 }
 
+.app-row--2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .app-card {
   background: var(--bg-panel);
   border: 1px solid var(--line-burgundy);
@@ -4322,6 +4327,7 @@ body.nav-drawer-open {
 
   /* Compact 2-Column Grid for App Row & Research Cards */
   .app-row,
+  .app-row--2col,
   .research-grid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
@@ -5231,4 +5237,582 @@ body.nav-drawer-open {
     flex: none;
     text-align: center;
   }
+}
+
+/* ---------- ONIRIA REORGANIZED SECTIONS (MOBILE RESPONSIVE) ---------- */
+@media (max-width: 860px) {
+  #perche .two-col {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  #perche .two-col h2,
+  #perche h2[data-i18n="oniria.why_problem_title"] {
+    font-size: clamp(24px, 6vw, 32px) !important;
+    line-height: 1.18 !important;
+  }
+  #perche .research-grid,
+  #come .research-grid,
+  #target .research-grid,
+  #target .app-row,
+  #futuro .research-grid,
+  #futuro .app-row {
+    grid-template-columns: 1fr !important;
+    display: grid !important;
+    overflow: visible !important;
+    scroll-snap-type: none !important;
+  }
+  #perche .research-card p,
+  #come .research-card p,
+  #target .app-card p,
+  #futuro .research-card p {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+  #perche .senses-bars {
+    width: 100% !important;
+  }
+}
+
+/* ==========================================================================
+   ONIRIA PERSONAS / USER SCENARIOS DOSSIER CARDS
+   ========================================================================== */
+.persona-mode-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.persona-mode-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(101, 18, 26, 0.08);
+  border: 1px solid rgba(101, 18, 26, 0.2);
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.persona-mode-icon--coop {
+  background: rgba(12, 66, 59, 0.08);
+  border-color: rgba(12, 66, 59, 0.25);
+  color: var(--accent-teal);
+}
+
+.persona-mode-title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 21px;
+  color: var(--color-onyx);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.persona-mode-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(20, 16, 13, 0.16), transparent);
+}
+
+.persona-card {
+  position: relative;
+  background: var(--bg-panel);
+  border: 1px solid var(--line-burgundy);
+  border-radius: 20px;
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 4px 20px -4px rgba(20, 16, 13, 0.04);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  overflow: hidden;
+}
+
+.persona-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), rgba(101, 18, 26, 0.2));
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.persona-card--marco::before {
+  background: linear-gradient(90deg, #1D3A5F, rgba(29, 58, 95, 0.2));
+}
+
+.persona-card--luca::before {
+  background: linear-gradient(90deg, var(--accent-teal), rgba(12, 66, 59, 0.2));
+}
+
+.persona-card--francesco::before {
+  background: linear-gradient(90deg, #9C5217, rgba(156, 82, 23, 0.2));
+}
+
+@media (min-width: 861px) {
+  .persona-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -10px rgba(101, 18, 26, 0.12), 0 2px 6px rgba(20, 16, 13, 0.04);
+    border-color: var(--accent-color);
+  }
+  .persona-card--marco:hover {
+    box-shadow: 0 20px 40px -10px rgba(29, 58, 95, 0.16), 0 2px 6px rgba(20, 16, 13, 0.04);
+    border-color: #1D3A5F;
+  }
+  .persona-card--luca:hover {
+    box-shadow: 0 20px 40px -10px rgba(12, 66, 59, 0.16), 0 2px 6px rgba(20, 16, 13, 0.04);
+    border-color: var(--accent-teal);
+  }
+  .persona-card--francesco:hover {
+    box-shadow: 0 20px 40px -10px rgba(156, 82, 23, 0.16), 0 2px 6px rgba(20, 16, 13, 0.04);
+    border-color: #9C5217;
+  }
+}
+
+.persona-card__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.persona-card__avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.02em;
+  background: linear-gradient(135deg, #8A2D38 0%, #4D1219 100%);
+  box-shadow: 0 6px 14px -3px rgba(101, 18, 26, 0.35);
+  border: 2px solid #FFFFFF;
+}
+
+.persona-card__avatar--marco {
+  background: linear-gradient(135deg, #2A5288 0%, #0F233E 100%);
+  box-shadow: 0 6px 14px -3px rgba(29, 58, 95, 0.4);
+}
+
+.persona-card__avatar--luca {
+  background: linear-gradient(135deg, #1F6B56 0%, #0B3327 100%);
+  box-shadow: 0 6px 14px -3px rgba(12, 66, 59, 0.4);
+}
+
+.persona-card__avatar--francesco {
+  background: linear-gradient(135deg, #B56524 0%, #5E2F09 100%);
+  box-shadow: 0 6px 14px -3px rgba(156, 82, 23, 0.4);
+}
+
+.persona-card__avatar img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+.persona-card__avatar-badge {
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--bg-alabaster);
+  border: 1.5px solid #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-onyx);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.persona-card__title-group {
+  flex: 1;
+  min-width: 0;
+}
+
+.persona-card__name {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-style: normal;
+  line-height: 1.25;
+  color: var(--color-onyx);
+  margin: 0 0 3px 0;
+}
+
+.persona-card__role {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  color: var(--color-onyx-muted);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.persona-card__strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 8px 12px;
+  background: rgba(245, 239, 232, 0.6);
+  border-radius: 12px;
+  border: 1px solid rgba(20, 16, 13, 0.06);
+}
+
+.persona-card__device-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 0.02em;
+}
+
+.persona-card--marco .persona-card__device-tag {
+  color: #1D3A5F;
+}
+
+.persona-card--luca .persona-card__device-tag {
+  color: var(--accent-teal);
+}
+
+.persona-card--francesco .persona-card__device-tag {
+  color: #9C5217;
+}
+
+.persona-card__tech-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-onyx-faint);
+}
+
+.persona-card__dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 3.5px;
+}
+
+.persona-card__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(20, 16, 13, 0.2);
+}
+
+.persona-card__dot.is-active {
+  background: var(--accent-color);
+}
+
+.persona-card--marco .persona-card__dot.is-active {
+  background: #1D3A5F;
+}
+
+.persona-card--luca .persona-card__dot.is-active {
+  background: var(--accent-teal);
+}
+
+.persona-card--francesco .persona-card__dot.is-active {
+  background: #9C5217;
+}
+
+.persona-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.persona-card__pod {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 13px 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(20, 16, 13, 0.06);
+  background: rgba(245, 239, 232, 0.45);
+}
+
+.persona-card__pod--usage {
+  background: #FFFFFF;
+  border: 1px solid rgba(101, 18, 26, 0.2);
+  box-shadow: 0 2px 8px rgba(101, 18, 26, 0.03);
+}
+
+.persona-card--marco .persona-card__pod--usage {
+  border-color: rgba(29, 58, 95, 0.25);
+  box-shadow: 0 2px 8px rgba(29, 58, 95, 0.04);
+}
+
+.persona-card--luca .persona-card__pod--usage {
+  border-color: rgba(12, 66, 59, 0.25);
+  box-shadow: 0 2px 8px rgba(12, 66, 59, 0.04);
+}
+
+.persona-card--francesco .persona-card__pod--usage {
+  border-color: rgba(156, 82, 23, 0.25);
+  box-shadow: 0 2px 8px rgba(156, 82, 23, 0.04);
+}
+
+.persona-card__pod-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-onyx-faint);
+}
+
+.persona-card__pod--usage .persona-card__pod-label {
+  color: var(--accent-color);
+}
+
+.persona-card--marco .persona-card__pod--usage .persona-card__pod-label {
+  color: #1D3A5F;
+}
+
+.persona-card--luca .persona-card__pod--usage .persona-card__pod-label {
+  color: var(--accent-teal);
+}
+
+.persona-card--francesco .persona-card__pod--usage .persona-card__pod-label {
+  color: #9C5217;
+}
+
+.persona-card__pod p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--color-onyx-muted);
+}
+
+.persona-card__quote {
+  position: relative;
+  margin-top: 2px;
+  padding: 12px 16px 12px 34px;
+  background: rgba(101, 18, 26, 0.04);
+  border-left: 2.5px solid var(--accent-color);
+  border-radius: 0 10px 10px 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--color-onyx);
+}
+
+.persona-card--luca .persona-card__quote {
+  background: rgba(12, 66, 59, 0.04);
+  border-left-color: var(--accent-teal);
+}
+
+.persona-card--francesco .persona-card__quote {
+  background: rgba(156, 82, 23, 0.05);
+  border-left-color: #9C5217;
+}
+
+.persona-card__quote::before {
+  content: '“';
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  font-size: 24px;
+  line-height: 1;
+  color: var(--accent-color);
+  opacity: 0.7;
+  font-family: var(--font-serif);
+}
+
+.persona-card--luca .persona-card__quote::before {
+  color: var(--accent-teal);
+}
+
+.persona-card--francesco .persona-card__quote::before {
+  color: #9C5217;
+}
+
+@media (max-width: 860px) {
+  .persona-card {
+    padding: 22px 18px !important;
+    border-radius: 16px !important;
+  }
+  .persona-card__name {
+    font-size: 20px !important;
+  }
+}
+
+/* ==========================================================================
+   ONIRIA COME FUNZIONA SECTION (TWO COLUMNS)
+   ========================================================================== */
+#come .two-col {
+  grid-template-columns: 0.9fr 1.15fr;
+  gap: 44px;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  #come .two-col {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+}
+
+/* ==========================================================================
+   ONIRIA ESPERIENZA CAROUSEL SLIDE IMAGES
+   ========================================================================== */
+#esperienza .experience-slide img {
+  width: 100%;
+  max-width: 520px;
+  height: 380px;
+  object-fit: contain;
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto;
+}
+
+#esperienza .experience-slide-dual {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+#esperienza .experience-slide-dual img {
+  width: calc(50% - 8px) !important;
+  max-width: 240px !important;
+  height: 380px !important;
+  object-fit: contain !important;
+}
+
+@media (max-width: 860px) {
+  #esperienza .experience-slide img {
+    height: 290px !important;
+    max-width: 100% !important;
+  }
+  #esperienza .experience-slide-dual {
+    gap: 12px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  #esperienza .experience-slide-dual img {
+    height: 360px !important;
+    max-width: calc(50% - 6px) !important;
+  }
+}
+
+/* ==========================================================
+   ONIRIA — ritocchi responsive (solo pagina oniria.html)
+   Da incollare in fondo a style.css
+   ========================================================== */
+
+/* Evita scroll orizzontale accidentale su tutta la pagina */
+#esperienza, #perche, #come, #target, #futuro { overflow-x: clip; }
+
+/* Diagramma del flusso (percorso in 4 tappe, desktop e mobile) */
+#come .flow-phases { display: block; position: relative; padding: 4px 2px; }
+#come .flow-phase { position: relative; display: flex; gap: 14px; padding-bottom: 22px; }
+#come .flow-phase:last-child { padding-bottom: 0; }
+/* linea che collega le tappe */
+#come .flow-phase:not(:last-child)::before {
+  content: ""; position: absolute; left: 17px; top: 38px; bottom: 2px;
+  width: 2px; background: #D9BFA8;
+}
+#come .flow-phase__num {
+  flex: 0 0 36px; height: 36px; border-radius: 50%;
+  background: var(--accent-color); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-serif); font-size: 17px; z-index: 1;
+}
+#come .flow-phase__body { flex: 1; min-width: 0; padding-top: 4px; }
+#come .flow-phase__body h5 {
+  margin: 0 0 4px; font-family: var(--font-serif); font-size: 18px; line-height: 1.25; font-weight: 400;
+}
+#come .flow-phase__body p { margin: 0; font-size: 14px; line-height: 1.5; }
+#come .flow-phase__loop {
+  display: flex; gap: 10px; align-items: flex-start;
+  margin-top: 12px; padding: 10px 12px;
+  background: #F6E6D8; border: 1.5px dashed #B98E6E; border-radius: 12px;
+}
+#come .flow-phase__loop span { font-size: 20px; line-height: 1; color: var(--accent-color); }
+#come .flow-phase__loop p { font-size: 13px; }
+#come .flow-phase__devices { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+#come .flow-phase__devices em {
+  font-style: normal; font-size: 12px; font-weight: 600;
+  background: #EFD0B6; border-radius: 999px; padding: 5px 12px;
+}
+
+#come .flow-diagram-card { padding: 28px 24px !important; }
+@media (max-width: 640px) { #come .flow-diagram-card { padding: 20px 16px !important; } }
+
+/* Personas: su mobile/tablet si scorrono lateralmente (swipe) */
+@media (max-width: 860px) {
+  #target .app-row.app-row--2col {
+    display: flex !important;
+    grid-template-columns: none !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 14px !important;
+    margin-inline: -16px;
+    padding: 4px 16px 14px;
+    scrollbar-width: none;
+  }
+  #target .app-row.app-row--2col::-webkit-scrollbar { display: none; }
+  #target .app-row.app-row--2col > .persona-card {
+    flex: 0 0 86% !important;
+    max-width: 86%;
+    scroll-snap-align: center;
+    align-self: stretch;
+  }
+}
+
+/* Telefoni piccoli */
+@media (max-width: 480px) {
+  .tag-row { gap: 8px; }
+  .tag-chip { font-size: 11px; padding: 7px 12px; }
+  #esperienza .experience-slide img { height: 240px !important; }
+  #esperienza .experience-slide-dual {
+    gap: 10px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  #esperienza .experience-slide-dual img {
+    height: 320px !important;
+    max-width: calc(50% - 5px) !important;
+  }
+  .persona-card__name { font-size: 18px !important; }
+  .persona-mode-title { white-space: normal !important; font-size: 20px; }
+  .research-num { font-size: 11px; }
+}
+
+/* Tablet: il testo non deve restare troppo stretto rispetto allo schermo */
+@media (min-width: 641px) and (max-width: 860px) {
+  #come .flow-diagram-card { padding: 20px 18px !important; }
 }

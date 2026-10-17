@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oniria — Giulia De Fazio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  <!-- PROGRESSIVE BLUR HEADER -->
+  <div class="header-blur-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo-mark">Giulia De Fazio</a>
+    
+    <nav>
+      <ul class="nav-links-list">
+        <li><a href="about.html" data-i18n="nav.about">Chi Sono</a></li>
+        <li><a href="progetti.html" class="active" data-i18n="nav.projects">Progetti</a></li>
+        <li><a href="illustrazioni.html" data-i18n="nav.illustrations">Illustrazioni</a></li>
+        <li><a href="contatti.html" data-i18n="nav.contact">Contatti</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <!-- LANGUAGE DROPDOWN -->
+      <div class="lang-dropdown" id="lang-dropdown">
+        <button type="button" class="lang-dropdown__trigger" id="lang-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false" aria-label="Seleziona lingua / Select language">
+          <svg class="lang-dropdown__globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 2a14.5 14.5 0 0 0 0 20M12 2a14.5 14.5 0 0 1 0 20M2 12h20"></path>
+          </svg>
+          <span class="lang-dropdown__current" id="lang-current-code">IT</span>
+          <svg class="lang-dropdown__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m6 9 6 6 6-6"></path>
+          </svg>
+        </button>
+        <div class="lang-dropdown__menu" role="listbox" aria-labelledby="lang-dropdown-trigger">
+          <button type="button" class="lang-dropdown__item is-active" role="option" data-lang="it" aria-selected="true">
+            <span class="lang-dropdown__badge">IT</span>
+            <span class="lang-dropdown__name">Italiano</span>
+            <svg class="lang-dropdown__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </button>
+          <button type="button" class="lang-dropdown__item" role="option" data-lang="en" aria-selected="false">
+            <span class="lang-dropdown__badge">EN</span>
+            <span class="lang-dropdown__name">English</span>
+            <svg class="lang-dropdown__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </button>
+          <button type="button" class="lang-dropdown__item" role="option" data-lang="es" aria-selected="false">
+            <span class="lang-dropdown__badge">ES</span>
+            <span class="lang-dropdown__name">Español</span>
+            <svg class="lang-dropdown__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </button>
+          <button type="button" class="lang-dropdown__item" role="option" data-lang="de" aria-selected="false">
+            <span class="lang-dropdown__badge">DE</span>
+            <span class="lang-dropdown__name">Deutsch</span>
+            <svg class="lang-dropdown__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- KOMMA KOMMA BUTTON-043 -->
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank" class="button-043">
+        <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
+        <span class="button-043__inner">
+          <span data-i18n="nav.contact_btn">Scrivimi</span>
+          <span class="button-043__icon-wrap">
+            <span class="button-043__icon-list">
+              <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg class="button-043__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </span>
+        </span>
+      </a>
+    </div>
+  </header>
+ 
+  <!-- TOP NAV -->
+  <nav class="project-nav project-nav-top">
+    <div class="wrap">
+      <a href="flowstate.html">
+        <span class="dir" data-i18n="project.prev">← Progetto precedente</span>
+        <span class="title">Flow State</span>
+      </a>
+      <a href="trama.html">
+        <span class="dir" data-i18n="project.next">Prossimo progetto →</span>
+        <span class="title">Trama</span>
+      </a>
+    </div>
+  </nav>
+ 
+  <!-- HERO -->
+  <section class="project-detail-hero">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <div class="hero-eyebrow" data-i18n="oniria.hero_eyebrow">Esperienza Immersiva — Progetto universitario</div>
+        <h1 data-i18n="oniria.title">Oniria</h1>
+        <div class="claim" data-i18n="oniria.claim">L'arcipelago dei sogni</div>
+        <p class="reveal" style="font-size: 16px; color: var(--color-onyx-muted); max-width: 58ch; margin-top: 14px; margin-bottom: 20px; line-height: 1.55;" data-i18n="oniria.hero_summary">Racconti un sogno a <strong>voce</strong> e diventa un <strong>mondo 3D</strong> da esplorare: in VR, sul telefono, in TV o dal computer.</p>
+        <div class="tag-row reveal" style="margin-top: 4px;">
+          <span class="tag-chip" data-i18n="oniria.chip1">App e web app</span>
+          <span class="tag-chip" data-i18n="oniria.chip2">Realtà virtuale</span>
+          <span class="tag-chip" data-i18n="oniria.chip3">Smartphone</span>
+          <span class="tag-chip" data-i18n="oniria.chip4">Smart TV</span>
+          <span class="tag-chip" data-i18n="oniria.chip5">Computer</span>
+        </div>
+      </div>
+      <div class="hero-img reveal" style="max-width: 480px; width: 100%; border-radius: 16px; overflow: hidden; border: 1px solid var(--line-color); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);">
+        <img src="Assets/img/Slide9.jpg" alt="Oniria — Arcipelago dei sogni" style="width: 100%; height: auto; display: block; aspect-ratio: 1 / 1; object-fit: cover;">
+      </div>
+    </div>
+  </section>
+  
+  <!-- L'ESPERIENZA -->
+  <section id="esperienza">
+    <div class="wrap">
+      <div class="section-label reveal" data-i18n="oniria.exp_label">L'esperienza</div>
+      <p class="reveal" style="color:var(--color-onyx-muted); font-size:16px; max-width:58ch; margin-bottom:24px;" data-i18n="oniria.exp_lead"><strong>Oniria</strong> è un'app e web app che ti permette di <strong>rivivere i tuoi sogni</strong>. Appena sveglio li racconti a voce e l'Intelligenza Artificiale li trasforma in <strong>mondi 3D</strong> che puoi esplorare con un <strong>visore VR</strong>. Ogni sogno diventa un'isola in un <strong>arcipelago sospeso tra le nuvole</strong> e puoi tornare a visitarlo quando vuoi.</p>
+
+      <div class="experience-carousel-wrap reveal" role="region" aria-roledescription="carosello" aria-label="Tappe dell'esperienza">
+        <div class="experience-carousel-viewport">
+          <div class="experience-carousel-track">
+            
+            <div class="experience-slide">
+              <div class="experience-slide-dual">
+                <img src="Assets/img/Slide1.1.png" alt="Schermata iniziale di Oniria con opzione Nuovo sogno">
+                <img src="Assets/img/Slide1.jpg" alt="Schermata del chatbot e registrazione vocale del sogno su smartphone">
+              </div>
+              <div class="experience-slide-text">
+                <div class="experience-slide-num" data-i18n="oniria.step1_num">01 · Smartphone</div>
+                <h3 data-i18n="oniria.step1_title">Racconti il sogno</h3>
+                <p data-i18n="oniria.step1_desc">Appena sveglio, racconti il sogno a <strong>voce</strong> su Oniria. L’app trascrive il racconto, lo divide in scene riordinabili e lo trasforma in un <strong>mondo 3D</strong> esplorabile muovendo il telefono. Puoi poi modificare gli elementi tramite il <strong>chatbot</strong>, semplicemente descrivendo cosa vuoi cambiare.</p>
+              </div>
+            </div>
+
+            <div class="experience-slide">
+              <div class="experience-slide-dual">
+                <img src="Assets/img/Slide2.1.jpg" alt="Conferma registrazione e salvataggio del sogno">
+                <img src="Assets/img/Slide2.2.jpg" alt="Schermata dell'arcipelago con il nuovo sogno e dispositivi vicini">
+              </div>
+              <div class="experience-slide-text">
+                <div class="experience-slide-num" data-i18n="oniria.step2_num">02 · Smartphone</div>
+                <h3 data-i18n="oniria.step2_title">Nasce un'isola</h3>
+                <p data-i18n="oniria.step2_desc">Quando il risultato ti piace, confermi. Il sogno riceve un nome, viene salvato e compare nel tuo arcipelago come una <strong>nuova isola</strong>. Da quel momento lo trovi su <strong>tutti i tuoi dispositivi</strong>.</p>
+              </div>
+            </div>
+
+            <div class="experience-slide">
+              <img src="Assets/img/Slide3.jpg" alt="Mongolfiera che galleggia sopra le nuvole e mappa delle isole">
+              <div class="experience-slide-text">
+                <div class="experience-slide-num" data-i18n="oniria.step3_num">03 · Visore VR</div>
+                <h3 data-i18n="oniria.step3_title">La mongolfiera</h3>
+                <p data-i18n="oniria.step3_desc">Indossando il visore ti ritrovi su una <strong>mongolfiera</strong> che galleggia sopra le nuvole. Sotto di te ci sono le <strong>isole dei tuoi sogni</strong>. Indichi quella che vuoi visitare e la mongolfiera ti ci porta.</p>
+              </div>
+            </div>
+
+            <div class="experience-slide">
+              <img src="Assets/img/Slide4.jpg" alt="Città di Cristallo con torri azzurre e strada luminosa">
+              <div class="experience-slide-text">
+                <div class="experience-slide-num" data-i18n="oniria.step4_num">04 · Visore VR</div>
+                <h3 data-i18n="oniria.step4_title">Dentro il sogno</h3>
+                <p data-i18n="oniria.step4_desc">Atterri e il <strong>sogno si apre intorno a te</strong>. In questo caso è una città di cristallo, con torri azzurre e una strada luminosa. Le distanze e le dimensioni sembrano quelle di un posto reale, e i suoni cambiano man mano che ti sposti. Puoi <strong>esplorare a tuo ritmo</strong> oppure lasciarti accompagnare lungo il percorso.</p>
+              </div>
+            </div>
+
+            <div class="experience-slide">
+              <img src="Assets/img/Slide5.jpg" alt="Menù Editor AI con palazzo trasformato in rosso">
+              <div class="experience-slide-text">
+                <div class="experience-slide-num" data-i18n="oniria.step5_num">05 · Visore VR</div>
+                <h3 data-i18n="oniria.step5_title">Cambiare un dettaglio</h3>
+                <p data-i18n="oniria.step5_desc">Se c'è qualcosa che nel ricordo era diverso, lo indichi con la mano e compare un piccolo menù con tre opzioni: <strong>Editor AI, Sposta e Ricolora</strong>. Dici cosa vorresti, per esempio un palazzo rosso al posto di quello azzurro, e il mondo si <strong>aggiorna davanti ai tuoi occhi</strong>. Ogni modifica viene salvata come una <strong>nuova versione</strong>, quindi puoi sempre tornare a quelle precedenti.</p>
+              </div>
+            </div>
+
+            <div class="experience-slide">
+              <img src="Assets/img/Slide6.jpg" alt="Menù contestuale sul palmo della mano per tornare indietro o uscire dal sogno">
+              <div class="experience-slide-text">
+                <div class="experience-slide-num" data-i18n="oniria.step6_num">06 · Visore VR</div>
+                <h3 data-i18n="oniria.step6_title">Tornare indietro</h3>
+                <p data-i18n="oniria.step6_desc">Quando hai finito, giri il <strong>palmo della mano verso l'alto</strong> e l'interfaccia riappare. Da lì puoi tornare sulla mongolfiera per scegliere un'altra isola, oppure uscire. Il sogno <strong>rimane nel tuo arcipelago</strong>.</p>
+              </div>
+            </div>
+
+            <div class="experience-slide">
+              <img src="Assets/img/Slide7.jpg" alt="Collegamento dello smartphone alla Smart TV per vedere il sogno sullo schermo grande">
+              <div class="experience-slide-text">
+                <div class="experience-slide-num" data-i18n="oniria.step7_num">07 · Smart TV</div>
+                <h3 data-i18n="oniria.step7_title">Sul divano</h3>
+                <p data-i18n="oniria.step7_desc">Se in quel momento non hai il visore, puoi collegare il telefono alla <strong>Smart TV</strong> inserendo un codice. Il telefono funziona da <strong>telecomando</strong> e il sogno appare sullo <strong>schermo grande</strong>, come un quadro in movimento da guardare in tranquillità, anche in compagnia.</p>
+              </div>
+            </div>
+
+            <div class="experience-slide">
+              <img src="Assets/img/Slide8.jpg" alt="Modalità cooperativa nel sogno con sfera luminosa e lista partecipanti">
+              <div class="experience-slide-text">
+                <div class="experience-slide-num" data-i18n="oniria.step8_num">08 · In compagnia</div>
+                <h3 data-i18n="oniria.step8_title">Insieme a qualcuno</h3>
+                <p data-i18n="oniria.step8_desc">Puoi <strong>invitare un'altra persona</strong> dentro il tuo sogno, anche se è lontana. Sei tu a guidare lo sguardo e chi entra ti segue, rappresentato da una <strong>piccola sfera luminosa</strong>. Potete parlare e indicare cose a vicenda, e se vuoi puoi <strong>passare il comando</strong> a chi hai invitato.</p>
+              </div>
+            </div>
+
+            <div class="experience-slide">
+              <img src="Assets/img/Slide9.jpg" alt="Web app da computer con archivio e mappa dell'arcipelago dei sogni">
+              <div class="experience-slide-text">
+                <div class="experience-slide-num" data-i18n="oniria.step9_num">09 · Computer</div>
+                <h3 data-i18n="oniria.step9_title">Ritrovare i tuoi sogni</h3>
+                <p data-i18n="oniria.step9_desc">Dal computer puoi <strong>rivedere l'intero arcipelago</strong>, riordinare i sogni e riaprire le versioni precedenti. Con il tempo le isole si dispongono vicino a quelle con cui condividono temi ed emozioni, e l'arcipelago diventa una <strong>mappa di quello che sogni</strong>.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <div class="experience-controls">
+          <div class="experience-counter" aria-live="polite">01 / 09</div>
+          <div class="experience-dots"></div>
+          <div class="experience-nav-btns">
+            <button class="exp-btn prev" aria-label="Passo precedente" data-i18n-aria="illus.lb_prev">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="exp-btn next" aria-label="Passo successivo" data-i18n-aria="illus.lb_next">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <p class="reveal" style="font-size: 12px; font-style: italic; color: var(--color-onyx-faint); margin-top: 16px; text-align: left; max-width: 58ch;" data-i18n="oniria.exp_note">
+        Nota: Le immagini in questa sezione sono illustrazioni fittizie generate tramite Intelligenza Artificiale a scopo dimostrativo.
+      </p>
+    </div>
+  </section>
+
+  <!-- 1. PERCHÉ È NATA -->
+  <section id="perche" class="section-tint">
+    <div class="wrap">
+      <div class="section-label reveal" data-i18n="oniria.why_label">Perché è nata</div>
+
+      <!-- 2. Blocco Il problema -->
+      <div class="reveal" style="margin-bottom: 48px; max-width: 68ch;">
+        <h2 data-i18n="oniria.why_problem_title" style="margin-bottom: 16px;">Il 95% di ciò che sogniamo svanisce nei primi dieci minuti dal risveglio.</h2>
+        <p data-i18n="oniria.why_problem_desc">Mentre sogniamo il cervello è molto attivo, ma <strong>raramente conserva quello che vive</strong>. Senza un modo per fissarlo, non possiamo rivedere un sogno, riflettere su cosa significa per noi o raccontarlo a qualcun altro.</p>
+      </div>
+
+      <!-- 3. Titolo Ricerca -->
+      <h4 class="reveal" style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: var(--color-onyx); margin-bottom: 20px;" data-i18n="oniria.why_found_title">Ricerca</h4>
+
+      <!-- 4. Research Grid con 4 card -->
+      <div class="research-grid" style="margin-bottom: 20px;">
+        <!-- Card 1 -->
+        <div class="research-card reveal">
+          <div class="research-num" data-i18n="oniria.why_s1_num">01 · Il sogno</div>
+          <h3 data-i18n="oniria.why_s1_title">Intenso, ma poco logico</h3>
+          <p data-i18n="oniria.why_s1_desc">Nel sogno le aree del cervello che ragionano e giudicano si attenuano molto, mentre quelle delle <strong>emozioni sono molto attive</strong>. Così tutto sembra normale, anche le cose impossibili, e le emozioni arrivano <strong>senza freno</strong>.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="research-card reveal">
+          <div class="research-num" data-i18n="oniria.why_s2_num">02 · La memoria</div>
+          <h3 data-i18n="oniria.why_s2_title">Perché lo dimentichiamo</h3>
+          <p data-i18n="oniria.why_s2_desc">Durante il <strong>sonno REM</strong>, la <strong>noradrenalina</strong> è quasi assente e alcuni neuroni riducono l’attività dell’<strong>ippocampo</strong>. Questo ostacola la memorizzazione dei sogni, le cui tracce vengono poi facilmente sovrascritte dagli stimoli del risveglio.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="research-card reveal">
+          <div class="research-num" data-i18n="oniria.why_s3_num">03 · Il racconto</div>
+          <h3 data-i18n="oniria.why_s3_title">Raccontarlo al presente</h3>
+          <p data-i18n="oniria.why_s3_desc">Chi lavora con i sogni, con metodi come la Gestalt e il Focusing, chiede di <strong>raccontarli al presente</strong>. Parlare così <strong>riattiva i sensi e il corpo</strong> e il ricordo torna a essere qualcosa che si rivive.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="research-card reveal">
+          <div class="research-num" data-i18n="oniria.why_s4_num">04 · I sensi</div>
+          <h3 data-i18n="oniria.why_s4_title">I sensi del sogno</h3>
+          <p data-i18n="oniria.why_s4_desc">Nei sogni dominano <strong>immagini e suoni</strong>; le sensazioni di volo, caduta e contatto fisico sono meno frequenti, mentre odori e sapori sono quasi assenti. Sono sensi che la <strong>realtà virtuale può restituire</strong>, insieme alla percezione del proprio corpo.</p>
+          <div class="senses-bars" role="img" aria-label="Frequenza dei sensi nei sogni: Vista circa 100%, Udito 40-60%, Tatto e movimento 15-30%, Olfatto e gusto meno dell'1%" data-i18n-aria="oniria.bars_aria" style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px;">
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--color-onyx-muted); margin-bottom: 4px;">
+                <span data-i18n="oniria.bar_sight">Vista</span>
+                <span>~100%</span>
+              </div>
+              <div style="height: 6px; background: var(--line-color); border-radius: 3px; overflow: hidden;">
+                <div style="width: 100%; height: 100%; background: var(--accent-color);"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--color-onyx-muted); margin-bottom: 4px;">
+                <span data-i18n="oniria.bar_hearing">Udito</span>
+                <span>40–60%</span>
+              </div>
+              <div style="height: 6px; background: var(--line-color); border-radius: 3px; overflow: hidden;">
+                <div style="width: 50%; height: 100%; background: var(--accent-color);"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--color-onyx-muted); margin-bottom: 4px;">
+                <span data-i18n="oniria.bar_touch">Tatto e movimento</span>
+                <span>15–30%</span>
+              </div>
+              <div style="height: 6px; background: var(--line-color); border-radius: 3px; overflow: hidden;">
+                <div style="width: 22%; height: 100%; background: var(--accent-color);"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--color-onyx-muted); margin-bottom: 4px;">
+                <span data-i18n="oniria.bar_smell">Olfatto e gusto</span>
+                <span>&lt;1%</span>
+              </div>
+              <div style="height: 6px; background: var(--line-color); border-radius: 3px; overflow: hidden;">
+                <div style="width: 1%; min-width: 2px; height: 100%; background: var(--accent-color);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Riga fonti -->
+      <p class="reveal" style="font-size: 13px; color: var(--color-onyx-faint); margin-bottom: 48px;" data-i18n="oniria.research_lead">Fonti principali: PubMed Central, bioRxiv, NCCIH, Muse EEG.</p>
+
+      <!-- 6. Blocco L'idea -->
+      <div class="two-col reveal" style="align-items: flex-start;">
+        <div class="visual-block" style="border-radius: 16px; overflow: hidden; border: 1px solid var(--line-color);">
+          <img src="Assets/img/Slide9.jpg" alt="Arcipelago delle isole dei sogni sospese tra le nuvole" style="width: 100%; display: block; height: auto;">
+        </div>
+        <div class="body">
+          <h4 style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: var(--color-onyx); margin-bottom: 16px;" data-i18n="oniria.why_c_title">L'idea</h4>
+          <p data-i18n="oniria.why_c_p1">Oniria nasce da qui. Appena ti svegli racconti il sogno a voce, <strong>al presente</strong>, e mentre parli, l'<strong>intelligenza artificiale</strong> lo trasforma in uno <strong>spazio 3D</strong>: l'obiettivo non è registrare un ricordo, ma farlo restare il più vicino possibile a quello che hai sentito.</p>
+          <p data-i18n="oniria.why_c_p2">Così ogni sogno diventa un'<strong>isola</strong> e l'insieme delle isole forma un <strong>arcipelago</strong> che dà corpo al tuo immaginario. L'archivio si esplora come una <strong>mappa</strong> a cui poter tornare ogni volta che vuoi.</p>
+          <p data-i18n="oniria.why_c_p3">Il nome viene dal greco <em>óneiros</em>, «sogno». Lo spirito è <strong>visionario ed empatico</strong>: la tecnologia si mette in ascolto e traduce quello che racconti con discrezione, <strong>senza mai giudicare né interpretare</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. COME FUNZIONA -->
+  <section id="come" class="section-accent">
+    <div class="wrap">
+      <div class="section-label reveal" data-i18n="oniria.how_label">Come funziona</div>
+
+      <!-- Riga a 2 colonne: Spiegazione e titolo a sinistra, Diagramma flow a destra allineato in alto col titolo -->
+      <div class="two-col reveal" style="align-items: start; margin-bottom: 56px;">
+        <div class="body">
+          <h2 style="margin-top: 0; margin-bottom: 24px;" data-i18n="oniria.flow_title">Dalla voce al mondo 3D</h2>
+          <p style="margin-bottom: 0; font-size: 16px; line-height: 1.6;" data-i18n="oniria.how_lead">In breve: <strong>racconti il sogno</strong>, l'<strong>intelligenza artificiale</strong> lo trasforma in un <strong>mondo 3D</strong> e lo ritrovi su <strong>tutti i tuoi dispositivi</strong>.</p>
+        </div>
+
+        <div class="flow-diagram-card" style="background: var(--bg-panel); border: 1px solid var(--line-color); border-radius: 16px; padding: 18px 14px; box-shadow: 0 4px 24px rgba(20, 16, 13, 0.04); margin-top: 0;">
+          <div class="flow-phases" role="list" aria-label="Come funziona Oniria">
+            <div class="flow-phase">
+              <span class="flow-phase__num">1</span>
+              <div class="flow-phase__body">
+                <h5 data-i18n="oniria.fm_p1_title">Racconti il sogno</h5>
+                <p data-i18n="oniria.fm_p1_text">Lo dici a voce appena ti svegli e Oniria lo trascrive.</p>
+              </div>
+            </div>
+            <div class="flow-phase">
+              <span class="flow-phase__num">2</span>
+              <div class="flow-phase__body">
+                <h5 data-i18n="oniria.fm_p2_title">Il sogno diventa un mondo 3D</h5>
+                <p data-i18n="oniria.fm_p2_text">L'intelligenza artificiale lo genera in tempo reale e lo vedi prendere forma.</p>
+                <div class="flow-phase__loop">
+                  <span aria-hidden="true">↻</span>
+                  <p data-i18n="oniria.fm_loop">Qualcosa non ti convince? Modificalo a voce o per iscritto, quante volte vuoi.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flow-phase">
+              <span class="flow-phase__num">3</span>
+              <div class="flow-phase__body">
+                <h5 data-i18n="oniria.fm_p3_title">Lo salvi e lo ritrovi</h5>
+                <p data-i18n="oniria.fm_p3_text">Confermi: il sogno riceve un nome e dei tag e resta nel tuo archivio.</p>
+              </div>
+            </div>
+            <div class="flow-phase flow-phase--end">
+              <span class="flow-phase__num">4</span>
+              <div class="flow-phase__body">
+                <h5 data-i18n="oniria.fm_p4_title">Lo esplori dove vuoi</h5>
+                <div class="flow-phase__devices">
+                  <em data-i18n="oniria.flow_dev_phone">Smartphone</em>
+                  <em data-i18n="oniria.flow_dev_vr">Visore VR</em>
+                  <em data-i18n="oniria.flow_dev_tv">Smart TV</em>
+                  <em data-i18n="oniria.flow_dev_pc">PC</em>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="research-grid">
+        <div class="research-card reveal">
+          <div class="research-num" data-i18n="oniria.tech_c1_num">Generazione</div>
+          <h3 data-i18n="oniria.tech_c1_title">Google Genie 3</h3>
+          <p data-i18n="oniria.tech_c1_desc">È l'intelligenza artificiale che costruisce il <strong>mondo 3D</strong> a partire dal tuo racconto, in <strong>tempo reale</strong> e <strong>senza un motore grafico tradizionale</strong>. Richiede una connessione internet costante.</p>
+        </div>
+        <div class="research-card reveal">
+          <div class="research-num" data-i18n="oniria.tech_c3_num">App e visori</div>
+          <h3 data-i18n="oniria.tech_c3_title">Dispositivi dedicati</h3>
+          <p data-i18n="oniria.tech_c3_desc">Tre app: <strong>iOS, Android</strong> e una per i <strong>visori VR (Meta Horizon OS)</strong>, per sfruttare <strong>sensori e prestazioni</strong> della realtà virtuale. Si consiglia un <strong>visore all-in-one</strong>, che permette di muoversi liberamente. Un <strong>sito companion</strong> consente di accedere ai propri sogni anche senza installare l'app.</p>
+        </div>
+        <div class="research-card reveal">
+          <div class="research-num" data-i18n="oniria.tech_c4_num">Smart TV</div>
+          <h3 data-i18n="oniria.tech_c4_title">Mirroring</h3>
+          <p data-i18n="oniria.tech_c4_desc">Il telefono si collega alla TV con un codice, tramite <strong>AirPlay o Miracast</strong>, e diventa il <strong>telecomando</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PER CHI È -->
+  <section id="target">
+    <div class="wrap">
+      <div class="section-label reveal" data-i18n="oniria.target_label">Per chi è</div>
+      <p class="reveal" style="color:var(--color-onyx-muted); font-size:16px; max-width:64ch; margin-bottom:44px;" data-i18n="oniria.target_lead">Oniria si rivolge a <strong>creativi digitali e utenti curiosi</strong> che cercano profondità e introspezione. Si può utilizzare in <strong>modalità singola</strong> e in <strong>modalità cooperativa</strong>.</p>
+
+      <!-- Sottosezione: Modalità Singola -->
+      <div class="reveal" style="margin-bottom: 48px;">
+        <div class="persona-mode-header">
+          <div class="persona-mode-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <h4 class="persona-mode-title" data-i18n="oniria.target_mode_single">Modalità Singola</h4>
+          <div class="persona-mode-line"></div>
+        </div>
+
+        <div class="app-row app-row--2col">
+          <!-- Card 1: Arianna -->
+          <div class="persona-card reveal">
+            <div class="persona-card__header">
+              <div class="persona-card__avatar">
+                <img src="Assets/img/ari_oniria.jpeg" alt="Arianna">
+                <div class="persona-card__avatar-badge" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/>
+                    <path d="M12 18h.01"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="persona-card__title-group">
+                <h3 class="persona-card__name" data-i18n="oniria.target1_name">Arianna, 26 anni</h3>
+                <div class="persona-card__role" data-i18n="oniria.target1_role">Commessa e studentessa</div>
+              </div>
+            </div>
+
+            <div class="persona-card__strip">
+              <div class="persona-card__device-tag">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/>
+                  <path d="M12 18h.01"/>
+                </svg>
+                <span data-i18n="oniria.target1_dev">Smartphone · iOS / Android</span>
+              </div>
+              <div class="persona-card__tech-tag">
+                <div class="persona-card__dots" aria-hidden="true">
+                  <span class="persona-card__dot is-active"></span>
+                  <span class="persona-card__dot is-active"></span>
+                  <span class="persona-card__dot"></span>
+                </div>
+                <span data-i18n="oniria.target1_tech">Tech level medio</span>
+              </div>
+            </div>
+
+            <div class="persona-card__body">
+              <div class="persona-card__pod">
+                <div class="persona-card__pod-label">
+                  <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  <span data-i18n="oniria.target_lbl_scenario">Scenario</span>
+                </div>
+                <p data-i18n="oniria.target1_scenario">Ha registrato un sogno strano in treno e vuole <strong>rivederlo in pausa pranzo</strong>.</p>
+              </div>
+
+              <div class="persona-card__pod persona-card__pod--usage">
+                <div class="persona-card__pod-label">
+                  <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/>
+                  </svg>
+                  <span data-i18n="oniria.target_lbl_usage">Esperienza</span>
+                </div>
+                <p data-i18n="oniria.target1_usage">Naviga da <strong>smartphone</strong> nel mondo 3D e <strong>modifica un dettaglio al volo</strong> prima di salvarlo.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Marco -->
+          <div class="persona-card persona-card--marco reveal">
+            <div class="persona-card__header">
+              <div class="persona-card__avatar persona-card__avatar--marco">
+                <img src="Assets/img/marco_oniria.jpeg" alt="Marco">
+                <div class="persona-card__avatar-badge" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 8h16a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-4l-2 2-2-2H4a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2z"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="persona-card__title-group">
+                <h3 class="persona-card__name" data-i18n="oniria.target2_name">Marco, 34 anni</h3>
+                <div class="persona-card__role" data-i18n="oniria.target2_role">Impiegato amministrativo</div>
+              </div>
+            </div>
+
+            <div class="persona-card__strip">
+              <div class="persona-card__device-tag">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 8h16a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-4l-2 2-2-2H4a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2z"/>
+                  <circle cx="8" cy="13" r="1.5"/>
+                  <circle cx="16" cy="13" r="1.5"/>
+                </svg>
+                <span data-i18n="oniria.target2_dev">Visore VR · Meta Quest</span>
+              </div>
+              <div class="persona-card__tech-tag">
+                <div class="persona-card__dots" aria-hidden="true">
+                  <span class="persona-card__dot is-active"></span>
+                  <span class="persona-card__dot is-active"></span>
+                  <span class="persona-card__dot"></span>
+                </div>
+                <span data-i18n="oniria.target2_tech">Tech level medio</span>
+              </div>
+            </div>
+
+            <div class="persona-card__body">
+              <div class="persona-card__pod">
+                <div class="persona-card__pod-label">
+                  <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  <span data-i18n="oniria.target_lbl_scenario">Scenario</span>
+                </div>
+                <p data-i18n="oniria.target2_scenario">Torna a casa stressato e vuole <strong>staccare il cervello</strong>, lontano da stimoli frenetici.</p>
+              </div>
+
+              <div class="persona-card__pod persona-card__pod--usage">
+                <div class="persona-card__pod-label">
+                  <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/>
+                  </svg>
+                  <span data-i18n="oniria.target_lbl_usage">Esperienza</span>
+                </div>
+                <p data-i18n="oniria.target2_usage">Indossa il <strong>visore VR</strong> e si lascia trasportare in volo nel suo sogno per un momento di <strong>relax meditativo</strong>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sottosezione: Modalità Cooperativa -->
+      <div class="reveal">
+        <div class="persona-mode-header">
+          <div class="persona-mode-icon persona-mode-icon--coop" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h4 class="persona-mode-title" data-i18n="oniria.target_mode_coop">Modalità Cooperativa</h4>
+          <div class="persona-mode-line"></div>
+        </div>
+
+        <div class="app-row app-row--2col">
+          <!-- Card 3: Luca & Giulia -->
+          <div class="persona-card persona-card--luca reveal">
+            <div class="persona-card__header">
+              <div class="persona-card__avatar persona-card__avatar--luca">
+                <img src="Assets/img/luca_oniria.jpeg" alt="Luca e Giulia">
+                <div class="persona-card__avatar-badge" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="persona-card__title-group">
+                <h3 class="persona-card__name" data-i18n="oniria.target3_name">Luca, 29 anni (con Giulia)</h3>
+                <div class="persona-card__role" data-i18n="oniria.target3_role">Fisioterapista · Relazione a distanza</div>
+              </div>
+            </div>
+
+            <div class="persona-card__strip">
+              <div class="persona-card__device-tag">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 8h16a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-4l-2 2-2-2H4a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2z"/>
+                  <circle cx="8" cy="13" r="1.5"/>
+                  <circle cx="16" cy="13" r="1.5"/>
+                </svg>
+                <span data-i18n="oniria.target3_dev">Visore VR &amp; Co-presenza</span>
+              </div>
+              <div class="persona-card__tech-tag">
+                <div class="persona-card__dots" aria-hidden="true">
+                  <span class="persona-card__dot is-active"></span>
+                  <span class="persona-card__dot is-active"></span>
+                  <span class="persona-card__dot"></span>
+                </div>
+                <span data-i18n="oniria.target3_tech">Tech level medio</span>
+              </div>
+            </div>
+
+            <div class="persona-card__body">
+              <div class="persona-card__pod">
+                <div class="persona-card__pod-label">
+                  <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  <span data-i18n="oniria.target_lbl_scenario">Scenario</span>
+                </div>
+                <p data-i18n="oniria.target3_scenario">Giulia vuole mostrare a Luca un sogno in cui <strong>erano insieme in una casa sull'albero</strong>.</p>
+              </div>
+
+              <div class="persona-card__pod persona-card__pod--usage">
+                <div class="persona-card__pod-label">
+                  <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/>
+                  </svg>
+                  <span data-i18n="oniria.target_lbl_usage">Esperienza</span>
+                </div>
+                <p data-i18n="oniria.target3_usage">Luca indossa il <strong>visore a distanza</strong>: guidato da Giulia, esplorano il ricordo e <strong>commentano a voce</strong> in tempo reale.</p>
+              </div>
+
+              <div class="persona-card__quote" data-i18n="oniria.target3_quote">«Wow, è davvero così alto come dicevi?»</div>
+            </div>
+          </div>
+
+          <!-- Card 4: Francesco -->
+          <div class="persona-card persona-card--francesco reveal">
+            <div class="persona-card__header">
+              <div class="persona-card__avatar persona-card__avatar--francesco">
+                <img src="Assets/img/fra_oniria.jpeg" alt="Francesco">
+                <div class="persona-card__avatar-badge" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="persona-card__title-group">
+                <h3 class="persona-card__name" data-i18n="oniria.target4_name">Francesco, 22 anni</h3>
+                <div class="persona-card__role" data-i18n="oniria.target4_role">Studente fuori sede</div>
+              </div>
+            </div>
+
+            <div class="persona-card__strip">
+              <div class="persona-card__device-tag">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                </svg>
+                <span data-i18n="oniria.target4_dev">Web Link · Smartphone</span>
+              </div>
+              <div class="persona-card__tech-tag">
+                <div class="persona-card__dots" aria-hidden="true">
+                  <span class="persona-card__dot is-active"></span>
+                  <span class="persona-card__dot is-active"></span>
+                  <span class="persona-card__dot is-active"></span>
+                </div>
+                <span data-i18n="oniria.target4_tech">Tech level medio-alto</span>
+              </div>
+            </div>
+
+            <div class="persona-card__body">
+              <div class="persona-card__pod">
+                <div class="persona-card__pod-label">
+                  <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  <span data-i18n="oniria.target_lbl_scenario">Scenario</span>
+                </div>
+                <p data-i18n="oniria.target4_scenario">Riceve su WhatsApp il link a un sogno assurdo condiviso da un amico mentre è <strong>in autobus</strong>.</p>
+              </div>
+
+              <div class="persona-card__pod persona-card__pod--usage">
+                <div class="persona-card__pod-label">
+                  <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/>
+                  </svg>
+                  <span data-i18n="oniria.target_lbl_usage">Esperienza</span>
+                </div>
+                <p data-i18n="oniria.target4_usage">Apre il link da <strong>smartphone come Ospite</strong> e segue l'esplorazione in diretta ridendo insieme.</p>
+              </div>
+
+              <div class="persona-card__quote" data-i18n="oniria.target4_quote">«Ma quello è il prof di matematica che vola?»</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SVILUPPI FUTURI -->
+  <section id="futuro" class="section-tint">
+    <div class="wrap">
+      <div class="section-label reveal" data-i18n="oniria.future_label">Sviluppi futuri</div>
+      <div class="two-col reveal">
+        <h2 data-i18n="oniria.future_title">Evoluzione del progetto</h2>
+        <div class="body">
+          <p data-i18n="oniria.future_p1">Una volta completata la fase di test iniziale, si potrebbe affiancare a Genie 3 uno strumento come <strong>Nvidia LATTE3D</strong>, in combinazione con un motore grafico tradizionale, per aumentare il <strong>livello di dettaglio</strong> e di personalizzazione degli ambienti.</p>
+          <p data-i18n="oniria.future_p2">Anche le <strong>modalità collaborative</strong> potranno evolvere, con strumenti più avanzati per <strong>esplorare l'immaginario</strong> da soli e in compagnia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREV/NEXT -->
+  <nav class="project-nav">
+    <div class="wrap">
+      <a href="flowstate.html">
+        <span class="dir" data-i18n="project.prev">← Progetto precedente</span>
+        <span class="title">Flow State</span>
+      </a>
+      <a href="trama.html">
+        <span class="dir" data-i18n="project.next">Prossimo progetto →</span>
+        <span class="title">Trama</span>
+      </a>
+    </div>
+  </nav>
+ 
+  <footer>
+    <div class="wrap">
+      <span style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: #FFFFFF;" data-i18n="footer.stay_in_touch">Restiamo in contatto</span>
+      <nav class="footer-links">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giuliadefazio.work@gmail.com" target="_blank">Email</a>
+        <a href="https://www.linkedin.com/in/giulia-de-fazio-321a8a215/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/le_illustrazioni_di_lia/" target="_blank">Instagram</a>
+        <a href="https://www.behance.net/giuliadefazio" target="_blank">Behance</a>
+      </nav>
+    </div>
+    <div class="wrap bottom">
+      <span>© 2026 Giulia De Fazio</span>
+      <span data-i18n="footer.location">Torino, Italia</span>
+    </div>
+  </footer>
+ 
+  <script src="translations.js?v=4"></script>
+  <script src="main.js?v=4"></script>
+ 
+</body>
+</html>
