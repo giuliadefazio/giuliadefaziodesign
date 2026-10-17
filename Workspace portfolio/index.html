@@ -22,8 +22,8 @@
     <nav>
       <ul class="nav-links-list">
         <li><a href="about.html" data-i18n="nav.about">Chi Sono</a></li>
-        <li><a href="illustrazioni.html" data-i18n="nav.illustrations">Illustrazioni</a></li>
         <li><a href="progetti.html" data-i18n="nav.projects">Progetti</a></li>
+        <li><a href="illustrazioni.html" data-i18n="nav.illustrations">Illustrazioni</a></li>
         <li><a href="contatti.html" data-i18n="nav.contact">Contatti</a></li>
       </ul>
     </nav>
@@ -93,13 +93,13 @@
 
     <div class="home-hero__media" aria-hidden="true">
       <div class="home-hero__slide is--current" data-index="0">
-        <img src="Assets/img/anteprima-juli.png" alt="Flow State">
+        <img src="Assets/img/Slide9.jpg" alt="Oniria">
       </div>
       <div class="home-hero__slide" data-index="1">
-        <img src="Assets/img/trama4.png" alt="Trama">
+        <img src="Assets/img/anteprima-juli.png" alt="Flow State">
       </div>
       <div class="home-hero__slide" data-index="2">
-        <img src="Assets/img/nome-anteprima.png" alt="Nomen">
+        <img src="Assets/img/trama4.png" alt="Trama">
       </div>
       <div class="home-hero__slide home-hero__slide--illus" data-index="3">
         <img src="Assets/img/charles.png" alt='Copertina "Il compagno di sbronze"'>
@@ -117,14 +117,14 @@
     <div class="home-hero__content">
       <span class="home-hero__featured-label" data-i18n="hero.featured">In evidenza</span>
       
-      <h1 class="home-hero__title" id="hero-slide-title">Flow State</h1>
+      <h1 class="home-hero__title" id="hero-slide-title">Oniria</h1>
       
       <p class="home-hero__statement" id="hero-slide-desc">
-        Capsule collection di acqua premium pensata come rituale quotidiano per rilassarsi e gestire lo stress.
+        Un'app che trasforma i sogni in mondi 3D esplorabili in VR, organizzati in un arcipelago personale.
       </p>
 
       <div class="home-hero__bottom-bar">
-        <a href="flowstate.html" id="hero-slide-link" class="button-043">
+        <a href="oniria.html" id="hero-slide-link" class="button-043">
           <span class="button-043__bg"><span class="button-043__bg-hover"></span></span>
           <span class="button-043__inner">
             <span id="hero-slide-btn-text" data-i18n="hero.view_project">Vedi progetto</span>
@@ -139,9 +139,9 @@
 
         <!-- SLIDESHOW DOTS -->
         <div class="home-hero__dots">
-          <button type="button" class="home-hero__dot is--current" data-index="0" aria-label="Mostra Flow State"></button>
-          <button type="button" class="home-hero__dot" data-index="1" aria-label="Mostra Trama"></button>
-          <button type="button" class="home-hero__dot" data-index="2" aria-label="Mostra Nomen"></button>
+          <button type="button" class="home-hero__dot is--current" data-index="0" aria-label="Mostra Oniria"></button>
+          <button type="button" class="home-hero__dot" data-index="1" aria-label="Mostra Flow State"></button>
+          <button type="button" class="home-hero__dot" data-index="2" aria-label="Mostra Trama"></button>
           <button type="button" class="home-hero__dot" data-index="3" aria-label="Mostra Copertina Il compagno di sbronze"></button>
           <button type="button" class="home-hero__dot" data-index="4" aria-label="Mostra Locandina Il Re Leone"></button>
           <button type="button" class="home-hero__dot" data-index="5" aria-label="Mostra L'inganno della donna del bosco"></button>
@@ -216,11 +216,28 @@
       <!-- EDITORIAL INDEX LIST -->
       <div class="project-index reveal" id="project-index" role="list">
         
-        <!-- ROW 01: FLOW STATE -->
-        <a href="flowstate.html" class="project-row" data-project-idx="0" role="listitem">
+        <!-- ROW 01: ONIRIA -->
+        <a href="oniria.html" class="project-row" data-project-idx="0" role="listitem">
           <div class="project-row__inner">
             <div class="project-row__left">
               <span class="project-row__num">01</span>
+              <h3 class="project-row__title">Oniria</h3>
+            </div>
+            <div class="project-row__right">
+              <span class="project-row__cat" data-i18n="home.projects.cat_immersive">Esperienza Immersiva</span>
+              <span class="project-row__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+          <div class="project-row__mobile-media">
+            <img src="Assets/img/Slide9.jpg" alt="Oniria" loading="lazy">
+          </div>
+        </a>
+
+        <!-- ROW 02: FLOW STATE -->
+        <a href="flowstate.html" class="project-row" data-project-idx="1" role="listitem">
+          <div class="project-row__inner">
+            <div class="project-row__left">
+              <span class="project-row__num">02</span>
               <h3 class="project-row__title">Flow State</h3>
             </div>
             <div class="project-row__right">
@@ -234,11 +251,11 @@
           </div>
         </a>
 
-        <!-- ROW 02: TRAMA -->
-        <a href="trama.html" class="project-row" data-project-idx="1" role="listitem">
+        <!-- ROW 03: TRAMA -->
+        <a href="trama.html" class="project-row" data-project-idx="2" role="listitem">
           <div class="project-row__inner">
             <div class="project-row__left">
-              <span class="project-row__num">02</span>
+              <span class="project-row__num">03</span>
               <h3 class="project-row__title">Trama</h3>
             </div>
             <div class="project-row__right">
@@ -251,11 +268,11 @@
           </div>
         </a>
 
-        <!-- ROW 03: NOMEN -->
-        <a href="nomen.html" class="project-row" data-project-idx="2" role="listitem">
+        <!-- ROW 04: NOMEN -->
+        <a href="nomen.html" class="project-row" data-project-idx="3" role="listitem">
           <div class="project-row__inner">
             <div class="project-row__left">
-              <span class="project-row__num">03</span>
+              <span class="project-row__num">04</span>
               <h3 class="project-row__title">Nomen</h3>
             </div>
             <div class="project-row__right">
@@ -268,38 +285,21 @@
           </div>
         </a>
 
-        <!-- ROW 04: GABBIA -->
-        <a href="gabbia.html" class="project-row" data-project-idx="3" role="listitem">
-          <div class="project-row__inner">
-            <div class="project-row__left">
-              <span class="project-row__num">04</span>
-              <h3 class="project-row__title">Gabbia</h3>
-            </div>
-            <div class="project-row__right">
-              <span class="project-row__cat" data-i18n="home.projects.cat_immersive">Esperienza Immersiva</span>
-              <span class="project-row__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-            </div>
-          </div>
-          <div class="project-row__mobile-media">
-            <img src="Assets/img/gabbia1.png" alt="Gabbia" loading="lazy">
-          </div>
-        </a>
-
       </div>
 
       <!-- DESKTOP FLOATING CURSOR PREVIEW -->
       <div class="project-preview-card" id="project-preview-card" aria-hidden="true">
         <div class="project-preview-card__img is-active" data-preview-idx="0">
-          <img src="Assets/img/anteprima-juli.png" alt="Flow State">
+          <img src="Assets/img/Slide9.jpg" alt="Oniria">
         </div>
         <div class="project-preview-card__img" data-preview-idx="1">
-          <img src="Assets/img/trama4.png" alt="Trama">
+          <img src="Assets/img/anteprima-juli.png" alt="Flow State">
         </div>
         <div class="project-preview-card__img" data-preview-idx="2">
-          <img src="Assets/img/nome-anteprima.png" alt="Nomen">
+          <img src="Assets/img/trama4.png" alt="Trama">
         </div>
         <div class="project-preview-card__img" data-preview-idx="3">
-          <img src="Assets/img/gabbia1.png" alt="Gabbia">
+          <img src="Assets/img/nome-anteprima.png" alt="Nomen">
         </div>
       </div>
 

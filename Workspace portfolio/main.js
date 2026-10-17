@@ -35,6 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
           homeItem.appendChild(homeLink);
           drawerList.insertBefore(homeItem, drawerList.firstChild);
         }
+
+        // Sposta "Progetti" sopra "Illustrazioni" nel menu hamburger responsive
+        const illustrazioniItem = drawerList.querySelector('a[href="illustrazioni.html"]')?.closest('li');
+        const progettiItem = drawerList.querySelector('a[href="progetti.html"]')?.closest('li');
+        if (illustrazioniItem && progettiItem) {
+          drawerList.insertBefore(progettiItem, illustrazioniItem);
+        }
+
         mobileDrawer.appendChild(drawerList);
       }
       if (contactBtn) mobileDrawer.appendChild(contactBtn.cloneNode(true));
@@ -69,6 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const defaultHeroData = [
     {
+      title: "Oniria",
+      desc: "Un'app che trasforma i sogni in mondi 3D esplorabili in VR, organizzati in un arcipelago personale.",
+      link: "oniria.html",
+      btnText: "Vedi progetto"
+    },
+    {
       title: "Flow State",
       desc: "Capsule collection di acqua premium pensata come rituale quotidiano per rilassarsi e gestire lo stress.",
       link: "flowstate.html",
@@ -78,12 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Trama",
       desc: "Esperienza teatrale immersiva che esplora le sfumature della manipolazione psicologica e del gaslighting.",
       link: "trama.html",
-      btnText: "Vedi progetto"
-    },
-    {
-      title: "Nomen",
-      desc: "Cortometraggio mystery ambientato nella Torino esoterica, tra tarocchi, coincidenze inquietanti e una parola misteriosa.",
-      link: "nomen.html",
       btnText: "Vedi progetto"
     },
     {
