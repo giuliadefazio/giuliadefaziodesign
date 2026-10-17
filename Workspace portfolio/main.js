@@ -429,6 +429,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   expCarousels.forEach(carousel => {
     const track = carousel.querySelector('.experience-carousel-track');
+    const viewport = carousel.querySelector('.experience-carousel-viewport') || carousel;
     const slides = carousel.querySelectorAll('.experience-slide');
     const prevBtn = carousel.querySelector('.exp-btn.prev');
     const nextBtn = carousel.querySelector('.exp-btn.next');
@@ -454,6 +455,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (targetIndex < 0) targetIndex = slides.length - 1;
       if (targetIndex >= slides.length) targetIndex = 0;
 
+      track.style.transition = '';
       track.style.transform = `translateX(-${targetIndex * 100}%)`;
 
       slides.forEach((slide, idx) => {
@@ -478,6 +480,124 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateExpSlide(0);
 
+    // Touch Swipe Navigation for Smartphones & Tablets
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchCurrentX = 0;
+    let isSwiping = false;
+    let isScrolling = false;
+
+    viewport.addEventListener('touchstart', (e) => {
+      if (!e.touches || e.touches.length === 0) return;
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+      touchCurrentX = touchStartX;
+      isSwiping = false;
+      isScrolling = false;
+    }, { passive: true });
+
+    viewport.addEventListener('touchmove', (e) => {
+      if (!e.touches || e.touches.length === 0 || isScrolling) return;
+
+      touchCurrentX = e.touches[0].clientX;
+      const dx = touchCurrentX - touchStartX;
+      const dy = e.touches[0].clientY - touchStartY;
+
+      // Determine intent on first significant movement
+      if (!isSwiping && !isScrolling) {
+        if (Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > 7) {
+          isScrolling = true; // User is scrolling vertically down the page
+          return;
+        } else if (Math.abs(dx) > 7) {
+          isSwiping = true; // User is swiping horizontally
+        }
+      }
+
+      if (isSwiping) {
+        track.style.transition = 'none';
+        const carouselWidth = viewport.offsetWidth || 1;
+        const dragPercent = (dx / carouselWidth) * 100;
+        const currentPercent = -currentExpSlide * 100;
+        track.style.transform = `translateX(${currentPercent + dragPercent}%)`;
+      }
+    }, { passive: true });
+
+    const handleTouchEnd = () => {
+      if (!isSwiping) return;
+
+      track.style.transition = '';
+      const dx = touchCurrentX - touchStartX;
+      const threshold = 35; // minimum px to trigger slide transition
+
+      if (dx < -threshold) {
+        updateExpSlide(currentExpSlide + 1);
+      } else if (dx > threshold) {
+        updateExpSlide(currentExpSlide - 1);
+      } else {
+        updateExpSlide(currentExpSlide); // snap back
+      }
+
+      isSwiping = false;
+      isScrolling = false;
+    };
+
+    viewport.addEventListener('touchend', handleTouchEnd);
+    viewport.addEventListener('touchcancel', () => {
+      if (isSwiping) {
+        track.style.transition = '';
+        updateExpSlide(currentExpSlide);
+        isSwiping = false;
+        isScrolling = false;
+      }
+    });
+
+    // Mouse Drag Navigation for Desktop
+    let isMouseDown = false;
+    let mouseStartX = 0;
+    let mouseCurrentX = 0;
+    let isMouseDragging = false;
+
+    viewport.addEventListener('mousedown', (e) => {
+      if (e.target.closest('button, a')) return;
+      isMouseDown = true;
+      mouseStartX = e.clientX;
+      mouseCurrentX = mouseStartX;
+      isMouseDragging = false;
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isMouseDown) return;
+      mouseCurrentX = e.clientX;
+      const dx = mouseCurrentX - mouseStartX;
+      if (Math.abs(dx) > 6) {
+        isMouseDragging = true;
+        track.style.transition = 'none';
+        const carouselWidth = viewport.offsetWidth || 1;
+        const dragPercent = (dx / carouselWidth) * 100;
+        const currentPercent = -currentExpSlide * 100;
+        track.style.transform = `translateX(${currentPercent + dragPercent}%)`;
+      }
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (!isMouseDown) return;
+      isMouseDown = false;
+      if (isMouseDragging) {
+        track.style.transition = '';
+        const dx = mouseCurrentX - mouseStartX;
+        const threshold = 40;
+        if (dx < -threshold) {
+          updateExpSlide(currentExpSlide + 1);
+        } else if (dx > threshold) {
+          updateExpSlide(currentExpSlide - 1);
+        } else {
+          updateExpSlide(currentExpSlide);
+        }
+        isMouseDragging = false;
+      }
+    });
+
+    // Keyboard navigation
     carousel.setAttribute('tabindex', '0');
     carousel.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowRight') {
