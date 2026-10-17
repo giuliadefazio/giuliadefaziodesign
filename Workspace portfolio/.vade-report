@@ -1,0 +1,102 @@
+# Vercel Web Analytics Implementation Report
+
+## Summary
+Successfully installed and configured Vercel Web Analytics for the giuliadefaziodesign portfolio project.
+
+## Implementation Details
+
+### Project Analysis
+- **Framework**: Vanilla HTML/CSS/JavaScript (no framework)
+- **Architecture**: Static portfolio website with 13 HTML pages
+- **Package Manager**: None (static site without Node.js dependencies)
+
+### Documentation Source
+Retrieved the latest installation instructions from the official Vercel documentation:
+- URL: https://vercel.com/docs/analytics/quickstart
+- Date: October 17, 2026
+
+### Changes Made
+
+#### 1. Added Vercel Web Analytics Script
+Added the Vercel Web Analytics tracking script to all 13 HTML files in the project:
+
+**Files Modified:**
+1. `index.html` - Homepage
+2. `about.html` - About page
+3. `progetti.html` - Projects overview page
+4. `illustrazioni.html` - Illustrations page
+5. `contatti.html` - Contact page
+6. `oniria.html` - Oniria project page
+7. `flowstate.html` - Flow State project page
+8. `trama.html` - Trama project page
+9. `nomen.html` - Nomen project page
+10. `welcome-back-champion.html` - Welcome Back Champion project page
+11. `gabbia.html` - Gabbia project page
+12. `la-forza-e-cura.html` - La Forza è Cura project page
+13. `sustainera-network-prototype.html` - Sustainera Network prototype page
+
+**Script Added:**
+```html
+<!-- Vercel Web Analytics -->
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+```
+
+#### 2. Script Placement
+- The analytics script was added in the `<head>` section of each HTML file
+- Positioned just before the closing `</head>` tag
+- Follows Vercel's recommended implementation for HTML projects
+
+### Implementation Approach
+
+According to the official Vercel documentation for vanilla HTML projects:
+- No npm package installation required for static HTML sites
+- The `/_vercel/insights/script.js` path is automatically handled by Vercel's infrastructure
+- Analytics tracking activates automatically after deployment to Vercel
+
+### Verification
+
+1. **HTML Validation**: Verified that all modified HTML files remain syntactically valid
+2. **Script Presence**: Confirmed that all 13 HTML files contain the analytics script
+3. **Format Consistency**: Ensured consistent formatting and placement across all files
+
+### Next Steps
+
+To complete the analytics setup:
+
+1. **Deploy to Vercel**: 
+   ```bash
+   vercel deploy
+   ```
+
+2. **Enable Analytics in Dashboard**:
+   - Navigate to the project in Vercel Dashboard
+   - Go to the Analytics section
+   - Click the "Enable" button to activate analytics tracking
+
+3. **Verify Tracking**:
+   - After deployment, visit the site
+   - Open browser DevTools → Network tab
+   - Look for requests to `/_vercel/insights/` endpoints
+   - This confirms that tracking is active
+
+### Technical Notes
+
+- **No Build Required**: This is a static HTML site, so no build process is needed
+- **No Dependencies**: No package.json or node_modules, as this is pure HTML/CSS/JS
+- **Zero Configuration**: The script works out-of-the-box once deployed to Vercel
+- **Performance**: The `defer` attribute ensures the script doesn't block page rendering
+- **Privacy**: Vercel Web Analytics is privacy-friendly and GDPR-compliant by default
+
+### Implementation Choices
+
+1. **Comprehensive Coverage**: Added analytics to all HTML pages to ensure complete tracking across the entire portfolio
+2. **Consistent Placement**: Maintained the same script position in every file for consistency
+3. **Minimal Footprint**: Used the lightweight inline initialization script as recommended by Vercel
+4. **Standards Compliance**: Followed the exact implementation pattern from official documentation
+
+## Conclusion
+
+Vercel Web Analytics has been successfully configured across all pages of the portfolio. Once deployed to Vercel and enabled in the dashboard, the site will automatically begin collecting privacy-friendly analytics data including page views, referrers, and visitor metrics.
