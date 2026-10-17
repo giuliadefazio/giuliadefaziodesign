@@ -3268,6 +3268,9 @@ section[id] {
 .experience-carousel-viewport {
   overflow: hidden;
   border-radius: 12px;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .experience-carousel-track {
@@ -3275,6 +3278,7 @@ section[id] {
   flex-direction: row;
   width: 100%;
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  touch-action: pan-y;
 }
 
 .experience-slide {
@@ -3298,6 +3302,9 @@ section[id] {
   border: none;
   display: block;
   margin: 0 auto;
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
 }
 
 .experience-slide-num {
@@ -5793,23 +5800,395 @@ body.nav-drawer-open {
   }
 }
 
-/* Telefoni piccoli */
-@media (max-width: 480px) {
-  .tag-row { gap: 8px; }
-  .tag-chip { font-size: 11px; padding: 7px 12px; }
-  #esperienza .experience-slide img { height: 240px !important; }
-  #esperienza .experience-slide-dual {
-    gap: 10px !important;
-    max-width: 100% !important;
-    width: 100% !important;
+/* ==========================================================
+   GLOBAL MOBILE TYPOGRAPHY & SCALING (<= 768px)
+   Rimpicciolisce font, titoli, immagini e spaziature su smartphone
+   ========================================================== */
+@media (max-width: 768px) {
+  /* Base typography */
+  html, body {
+    font-size: 14.5px !important;
+    line-height: 1.55 !important;
   }
+
+  p,
+  p[style*="font-size: 16px"],
+  p[style*="font-size:16px"],
+  p[style*="font-size: 15.5px"],
+  p[style*="font-size:15.5px"] {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+
+  /* Headings */
+  h1,
+  .about-hero-text h1,
+  .project-detail-hero h1 {
+    font-size: clamp(24px, 6.2vw, 30px) !important;
+    line-height: 1.15 !important;
+  }
+
+  h2,
+  .orbit-section__heading h2,
+  .prototype-info h2 {
+    font-size: clamp(19px, 5.2vw, 23px) !important;
+    line-height: 1.25 !important;
+  }
+
+  h3,
+  .orbit-card__title,
+  .experience-slide-text h3 {
+    font-size: clamp(16px, 4.4vw, 19px) !important;
+    line-height: 1.3 !important;
+  }
+
+  h4,
+  h4[style*="font-size: 20px"],
+  h4[style*="font-size:20px"],
+  .persona-mode-title {
+    font-size: 15.5px !important;
+    line-height: 1.35 !important;
+  }
+
+  h5 {
+    font-size: 14px !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Sezioni e Spaziature compatte */
+  main section,
+  section[id],
+  .intro-section,
+  .orbit-section,
+  .statement-section,
+  .contact-section,
+  .project-detail-section {
+    padding: 42px 0 !important;
+  }
+
+  .intro-section.page-top-hero {
+    padding-top: 86px !important;
+    padding-bottom: 24px !important;
+  }
+
+  .wrap {
+    padding: 0 16px !important;
+  }
+
+  .section-label {
+    font-size: 10px !important;
+    letter-spacing: 0.16em !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Header & Logo */
+  header.site-header {
+    padding: 12px 16px !important;
+  }
+
+  .header-blur-overlay {
+    height: 62px !important;
+  }
+
+  .logo-mark {
+    font-size: 17px !important;
+  }
+
+  .lang-dropdown__trigger {
+    font-size: 11.5px !important;
+    padding: 4px 8px !important;
+  }
+
+  .mobile-nav-toggle .bar {
+    width: 20px !important;
+    height: 2px !important;
+  }
+
+  .mobile-nav-drawer .nav-links-list a {
+    font-size: 15px !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  .mobile-nav-drawer {
+    gap: 20px !important;
+    padding: 24px !important;
+  }
+
+  /* Homepage Hero */
+  .home-hero {
+    min-height: 72svh !important;
+    padding: 72px 16px 20px !important;
+  }
+
+  .home-hero__featured-label {
+    font-size: 9.5px !important;
+  }
+
+  .home-hero__title {
+    font-size: clamp(22px, 6.5vw, 28px) !important;
+  }
+
+  .home-hero__statement,
+  .home-hero__desc {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+
+  .home-hero__bottom-bar {
+    margin-top: 14px !important;
+  }
+
+  .home-hero__nav-arrow {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .home-hero__nav-arrow svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  /* Orbit Cards (Progetti & Home) */
+  .orbit-card {
+    min-height: 220px !important;
+    padding: 16px !important;
+    border-radius: 14px !important;
+  }
+
+  .orbit-card__num {
+    font-size: 9.5px !important;
+  }
+
+  .orbit-card__title {
+    font-size: 17px !important;
+  }
+
+  .orbit-card__desc {
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+
+  .orbit-card__cta {
+    font-size: 11px !important;
+  }
+
+  /* Editorial Project Index (Home) */
+  .project-row {
+    padding: 12px 0 !important;
+  }
+
+  .project-row__title {
+    font-size: 15px !important;
+  }
+
+  .project-row__meta,
+  .project-row__cat,
+  .project-row__year {
+    font-size: 11.5px !important;
+  }
+
+  /* Experience Carousel (Oniria, Trama, Gabbia) */
+  .experience-carousel-wrap {
+    padding: 14px 12px !important;
+    border-radius: 14px !important;
+    margin-top: 14px !important;
+  }
+
+  .experience-slide {
+    gap: 12px !important;
+  }
+
+  .experience-slide-num {
+    font-size: 9.5px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .experience-slide-text h3 {
+    font-size: 16.5px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .experience-slide-text p {
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+  }
+
+  .experience-controls {
+    margin-top: 12px !important;
+    padding-top: 10px !important;
+  }
+
+  .experience-counter {
+    font-size: 11px !important;
+  }
+
+  .exp-btn {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .exp-btn svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  #esperienza .experience-slide img {
+    height: 200px !important;
+  }
+
   #esperienza .experience-slide-dual img {
-    height: 320px !important;
-    max-width: calc(50% - 5px) !important;
+    height: 240px !important;
   }
-  .persona-card__name { font-size: 18px !important; }
-  .persona-mode-title { white-space: normal !important; font-size: 20px; }
-  .research-num { font-size: 11px; }
+
+  /* Research Cards */
+  .research-card {
+    padding: 12px 10px !important;
+    border-radius: 10px !important;
+  }
+
+  .research-num {
+    font-size: 9px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .research-card h3 {
+    font-size: 13.5px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .research-card p {
+    font-size: 11.5px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Personas (Oniria) */
+  .persona-card {
+    padding: 14px 12px !important;
+    border-radius: 12px !important;
+  }
+
+  .persona-card__name {
+    font-size: 14.5px !important;
+  }
+
+  .persona-card__role {
+    font-size: 11px !important;
+  }
+
+  .persona-card__pod {
+    padding: 10px !important;
+    border-radius: 10px !important;
+    margin-top: 8px !important;
+  }
+
+  .persona-card__pod-label {
+    font-size: 9px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .persona-card__pod p {
+    font-size: 11.5px !important;
+    line-height: 1.4 !important;
+  }
+
+  .persona-card__quote {
+    font-size: 11.5px !important;
+    margin-top: 8px !important;
+  }
+
+  /* Tag chips */
+  .tag-row {
+    gap: 6px !important;
+  }
+
+  .tag-chip {
+    font-size: 10px !important;
+    padding: 5px 9px !important;
+  }
+
+  /* Buttons */
+  .button-043 {
+    font-size: 11.5px !important;
+    padding: 8px 16px !important;
+  }
+
+  /* Project Navigation (Footer) */
+  .project-nav {
+    padding: 14px 0 !important;
+  }
+
+  .project-nav a .dir {
+    font-size: 8.5px !important;
+  }
+
+  .project-nav a .title {
+    font-size: 12.5px !important;
+  }
+
+  /* Footer */
+  footer {
+    padding: 32px 0 20px !important;
+  }
+
+  footer span[style*="font-family"] {
+    font-size: 15px !important;
+  }
+
+  .footer-links {
+    gap: 14px !important;
+  }
+
+  .footer-links a {
+    font-size: 12px !important;
+  }
+
+  footer .bottom {
+    font-size: 11px !important;
+  }
+}
+
+/* Regole extra per smartphone molto compatti (<= 480px) */
+@media (max-width: 480px) {
+  html, body {
+    font-size: 13.5px !important;
+  }
+
+  p,
+  p[style*="font-size: 16px"],
+  p[style*="font-size:16px"],
+  p[style*="font-size: 15.5px"],
+  p[style*="font-size:15.5px"] {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+
+  h1 {
+    font-size: clamp(21px, 6vw, 25px) !important;
+  }
+
+  h2 {
+    font-size: clamp(17px, 5vw, 20px) !important;
+  }
+
+  h3 {
+    font-size: 15px !important;
+  }
+
+  .experience-slide-text h3 {
+    font-size: 15px !important;
+  }
+
+  .experience-slide-text p {
+    font-size: 12px !important;
+  }
+
+  #esperienza .experience-slide img {
+    height: 180px !important;
+  }
+
+  #esperienza .experience-slide-dual img {
+    height: 210px !important;
+  }
 }
 
 /* Tablet: il testo non deve restare troppo stretto rispetto allo schermo */
