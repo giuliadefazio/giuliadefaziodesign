@@ -3078,17 +3078,31 @@ p {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.tag-chip:hover {
-  transform: translateY(-2px);
-  background: var(--accent-color);
-  border-color: var(--accent-color);
-  color: #FFFFFF;
-  box-shadow: 0 8px 20px rgba(101, 18, 26, 0.22);
-}
+/* ---------- HOVER EFFECT (SOLO SU DISPOSITIVI CON PUNTATORE / DESKTOP) ---------- */
+@media (hover: hover) and (pointer: fine) {
+  .tag-chip:hover {
+    transform: translateY(-2px);
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #FFFFFF;
+    box-shadow: 0 8px 20px rgba(101, 18, 26, 0.22);
+  }
 
-.tag-chip:hover::before {
-  background: #FFFFFF;
-  transform: scale(1.3);
+  .tag-chip:hover::before {
+    background: #FFFFFF;
+    transform: scale(1.3);
+  }
+
+  /* Reset hover text color for all tonal variants — nth-child overrides hover without this */
+  .tag-chip:nth-child(5n+1):hover,
+  .tag-chip:nth-child(5n+2):hover,
+  .tag-chip:nth-child(5n+3):hover,
+  .tag-chip:nth-child(5n+4):hover,
+  .tag-chip:nth-child(5n+5):hover {
+    color: #FFFFFF;
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+  }
 }
 
 /* ---------- CATEGORY TAG TONAL VARIATIONS (Warm Burgundy Family) ---------- */
@@ -3114,17 +3128,6 @@ p {
 .tag-chip:nth-child(5n+5) {
   border-color: rgba(105, 20, 30, 0.22);
   color: #501016;
-}
-
-/* Reset hover text color for all tonal variants — nth-child overrides hover without this */
-.tag-chip:nth-child(5n+1):hover,
-.tag-chip:nth-child(5n+2):hover,
-.tag-chip:nth-child(5n+3):hover,
-.tag-chip:nth-child(5n+4):hover,
-.tag-chip:nth-child(5n+5):hover {
-  color: #FFFFFF;
-  background: var(--accent-color);
-  border-color: var(--accent-color);
 }
 
 /* Subtle Variant for Toolkit / Software Chips */
@@ -5801,61 +5804,140 @@ body.nav-drawer-open {
 }
 
 /* ==========================================================
-   GLOBAL MOBILE TYPOGRAPHY & SCALING (<= 768px)
-   Rimpicciolisce font, titoli, immagini e spaziature su smartphone
+   SCALA TIPOGRAFICA UNICA — tutto il sito (desktop e mobile)
+   Per cambiare una misura basta modificare la variabile.
+   (Il doppio :not(#_) alza la priorità per battere le vecchie
+   regole delle singole pagine; l'album di illustrazioni in home
+   ha un suo sistema e non viene toccato.)
    ========================================================== */
+:root {
+  /* DESKTOP (> 768px) */
+  --fs-label: 11px;      /* etichette in maiuscolo, chip, contatori */
+  --fs-small: 14px;      /* note, fonti, ruoli, testi secondari */
+  --fs-body: 16px;       /* testo corrente */
+  --fs-card-title: clamp(24px, 2.8vw, 35px); /* titoli di card (come ora) */
+  --fs-sub: 20px;        /* sottotitoli */
+  --fs-h2: clamp(26px, 3.2vw, 40px);         /* titoli di sezione (come ora) */
+}
+
 @media (max-width: 768px) {
-  /* Base typography */
-  html, body {
-    font-size: 14.5px !important;
-    line-height: 1.55 !important;
+  :root {
+    /* MOBILE (<= 768px) */
+    --fs-small: 13px;
+    --fs-body: 14px;
+    --fs-card-title: 17px;
+    --fs-h2: clamp(24px, 6.5vw, 30px);
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* testo corrente */
+  :is(
+    section p, .intro-body, .intro-body p, .home-hero__statement,
+    .variant-copy, .visual-note, .variants-intro, .orbit-card__desc,
+    .persona-card__pod p, .flow-phase p, .persona-card__quote,
+    [data-i18n="gabbia.concept_quote"]
+  ):not(.oniria-small):not(.sketchbook *):not(footer *):not(#_):not(#__) {
+    font-size: var(--fs-body) !important;
+    line-height: 1.6 !important;
   }
 
-  p,
-  p[style*="font-size: 16px"],
-  p[style*="font-size:16px"],
-  p[style*="font-size: 15.5px"],
-  p[style*="font-size:15.5px"] {
-    font-size: 14px !important;
-    line-height: 1.55 !important;
+  /* testo piccolo */
+  :is(
+    .oniria-small, .senses-bars span, .persona-card__role,
+    .persona-card__device-tag, .variant-benefit, .variant-fungo,
+    .illus-teaser__desc, .contact-card-light .val,
+    .flow-phase__devices em
+  ):not(.sketchbook *):not(#_):not(#__) {
+    font-size: var(--fs-small) !important;
   }
 
-  /* Headings */
-  h1,
-  .about-hero-text h1,
-  .project-detail-hero h1 {
-    font-size: clamp(24px, 6.2vw, 30px) !important;
-    line-height: 1.15 !important;
+  /* etichette in maiuscolo */
+  :is(
+    .research-num, .experience-slide-num, .experience-counter,
+    .persona-card__pod-label, .persona-card__tech-tag, .tag-chip,
+    .hero-eyebrow, .section-label, .gallery-tag, .orbit-card__num,
+    .project-row__cat, .story-step .n, .project-nav .dir,
+    .home-hero__featured-label, .contact-card-light .label,
+    .contact-card-light .action-tag, .bio-cv-grid span:not(.button-043 *)
+  ):not(.sketchbook *):not(#_):not(#__) {
+    font-size: var(--fs-label) !important;
   }
 
-  h2,
-  .orbit-section__heading h2,
-  .prototype-info h2 {
-    font-size: clamp(19px, 5.2vw, 23px) !important;
+  /* titoli di card */
+  :is(
+    .experience-slide-text h3, .research-card h3, .persona-card__name,
+    .story-step h3, .gallery-text h3, .flow-phase__body h5,
+    .ritual-launch-text-block h3, .orbit-card__title, .claim, .bio-cv-grid h2,
+    .project-nav .title
+  ):not(.sketchbook *):not(#_):not(#__) {
+    font-size: var(--fs-card-title) !important;
     line-height: 1.25 !important;
   }
 
-  h3,
-  .orbit-card__title,
-  .experience-slide-text h3 {
-    font-size: clamp(16px, 4.4vw, 19px) !important;
-    line-height: 1.3 !important;
+  /* sottotitoli */
+  :is(section h4, .persona-mode-title):not(.cta-plate__title):not(.sketchbook *):not(#_):not(#__) {
+    font-size: var(--fs-sub) !important;
   }
 
-  h4,
-  h4[style*="font-size: 20px"],
-  h4[style*="font-size:20px"],
-  .persona-mode-title {
-    font-size: 15.5px !important;
-    line-height: 1.35 !important;
+  /* titoli di sezione */
+  :is(section h2):not(.intro-quote):not(.illus-teaser__title):not(#contatti h2):not(.bio-cv-grid h2):not(.sketchbook *):not(#_):not(#__) {
+    font-size: var(--fs-h2) !important;
+    line-height: 1.2 !important;
+  }
+}
+
+@media (min-width: 769px) {
+
+  /* testo corrente (solo nei contenuti dei progetti e nelle card) */
+  :is(
+    #esperienza p, #perche p, #come p, #target p, #futuro p,
+    #brief p, #concept p, #varianti p, #campagna-digitale p,
+    #sistema-visivo p, #tecnologie p, #metodo p, #strumenti p,
+    .variant-copy, .visual-note, .variants-intro, .orbit-card__desc,
+    .persona-card__quote, [data-i18n="gabbia.concept_quote"], .flow-phase p
+  ):not(.oniria-small):not(.sketchbook *):not(footer *):not(#_):not(#__) {
+    font-size: var(--fs-body) !important;
+    line-height: 1.6 !important;
   }
 
-  h5 {
-    font-size: 14px !important;
-    line-height: 1.35 !important;
+  /* testo piccolo */
+  :is(
+    .oniria-small, .senses-bars span, .persona-card__role,
+    .persona-card__device-tag, .variant-benefit, .variant-fungo,
+    .flow-phase__devices em
+  ):not(.sketchbook *):not(#_):not(#__) {
+    font-size: var(--fs-small) !important;
   }
 
-  /* Sezioni e Spaziature compatte */
+  /* etichette in maiuscolo */
+  :is(
+    .research-num, .experience-slide-num, .experience-counter,
+    .persona-card__pod-label, .persona-card__tech-tag, .tag-chip,
+    .gallery-tag, .orbit-card__num, .project-row__cat, .project-nav .dir
+  ):not(.sketchbook *):not(#_):not(#__) {
+    font-size: var(--fs-label) !important;
+  }
+
+  /* titoli di card */
+  :is(
+    .experience-slide-text h3, .research-card h3, .persona-card__name,
+    .story-step h3, .gallery-text h3,
+    .ritual-launch-text-block h3, .project-nav .title
+  ):not(.sketchbook *):not(#_):not(#__) {
+    font-size: var(--fs-card-title) !important;
+  }
+
+  /* sottotitoli */
+  :is(#perche h4, #target h4, .persona-mode-title, .flow-phase__body h5):not(.sketchbook *):not(#_):not(#__) {
+    font-size: var(--fs-sub) !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Sezioni e Spaziature compatte su mobile */
   main section,
   section[id],
   .intro-section,
@@ -5863,7 +5945,7 @@ body.nav-drawer-open {
   .statement-section,
   .contact-section,
   .project-detail-section {
-    padding: 42px 0 !important;
+    padding: 44px 0 !important;
   }
 
   .intro-section.page-top-hero {
@@ -5873,12 +5955,6 @@ body.nav-drawer-open {
 
   .wrap {
     padding: 0 16px !important;
-  }
-
-  .section-label {
-    font-size: 10px !important;
-    letter-spacing: 0.16em !important;
-    margin-bottom: 12px !important;
   }
 
   /* Header & Logo */
@@ -5920,20 +5996,6 @@ body.nav-drawer-open {
     padding: 72px 16px 20px !important;
   }
 
-  .home-hero__featured-label {
-    font-size: 9.5px !important;
-  }
-
-  .home-hero__title {
-    font-size: clamp(22px, 6.5vw, 28px) !important;
-  }
-
-  .home-hero__statement,
-  .home-hero__desc {
-    font-size: 13px !important;
-    line-height: 1.5 !important;
-  }
-
   .home-hero__bottom-bar {
     margin-top: 14px !important;
   }
@@ -5955,36 +6017,9 @@ body.nav-drawer-open {
     border-radius: 14px !important;
   }
 
-  .orbit-card__num {
-    font-size: 9.5px !important;
-  }
-
-  .orbit-card__title {
-    font-size: 17px !important;
-  }
-
-  .orbit-card__desc {
-    font-size: 12px !important;
-    line-height: 1.45 !important;
-  }
-
-  .orbit-card__cta {
-    font-size: 11px !important;
-  }
-
   /* Editorial Project Index (Home) */
   .project-row {
     padding: 12px 0 !important;
-  }
-
-  .project-row__title {
-    font-size: 15px !important;
-  }
-
-  .project-row__meta,
-  .project-row__cat,
-  .project-row__year {
-    font-size: 11.5px !important;
   }
 
   /* Experience Carousel (Oniria, Trama, Gabbia) */
@@ -5998,28 +6033,9 @@ body.nav-drawer-open {
     gap: 12px !important;
   }
 
-  .experience-slide-num {
-    font-size: 9.5px !important;
-    margin-bottom: 4px !important;
-  }
-
-  .experience-slide-text h3 {
-    font-size: 16.5px !important;
-    margin-bottom: 6px !important;
-  }
-
-  .experience-slide-text p {
-    font-size: 12.5px !important;
-    line-height: 1.45 !important;
-  }
-
   .experience-controls {
     margin-top: 12px !important;
     padding-top: 10px !important;
-  }
-
-  .experience-counter {
-    font-size: 11px !important;
   }
 
   .exp-btn {
@@ -6040,39 +6056,15 @@ body.nav-drawer-open {
     height: 240px !important;
   }
 
-  /* Research Cards */
+  /* Research Cards & Personas */
   .research-card {
     padding: 12px 10px !important;
     border-radius: 10px !important;
   }
 
-  .research-num {
-    font-size: 9px !important;
-    margin-bottom: 2px !important;
-  }
-
-  .research-card h3 {
-    font-size: 13.5px !important;
-    margin-bottom: 4px !important;
-  }
-
-  .research-card p {
-    font-size: 11.5px !important;
-    line-height: 1.4 !important;
-  }
-
-  /* Personas (Oniria) */
   .persona-card {
     padding: 14px 12px !important;
     border-radius: 12px !important;
-  }
-
-  .persona-card__name {
-    font-size: 14.5px !important;
-  }
-
-  .persona-card__role {
-    font-size: 11px !important;
   }
 
   .persona-card__pod {
@@ -6081,32 +6073,35 @@ body.nav-drawer-open {
     margin-top: 8px !important;
   }
 
-  .persona-card__pod-label {
-    font-size: 9px !important;
-    margin-bottom: 3px !important;
+  /* Tag chips & Buttons */
+  .tag-chip {
+    pointer-events: none !important;
+    cursor: default !important;
+    -webkit-tap-highlight-color: transparent !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
   }
 
-  .persona-card__pod p {
-    font-size: 11.5px !important;
-    line-height: 1.4 !important;
+  .tag-chip:hover,
+  .tag-chip:active,
+  .tag-chip:focus {
+    transform: none !important;
+    box-shadow: 0 2px 6px rgba(20, 16, 13, 0.03) !important;
+    background: var(--bg-panel) !important;
+    color: var(--color-onyx) !important;
   }
 
-  .persona-card__quote {
-    font-size: 11.5px !important;
-    margin-top: 8px !important;
+  .tag-chip:hover::before,
+  .tag-chip:active::before,
+  .tag-chip:focus::before {
+    transform: none !important;
+    background: var(--accent-color) !important;
   }
 
-  /* Tag chips */
   .tag-row {
     gap: 6px !important;
   }
 
-  .tag-chip {
-    font-size: 10px !important;
-    padding: 5px 9px !important;
-  }
-
-  /* Buttons */
   .button-043 {
     font-size: 11.5px !important;
     padding: 8px 16px !important;
@@ -6117,12 +6112,8 @@ body.nav-drawer-open {
     padding: 14px 0 !important;
   }
 
-  .project-nav a .dir {
-    font-size: 8.5px !important;
-  }
-
   .project-nav a .title {
-    font-size: 12.5px !important;
+    white-space: normal !important;
   }
 
   /* Footer */
@@ -6144,50 +6135,6 @@ body.nav-drawer-open {
 
   footer .bottom {
     font-size: 11px !important;
-  }
-}
-
-/* Regole extra per smartphone molto compatti (<= 480px) */
-@media (max-width: 480px) {
-  html, body {
-    font-size: 13.5px !important;
-  }
-
-  p,
-  p[style*="font-size: 16px"],
-  p[style*="font-size:16px"],
-  p[style*="font-size: 15.5px"],
-  p[style*="font-size:15.5px"] {
-    font-size: 13px !important;
-    line-height: 1.5 !important;
-  }
-
-  h1 {
-    font-size: clamp(21px, 6vw, 25px) !important;
-  }
-
-  h2 {
-    font-size: clamp(17px, 5vw, 20px) !important;
-  }
-
-  h3 {
-    font-size: 15px !important;
-  }
-
-  .experience-slide-text h3 {
-    font-size: 15px !important;
-  }
-
-  .experience-slide-text p {
-    font-size: 12px !important;
-  }
-
-  #esperienza .experience-slide img {
-    height: 180px !important;
-  }
-
-  #esperienza .experience-slide-dual img {
-    height: 210px !important;
   }
 }
 
