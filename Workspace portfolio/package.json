@@ -1,0 +1,19 @@
+{
+  "name": "giuliadefaziodesign-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Giulia De Fazio - Digital Communication Designer",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"No tests configured\" && exit 0"
+  },
+  "keywords": [
+    "portfolio",
+    "design",
+    "digital-communication"
+  ],
+  "author": "Giulia De Fazio",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
