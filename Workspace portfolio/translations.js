@@ -93,7 +93,7 @@
       'contact.action_portfolio': 'Portfolio',
 
       // ABOUT PAGE (about.html)
-      'about.hero_title': 'Ciao, sono <span class="serif-highlight">Giulia.</span>',
+      'about.hero_title': 'Ciao, sono <span class="serif-highlight">Giulia</span>',
       'about.hero_desc': 'Digital Communication Designer di Torino.<br>Progetto esperienze che uniscono strategia, sensibilità visiva e narrazione.',
       'about.tag_visual': 'Identità Visiva',
       'about.tag_crossmedia': 'Campagne Crossmediali',
@@ -717,7 +717,7 @@
       'contact.action_portfolio': 'Portfolio',
 
       // ABOUT PAGE (about.html)
-      'about.hero_title': 'Hi, I’m <span class="serif-highlight">Giulia.</span>',
+      'about.hero_title': 'Hi, I’m <span class="serif-highlight">Giulia</span>',
       'about.hero_desc': 'Digital Communication Designer based in Turin.<br>I craft experiences merging strategy, visual sensibility, and narrative.',
       'about.tag_visual': 'Visual Identity',
       'about.tag_crossmedia': 'Crossmedia Campaigns',
@@ -1266,7 +1266,7 @@ es: {
       'about.cv_btn'                  : 'Descargar CV',
       'about.cv_title'                : 'Explora mi trayectoria.',
       'about.hero_desc'               : 'Diseñadora de comunicación digital de Turín.<br>Diseño experiencias que aúnan estrategia, sensibilidad visual y narrativa.',
-      'about.hero_title'              : 'Hola, soy <span class="serif-highlight">Giulia.</span>',
+      'about.hero_title'              : 'Hola, soy <span class="serif-highlight">Giulia</span>',
       'about.method_label'            : 'Método',
       'about.method_title'            : 'Cómo trabajo',
       'about.step1_desc'              : 'Sumergirse en el contexto, comprender los objetivos y escuchar las necesidades genuinas de las personas y marcas.',
@@ -1848,7 +1848,7 @@ es: {
       'about.cv_btn'                  : 'Lebenslauf herunterladen',
       'about.cv_title'                : 'Entdecke meinen Werdegang.',
       'about.hero_desc'               : 'Digital Communication Designerin aus Turin.<br>Ich gestalte Erlebnisse, die Strategie, visuelle Sensibilität und Storytelling verbinden.',
-      'about.hero_title'              : 'Hallo, ich bin <span class="serif-highlight">Giulia.</span>',
+      'about.hero_title'              : 'Hallo, ich bin <span class="serif-highlight">Giulia</span>',
       'about.method_label'            : 'Methode',
       'about.method_title'            : 'Wie ich arbeite',
       'about.step1_desc'              : 'In den Kontext eintauchen, Ziele erfassen und den echten Bedürfnissen von Menschen und Marken zuhören.',
