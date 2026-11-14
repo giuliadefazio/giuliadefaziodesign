@@ -3027,7 +3027,7 @@ p {
 
 .about-hero-img {
   flex: 0 0 auto;
-  max-height: 420px;
+  max-height: 490px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
@@ -3035,7 +3035,7 @@ p {
 
 .about-hero-img img {
   height: 100%;
-  max-height: 420px;
+  max-height: 490px;
   max-width: 100%;
   width: auto;
   display: block;
@@ -4627,7 +4627,7 @@ body.nav-drawer-open {
      titolo, sottotitolo e tag nella stessa griglia del disegno */
   .about-hero-grid {
     display: grid !important;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 38%) !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 42%) !important;
     column-gap: 16px !important;
     row-gap: 0 !important;
     align-items: start !important;
@@ -4653,7 +4653,7 @@ body.nav-drawer-open {
     height: auto !important;
     width: auto !important;
     max-width: 100% !important;
-    max-height: 190px !important;
+    max-height: 220px !important;
     object-fit: contain !important;
   }
   .about-hero-text > p,
